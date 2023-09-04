@@ -189,7 +189,7 @@ def main() -> NoReturn:
           params.put_bool("PandaHeartbeatLost", True)
           cloudlog.event("heartbeat lost", deviceState=health, serial=panda.get_usb_serial())
 
-        read_panda_logs(panda)
+        #read_panda_logs(panda)
 
         if first_run:
           if panda.is_internal():
