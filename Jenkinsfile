@@ -185,7 +185,6 @@ node {
           ["test encoder", "LD_LIBRARY_PATH=/usr/local/lib pytest system/loggerd/tests/test_encoder.py"],
           ["test pigeond", "pytest system/sensord/tests/test_pigeond.py"],
           ["test manager", "pytest selfdrive/manager/test/test_manager.py"],
-          ["test nav", "pytest selfdrive/navd/tests/"],
         ])
       },
       'loopback': {
@@ -239,6 +238,7 @@ node {
           // tests that our build system's dependencies are configured properly,
           // needs a machine with lots of cores
           sh label: "test multi-threaded build", script: "scons --no-cache --random -j42"
+          sh label: "test nav", script: "pytest selfdrive/navd/tests/"
         }
       },
       'car tests': {
