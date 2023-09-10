@@ -86,6 +86,7 @@ def pcStage(String stageName, Closure body) {
     docker.build("openpilot-base:build-${env.GIT_COMMIT}", "-f Dockerfile.openpilot_base .").inside(dockerArgs) {
       timeout(time: 20, unit: 'MINUTES') {
         try {
+          sh "umask 0000"
           sh "git config --global --add safe.directory '*'"
           sh "git submodule update --init --recursive"
           sh "git lfs pull"
@@ -141,6 +142,10 @@ node {
       deviceStage("build nightly", "tici-needs-can", [], [
         ["build nightly", "RELEASE_BRANCH=nightly $SOURCE_DIR/release/build_release.sh"],
       ])
+    }
+
+    pcStage("PC tests") {
+      sh "scons -j20"
     }
 
     /*
