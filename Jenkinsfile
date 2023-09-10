@@ -238,15 +238,15 @@ node {
         pcStage("PC tests") {
           // tests that our build system's dependencies are configured properly,
           // needs a machine with lots of cores
-          sh "scons --no-cache --random -j42"
+          sh label: "test multi-threaded build", script: "scons --no-cache --random -j42"
         }
       },
       'car tests': {
         pcStage("car tests") {
           sh "scons -j30"
-          sh "INTERNAL_SEG_CNT=250 INTERNAL_SEG_LIST=selfdrive/car/tests/test_models_segs.txt FILEREADER_CACHE=1 \
+          sh label: "test_models.py", script: "INTERNAL_SEG_CNT=250 INTERNAL_SEG_LIST=selfdrive/car/tests/test_models_segs.txt FILEREADER_CACHE=1 \
               pytest -n42 --dist=loadscope selfdrive/car/tests/test_models.py"
-          sh "MAX_EXAMPLES=100 pytest -n42 selfdrive/car/tests/test_car_interfaces.py"
+          sh label: "test_car_interfaces.py", script: "MAX_EXAMPLES=100 pytest -n42 selfdrive/car/tests/test_car_interfaces.py"
         }
       },
 
