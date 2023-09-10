@@ -80,7 +80,7 @@ safe_checkout() {
   echo "git checkout done, t=$SECONDS"
   du -hs $SOURCE_DIR $SOURCE_DIR/.git
 
-  if [ ! -z "SKIP_COPY" ]; then
+  if [ -z "SKIP_COPY" ]; then
     rsync -a --delete $SOURCE_DIR $TEST_DIR
   fi
 }
