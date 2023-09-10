@@ -35,6 +35,7 @@ def wait_for_power(min_pwr, max_pwr, min_secs_in_range, timeout):
     pwrs.append(get_power(1))
     if all(min_pwr <= p <= max_pwr for p in pwrs):
       break
+    print([round(p-3.63, 2) for p in pwrs])
   return np.mean(pwrs)
 
 
