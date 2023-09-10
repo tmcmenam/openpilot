@@ -85,11 +85,15 @@ def pcStage(String stageName, Closure body) {
     def dockerArgs = '--user=root -v /tmp/comma_download_cache:/tmp/comma_download_cache -v /tmp/scons_cache:/tmp/scons_cache';
     docker.build("openpilot-base:build-${env.GIT_COMMIT}", "-f Dockerfile.openpilot_base .").inside(dockerArgs) {
       timeout(time: 20, unit: 'MINUTES') {
-        sh "umask 0000"
-        sh "git config --global --add safe.directory '*'"
-        sh "git submodule update --init --recursive"
-        sh "git lfs pull"
-        body()
+        try {
+          sh "git config --global --add safe.directory '*'"
+          sh "git submodule update --init --recursive"
+          sh "git lfs pull"
+          body()
+        } finally {
+          sh "rm -rf ${env.WORKSPACE}/* || true"
+          sh "rm -rf .* || true"
+        }
       }
     }
   }
@@ -137,10 +141,6 @@ node {
       deviceStage("build nightly", "tici-needs-can", [], [
         ["build nightly", "RELEASE_BRANCH=nightly $SOURCE_DIR/release/build_release.sh"],
       ])
-    }
-
-    pcStage("PC tests") {
-      sh "scons -j20 cereal"
     }
 
     /*
