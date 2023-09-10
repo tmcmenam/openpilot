@@ -82,7 +82,7 @@ def pcStage(String stageName, Closure body) {
 
     checkout scm
 
-    def dockerArgs = '--user=root -v /tmp/comma_download_cache:/tmp/comma_download_cache -v /tmp/scons_cache:/tmp/scons_cache --user $(id -u):$(id -g)';
+    def dockerArgs = '--user=root -v /tmp/comma_download_cache:/tmp/comma_download_cache -v /tmp/scons_cache:/tmp/scons_cache';
     docker.build("openpilot-base:build-${env.GIT_COMMIT}", "-f Dockerfile.openpilot_base .").inside(dockerArgs) {
       timeout(time: 20, unit: 'MINUTES') {
         try {
