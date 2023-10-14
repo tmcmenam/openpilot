@@ -226,6 +226,7 @@ system/ubloxd/SConscript
 system/ubloxd/generated/*
 system/ubloxd/*.h
 system/ubloxd/*.cc
+system/ubloxd/*.py
 
 selfdrive/locationd/__init__.py
 selfdrive/locationd/SConscript
@@ -286,7 +287,6 @@ system/sensord/sensors_qcom2.cc
 system/sensord/sensors/*.cc
 system/sensord/sensors/*.h
 system/sensord/sensord
-system/sensord/pigeond.py
 
 selfdrive/thermald/thermald.py
 selfdrive/thermald/power_monitoring.py
