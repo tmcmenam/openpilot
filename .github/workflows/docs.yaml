@@ -33,7 +33,7 @@ jobs:
     - name: Push
       run: |
         git checkout -B gh-pages
-        git add docs/
+        git add -f build/docs/html/
 
         source release/identity.sh
 
