@@ -29,7 +29,7 @@ jobs:
     - uses: ./.github/workflows/setup-with-retry
     - name: Build docs
       run: |
-        ${{ env.RUN }} "cd docs && make html"
+        ${{ env.RUN }} "apt update && apt install -y doxygen && cd docs && make html"
     - name: Push
       run: |
         git checkout -B gh-pages

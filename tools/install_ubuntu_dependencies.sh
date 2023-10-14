@@ -22,7 +22,6 @@ function install_ubuntu_common_requirements() {
     casync \
     clang \
     cmake \
-    doxygen \
     make \
     cppcheck \
     libtool \
