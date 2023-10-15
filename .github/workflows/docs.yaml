@@ -1,0 +1,42 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+concurrency:
+  group: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && github.run_id || github.head_ref || github.ref }}-${{ github.workflow }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+env:
+  BASE_IMAGE: openpilot-base
+
+  BUILD: selfdrive/test/docker_build.sh base
+
+  RUN: docker run --shm-size 1G -v $GITHUB_WORKSPACE:/tmp/openpilot -w /tmp/openpilot -e FILEREADER_CACHE=1 -e PYTHONPATH=/tmp/openpilot -e NUM_JOBS -e JOB_ID -e GITHUB_ACTION -e GITHUB_REF -e GITHUB_HEAD_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_RUN_ID -v $GITHUB_WORKSPACE/.ci_cache/scons_cache:/tmp/scons_cache -v $GITHUB_WORKSPACE/.ci_cache/comma_download_cache:/tmp/comma_download_cache -v $GITHUB_WORKSPACE/.ci_cache/openpilot_cache:/tmp/openpilot_cache $BASE_IMAGE /bin/sh -c
+
+jobs:
+  docs:
+    name: build docs
+    runs-on: ubuntu-20.04
+    timeout-minutes: 45
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+    - uses: ./.github/workflows/setup-with-retry
+    - name: Build docs
+      run: |
+        ${{ env.RUN }} "apt update && apt install -y doxygen && cd docs && make html"
+    - name: Push
+      run: |
+        git checkout -B gh-pages
+        git add -f build/docs/html/
+
+        source release/identity.sh
+        git commit -m "build docs"
+
+        export GIT_LFS_SKIP_PUSH=1
+        git push -f origin gh-pages
