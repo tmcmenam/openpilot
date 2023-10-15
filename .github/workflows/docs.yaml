@@ -26,28 +26,17 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: true
-    #- uses: ./.github/workflows/setup-with-retry
-    #- name: Build docs
-    #  run: |
-    #    ${{ env.RUN }} "apt update && apt install -y doxygen && cd docs && make html"
+    - uses: ./.github/workflows/setup-with-retry
+    - name: Build docs
+      run: |
+        ${{ env.RUN }} "apt update && apt install -y doxygen && cd docs && make html"
     - name: Push
       run: |
-        set -x
-
         git checkout -B gh-pages
-        #git add -f build/docs/html/
-        touch abc
-        git add abc
+        git add -f build/docs/html/
 
         source release/identity.sh
-
         git commit -m "build docs"
-        git remote -v
-
-        export GIT_TRACE=true
-        export GIT_TRACE_SETUP=true
-        export GIT_SSH_COMMAND="ssh -vvv"
 
         export GIT_LFS_SKIP_PUSH=1
-
-        git push -v origin gh-pages
+        git push -f origin gh-pages
