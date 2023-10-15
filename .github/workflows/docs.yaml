@@ -43,4 +43,9 @@ jobs:
 
         git commit -m "build docs"
         git remote -v
+
+        export GIT_TRACE=true
+        export GIT_TRACE_SETUP=true
+        export GIT_SSH_COMMAND="ssh -vvv"
+
         git push -v origin gh-pages
