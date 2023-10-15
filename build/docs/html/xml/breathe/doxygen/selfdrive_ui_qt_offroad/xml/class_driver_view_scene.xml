@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_driver_view_scene" kind="class" language="C++" prot="public">
+    <compoundname>DriverViewScene</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_driver_view_scene_1acac79514db3f65edae63047f545e1ac2" prot="private" static="no" mutable="no">
+        <type>Params</type>
+        <definition>Params DriverViewScene::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="22" column="10" bodyfile="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_driver_view_scene_1a0bdfcf46a141ff20ddb9e7c3124ac8c5" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap DriverViewScene::face_img</definition>
+        <argsstring></argsstring>
+        <name>face_img</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="23" column="11" bodyfile="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_driver_view_scene_1a8516cb605bbca9e9115776f0f5fe9309" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DriverViewScene::is_rhd</definition>
+        <argsstring></argsstring>
+        <name>is_rhd</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="24" column="8" bodyfile="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_driver_view_scene_1ad8530a42fee8c51ce40b3e07bef7b024" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DriverViewScene::frame_updated</definition>
+        <argsstring></argsstring>
+        <name>frame_updated</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="25" column="8" bodyfile="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_driver_view_scene_1a4495ba4e04dd85622d04ba29fe26a703" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DriverViewScene::DriverViewScene</definition>
+        <argsstring>(QWidget *parent)</argsstring>
+        <name>DriverViewScene</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="11" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_driver_view_scene_1aa94babbea56c03f8330d561defc158e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DriverViewScene::frameUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>frameUpdated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="14" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_driver_view_scene_1a91252c8fd32517e9bf950c39ece8881d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DriverViewScene::showEvent</definition>
+        <argsstring>(QShowEvent *event) override</argsstring>
+        <name>showEvent</name>
+        <param>
+          <type>QShowEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="17" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_driver_view_scene_1af255eb5bfe5dcec54ebc28a4dfc33e22" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DriverViewScene::hideEvent</definition>
+        <argsstring>(QHideEvent *event) override</argsstring>
+        <name>hideEvent</name>
+        <param>
+          <type>QHideEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="18" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_driver_view_scene_1adf840e77773f6bc73db796b8701b4419" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DriverViewScene::paintEvent</definition>
+        <argsstring>(QPaintEvent *event) override</argsstring>
+        <name>paintEvent</name>
+        <param>
+          <type>QPaintEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="19" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DriverViewScene</label>
+        <link refid="class_driver_view_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DriverViewScene</label>
+        <link refid="class_driver_view_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" line="7" column="37" bodyfile="/tmp/openpilot/selfdrive/ui/qt/offroad/driverview.h" bodystart="7" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_driver_view_scene_1a4495ba4e04dd85622d04ba29fe26a703" prot="public" virt="non-virtual"><scope>DriverViewScene</scope><name>DriverViewScene</name></member>
+      <member refid="class_driver_view_scene_1a0bdfcf46a141ff20ddb9e7c3124ac8c5" prot="private" virt="non-virtual"><scope>DriverViewScene</scope><name>face_img</name></member>
+      <member refid="class_driver_view_scene_1ad8530a42fee8c51ce40b3e07bef7b024" prot="private" virt="non-virtual"><scope>DriverViewScene</scope><name>frame_updated</name></member>
+      <member refid="class_driver_view_scene_1aa94babbea56c03f8330d561defc158e4" prot="public" virt="non-virtual"><scope>DriverViewScene</scope><name>frameUpdated</name></member>
+      <member refid="class_driver_view_scene_1af255eb5bfe5dcec54ebc28a4dfc33e22" prot="protected" virt="non-virtual"><scope>DriverViewScene</scope><name>hideEvent</name></member>
+      <member refid="class_driver_view_scene_1a8516cb605bbca9e9115776f0f5fe9309" prot="private" virt="non-virtual"><scope>DriverViewScene</scope><name>is_rhd</name></member>
+      <member refid="class_driver_view_scene_1adf840e77773f6bc73db796b8701b4419" prot="protected" virt="non-virtual"><scope>DriverViewScene</scope><name>paintEvent</name></member>
+      <member refid="class_driver_view_scene_1acac79514db3f65edae63047f545e1ac2" prot="private" virt="non-virtual"><scope>DriverViewScene</scope><name>params</name></member>
+      <member refid="class_driver_view_scene_1a91252c8fd32517e9bf950c39ece8881d" prot="protected" virt="non-virtual"><scope>DriverViewScene</scope><name>showEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

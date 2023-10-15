@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_can_data" kind="struct" language="C++" prot="public">
+    <compoundname>CanData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_can_data_1a497ba116da49e53c332ff4169b5b958b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CanData::ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="24" column="10" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a4888c3902de8135ca6c3096900bde697" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CanData::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="25" column="12" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a78b0f25110eac38019c655d78f2befb2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CanData::freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="26" column="10" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a0f969865f95bdea0a4a4f36afb1e987b" prot="public" static="no" mutable="no">
+        <type>QByteArray</type>
+        <definition>QByteArray CanData::dat</definition>
+        <argsstring></argsstring>
+        <name>dat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="27" column="14" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a79513400711d898b6ea7b95c8be30aec" prot="public" static="no" mutable="no">
+        <type>QVector&lt; QColor &gt;</type>
+        <definition>QVector&lt;QColor&gt; CanData::colors</definition>
+        <argsstring></argsstring>
+        <name>colors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="28" column="11" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1ae7c05833758d84a5cd84a1b16f5e8801" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; CanData::last_change_t</definition>
+        <argsstring></argsstring>
+        <name>last_change_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="29" column="15" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a2a6dcdfa3a06ad2299bd0e7f1207653c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::array&lt; uint32_t, 8 &gt; &gt;</type>
+        <definition>std::vector&lt;std::array&lt;uint32_t, 8&gt; &gt; CanData::bit_change_counts</definition>
+        <argsstring></argsstring>
+        <name>bit_change_counts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="30" column="15" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a824823b76e56aecea49be6bc9d640971" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; CanData::last_delta</definition>
+        <argsstring></argsstring>
+        <name>last_delta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="31" column="15" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a570665234e9022d8de011df25d4c7425" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; CanData::same_delta_counter</definition>
+        <argsstring></argsstring>
+        <name>same_delta_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="32" column="15" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_can_data_1a6a71d1564e1d59d11860dcca3dc723b2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CanData::last_freq_update_ts</definition>
+        <argsstring></argsstring>
+        <name>last_freq_update_ts</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="33" column="10" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_can_data_1a9ec9032a18f27a9a409d5f9ff4fc30ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanData::compute</definition>
+        <argsstring>(const MessageId &amp;msg_id, const char *dat, const int size, double current_sec, double playback_speed, const std::vector&lt; uint8_t &gt; *mask=nullptr, double in_freq=0)</argsstring>
+        <name>compute</name>
+        <param>
+          <type>const MessageId &amp;</type>
+          <declname>msg_id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>dat</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>current_sec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>playback_speed</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; *</type>
+          <declname>mask</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>in_freq</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="21" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/tools/cabana/streams/abstractstream.h" line="20" column="14" bodyfile="/tmp/openpilot/tools/cabana/streams/abstractstream.h" bodystart="20" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct_can_data_1a2a6dcdfa3a06ad2299bd0e7f1207653c" prot="public" virt="non-virtual"><scope>CanData</scope><name>bit_change_counts</name></member>
+      <member refid="struct_can_data_1a79513400711d898b6ea7b95c8be30aec" prot="public" virt="non-virtual"><scope>CanData</scope><name>colors</name></member>
+      <member refid="struct_can_data_1a9ec9032a18f27a9a409d5f9ff4fc30ec" prot="public" virt="non-virtual"><scope>CanData</scope><name>compute</name></member>
+      <member refid="struct_can_data_1a4888c3902de8135ca6c3096900bde697" prot="public" virt="non-virtual"><scope>CanData</scope><name>count</name></member>
+      <member refid="struct_can_data_1a0f969865f95bdea0a4a4f36afb1e987b" prot="public" virt="non-virtual"><scope>CanData</scope><name>dat</name></member>
+      <member refid="struct_can_data_1a78b0f25110eac38019c655d78f2befb2" prot="public" virt="non-virtual"><scope>CanData</scope><name>freq</name></member>
+      <member refid="struct_can_data_1ae7c05833758d84a5cd84a1b16f5e8801" prot="public" virt="non-virtual"><scope>CanData</scope><name>last_change_t</name></member>
+      <member refid="struct_can_data_1a824823b76e56aecea49be6bc9d640971" prot="public" virt="non-virtual"><scope>CanData</scope><name>last_delta</name></member>
+      <member refid="struct_can_data_1a6a71d1564e1d59d11860dcca3dc723b2" prot="public" virt="non-virtual"><scope>CanData</scope><name>last_freq_update_ts</name></member>
+      <member refid="struct_can_data_1a570665234e9022d8de011df25d4c7425" prot="public" virt="non-virtual"><scope>CanData</scope><name>same_delta_counter</name></member>
+      <member refid="struct_can_data_1a497ba116da49e53c332ff4169b5b958b" prot="public" virt="non-virtual"><scope>CanData</scope><name>ts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

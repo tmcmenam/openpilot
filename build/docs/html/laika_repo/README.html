@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="openpilot docs" name="description" />
+<meta content="op, openpilot, docs, documentation" name="keywords" />
+<meta content="all,follow" name="robots" />
+<meta content="index,follow,snippet,archive" name="googlebot" />
+<meta content="en_US" property="og:locale" />
+<meta content="docs.comma.ai" property="og:site_name" />
+<meta content="https://docs.comma.ai" property="og:url" />
+<meta content="openpilot Documentation" property="og:title" />
+<meta content="website" property="og:type" />
+<meta content="image/jpeg" property="og:image:type" />
+<meta content="400" property="og:image:width" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image:url" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image:secure_url" />
+<meta content="openpilot Documentation" property="og:description" />
+<meta content="summary_large_image" property="twitter:card" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="twitter:logo" />
+<meta content="openpilot Documentation" property="twitter:title" />
+<meta content="openpilot Documentation" property="twitter:description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; openpilot docs 0.9.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.comma.ai/laika_repo/README.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=61b282d3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DBC file basics" href="../opendbc/README.html" />
+    <link rel="prev" title="MSGQ: A lock free single producer multi consumer message queue" href="../cereal/messaging/msgq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000000" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            openpilot docs
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.9.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html">Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html#id1">265 Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html#don-t-see-your-car-here">Don’t see your car here?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../INTEGRATION.html">Integration with Stock Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LIMITATIONS.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SAFETY.html">Safety</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">openpilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#cereal">cereal</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../overview.html#laika">laika</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-gnss-problem">The GNSS problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#astrodog">Astrodog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#satellite-info">Satellite info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pseudorange-corrections">Pseudorange corrections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#architecture">Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#design-principles-of-laika">Design principles of laika</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#laika-s-accuracy">Laika’s accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#laika">laika</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eathdata-account">Eathdata account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notebook-examples">notebook examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-gnss-references">Useful GNSS references</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#models">models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#opendbc">opendbc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#panda">panda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#rednose">rednose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#tools">tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">openpilot</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C/C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../c_docs.html">openpilot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">openpilot docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../overview.html">openpilot</a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/laika_repo/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>Laika is an open-source GNSS processing library. Laika is similar to projects like <a class="reference external" href="https://github.com/tomojitakasu/RTKLIB">RTKlib</a> and <a class="reference external" href="https://github.com/SGL-UT/GPSTk">GPSTK</a>, but in Python and with a strong focus on readability, usability and easy integration with other optimizers. Laika can process raw GNSS observations with data gathered online from various analysis groups to produce data ready for position/velocity estimation. Laika is designed to produce accurate results whilst still being readable and easy to use. Laika is the perfect tool to develop accurate GNSS-only or GNSS-fusion localisation algorithms.</p>
+<p><img alt="alt text" src="../_images/GNSS.png" /></p>
+</section>
+<section id="the-gnss-problem">
+<h1>The GNSS problem<a class="headerlink" href="#the-gnss-problem" title="Link to this heading"></a></h1>
+<p>GNSS satellites orbit the earth broadcasting signals that allow the receiver to determine the distance to each satellite. These satellites have known orbits and so their positions are known. This makes determining the receiver’s position a basic 3-dimensional <a class="reference external" href="https://en.wikipedia.org/wiki/Trilateration">trilateration</a> problem. In practice observed distances to each satellite will be measured with some offset that is caused by the receiver’s clock error. This offset also needs to be determined, making it a 4-dimensional trilateration problem.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/3spheres.svg/622px-3spheres.svg.png" width="60%"></p>
+<p>Since this problem is generally overdetermined (more than 4 satellites to solve the 4d problem) there is a variety of methods to compute a position estimate from the measurements. Laika provides a basic <a class="reference external" href="https://en.wikipedia.org/wiki/Weighted_least_squares">weighted least squares</a> solver for experimental purposes. This is far from optimal due to the dynamic nature of the system, this makes a Bayesian estimator like a <a class="reference external" href="https://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</a> the preferred estimator.</p>
+<p>However, the above description is over-simplified. Getting accurate distance estimates to satellites and the satellite’s position from the receiver observations is not trivial. This is what we call processing of the GNSS observables and it is this procedure laika is designed to make easy.</p>
+</section>
+<section id="astrodog">
+<h1>Astrodog<a class="headerlink" href="#astrodog" title="Link to this heading"></a></h1>
+<p>Astrodog is the main component of the laika. It is a python object, and like the <a class="reference external" href="https://en.wikipedia.org/wiki/Soviet_space_dogs">soviet space dogs</a> to which it owes its name, an astrodog will do everything to make the life of its owner easier. Which in this case is fetch and process all the necessary data to transform raw GNSS observables into usable distance measurements and satellite positions ready for position estimation.</p>
+<section id="satellite-info">
+<h2>Satellite info<a class="headerlink" href="#satellite-info" title="Link to this heading"></a></h2>
+<p>Astrodog has a get_sat_info function that will provide an accurate position, velocity and clock error for any satellite at any time in history.</p>
+</section>
+<section id="pseudorange-corrections">
+<h2>Pseudorange corrections<a class="headerlink" href="#pseudorange-corrections" title="Link to this heading"></a></h2>
+<p>Astrodog has a get_delay function that will provide a pseudorange delay correction for any satellite at any time in history for the requested receiver position. This delay correction includes a correction for the tropospheric signal delay, ionospheric signal delay and differential code biases (DCBs) of the transmitting satellite.</p>
+<p>This delay can either be estimated with mathematical models or with <a class="reference external" href="https://www.ngs.noaa.gov/CORS/">DGPS station</a> observations, which is more accurate, but slower and only supported in the continental United States.</p>
+</section>
+<section id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
+<p>GNSS processing requires getting data from the internet from various analysis groups such as NASA’s <a class="reference external" href="https://cddis.nasa.gov/Data_and_Derived_Products/GNSS/GNSS_data_and_product_archive.html">CDDIS</a>. AstroDog downloads files from FTP servers from these groups when it needs them. Downloading and parsing all this data can be slow. AstroDog caches all downloaded files locally to avoid re-downloading.</p>
+<p>These files are then parsed by AstroDog and kept in memory. Every one of these parsed objects (DCBs, ionospheric models, satellite orbit polynomials, etc.) has a valid location area and/or a valid time window.  Within those windows these objects can provide information relevant to GNSS processing.</p>
+</section>
+</section>
+<section id="design-principles-of-laika">
+<h1>Design principles of laika<a class="headerlink" href="#design-principles-of-laika" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Should work without configuration or setup</p></li>
+<li><p>Default configuration should not compromise accuracy for anything</p></li>
+</ul>
+</section>
+<section id="laika-s-accuracy">
+<h1>Laika’s accuracy<a class="headerlink" href="#laika-s-accuracy" title="Link to this heading"></a></h1>
+<p>To confirm the quality of Laika’s GNSS processing, we ran laika’s processing and a simple Kalman filter (procedure described in examples) on 2000 minutes of driving of a regular commute in San Francisco. The data comes from a “u-blox M8” chip. The fixes computed with laika’s processed data are compared to the live navigation fixes given by the u-blox chip. They compared by looking at the standard deviation of all measured altitudes within every 5×5 m² in the dataset. There is no way to compare horizontal accuracy without ground truth, but there is no reason to believe that vertical and horizontal accuracy are not equally correlated for laika computed positions and u-blox’s live positions. Data with the antenna on the roof and antenna inside the car are compared separately, since the results are significantly different.
+<img alt="altitude distributionplot" src="../_images/distplot_laika.png" /></p>
+</section>
+<section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/commaai/laika/blob/master/examples/Walkthrough.ipynb">A comprehensive walkthrough of the main functions of AstroDog and other useful laika functions</a></p></li>
+<li><p><a class="reference external" href="https://github.com/commaai/laika/blob/master/examples/Compute_station_pos.ipynb">Computation of a Continuously Operating Reference Station (CORS) position with laika</a></p></li>
+<li><p><a class="reference external" href="https://github.com/commaai/laika/blob/master/examples/Kalman.ipynb">Using laika with a Kalman filter to get more accurate position fixes from a GPS module</a></p></li>
+</ul>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>Laika runs in Python 3.8.2, and has only been tested on Ubuntu 20.04. Running in a virtual environment is recommended.</p>
+<section id="laika">
+<h2>laika<a class="headerlink" href="#laika" title="Link to this heading"></a></h2>
+<p>If you do not yet have numpy and scipy installed. Install them with pip. Having accelerated numpy will make laika much faster.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>Then laika can be installed with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>The tests should now pass.</p>
+</section>
+<section id="eathdata-account">
+<h2>Eathdata account<a class="headerlink" href="#eathdata-account" title="Link to this heading"></a></h2>
+<p>It is no longer possible to download GNSS data from NASA servers without an account.
+You can make an account <a class="reference external" href="https://urs.earthdata.nasa.gov/">here</a>. Then create a .netrc file in the laika folder with content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="n">urs</span><span class="o">.</span><span class="n">earthdata</span><span class="o">.</span><span class="n">nasa</span><span class="o">.</span><span class="n">gov</span> <span class="n">login</span> <span class="n">your_username</span> <span class="n">password</span> <span class="n">your_password</span>
+</pre></div>
+</div>
+</section>
+<section id="notebook-examples">
+<h2>notebook examples<a class="headerlink" href="#notebook-examples" title="Link to this heading"></a></h2>
+<p>The notebook examples require some visualisation packages. To install them first you need</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libfreetype6</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>and then with pip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements_examples</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>Then you should be able to run the notebooks. The notebooks can be opened by running <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and then navigating to the desired .ipynb file.</p>
+</section>
+</section>
+<section id="useful-gnss-references">
+<h1>Useful GNSS references<a class="headerlink" href="#useful-gnss-references" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.springer.com/us/book/9783319429267">Comprehensive handbook of all things GNSS</a></p></li>
+<li><p><a class="reference external" href="https://gssc.esa.int/navipedia/index.php/Main_Page">Concise clear explanations of most concepts</a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../cereal/messaging/msgq.html" class="btn btn-neutral float-left" title="MSGQ: A lock free single producer multi consumer message queue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../opendbc/README.html" class="btn btn-neutral float-right" title="DBC file basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, comma.ai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_line_prob_val" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputLineProbVal</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_line_prob_val_1af255a8592ddc527b6e7ebf52fcb272cd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputLineProbVal::val_deprecated</definition>
+        <argsstring></argsstring>
+        <name>val_deprecated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="90" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_line_prob_val_1a121051608eb4e24ac5d0d3d56a08e9cd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputLineProbVal::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="91" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="89" column="29" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="89" bodyend="92"/>
+    <listofallmembers>
+      <member refid="struct_model_output_line_prob_val_1a121051608eb4e24ac5d0d3d56a08e9cd" prot="public" virt="non-virtual"><scope>ModelOutputLineProbVal</scope><name>val</name></member>
+      <member refid="struct_model_output_line_prob_val_1af255a8592ddc527b6e7ebf52fcb272cd" prot="public" virt="non-virtual"><scope>ModelOutputLineProbVal</scope><name>val_deprecated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_e_k_f" kind="struct" language="C++" prot="public">
+    <compoundname>EKF</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_e_k_f_1ac0f39760f4ea4485c66525abb0bd2924" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EKF::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="17" column="15" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a4d5c37ef901dc1da17c1f0af949e9c13" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; EKF::kinds</definition>
+        <argsstring></argsstring>
+        <name>kinds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="18" column="15" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a9fccc3b110e37f7621996be8505a6950" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; EKF::feature_kinds</definition>
+        <argsstring></argsstring>
+        <name>feature_kinds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="19" column="15" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1ada7f9a57c27e97ff7ffab1daa995dc43" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::f_fun) (double *, double, double *)</definition>
+        <argsstring>)(double *, double, double *)</argsstring>
+        <name>f_fun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="21" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1af497d0bd4a127b937df430bdffaf437f" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::F_fun) (double *, double, double *)</definition>
+        <argsstring>)(double *, double, double *)</argsstring>
+        <name>F_fun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="22" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a9957cc3ce06bff2e1cfc89b2e3d7b44b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::err_fun) (double *, double *, double *)</definition>
+        <argsstring>)(double *, double *, double *)</argsstring>
+        <name>err_fun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="23" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1ad814d3c69cd45dc9a97fd46b9eaeed9a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::inv_err_fun) (double *, double *, double *)</definition>
+        <argsstring>)(double *, double *, double *)</argsstring>
+        <name>inv_err_fun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="24" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a7797c90e4949312969c5062d96ea03d9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::H_mod_fun) (double *, double *)</definition>
+        <argsstring>)(double *, double *)</argsstring>
+        <name>H_mod_fun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="25" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1af4b04bfa189b8ad277647756b4d4ecd0" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* EKF::predict) (double *, double *, double *, double)</definition>
+        <argsstring>)(double *, double *, double *, double)</argsstring>
+        <name>predict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="26" column="3" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a4a267451cbea863a23c36ae9bd409b8e" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, void(*)(double *, double *, double *)&gt;</type>
+        <definition>std::unordered_map&lt;int, void (*)(double *, double *, double *)&gt; EKF::hs</definition>
+        <argsstring></argsstring>
+        <name>hs</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="27" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a447406c439a714a476adbe21f9eae4c2" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, void(*)(double *, double *, double *)&gt;</type>
+        <definition>std::unordered_map&lt;int, void (*)(double *, double *, double *)&gt; EKF::Hs</definition>
+        <argsstring></argsstring>
+        <name>Hs</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="28" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a2a615200787814455d899ab66ecd5b2c" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, void(*)(double *, double *, double *, double *, double *)&gt;</type>
+        <definition>std::unordered_map&lt;int, void (*)(double *, double *, double *, double *, double *)&gt; EKF::updates</definition>
+        <argsstring></argsstring>
+        <name>updates</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="29" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a1b9f78a26a55477a25dcba4dcb7b891d" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, void(*)(double *, double *, double *)&gt;</type>
+        <definition>std::unordered_map&lt;int, void (*)(double *, double *, double *)&gt; EKF::Hes</definition>
+        <argsstring></argsstring>
+        <name>Hes</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="30" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a1885bfa4f4b9b4357e34b481b245e141" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, void(*)(double)&gt;</type>
+        <definition>std::unordered_map&lt;std::string, void (*)(double)&gt; EKF::sets</definition>
+        <argsstring></argsstring>
+        <name>sets</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="31" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_k_f_1a998cb254c06623010b3a69b22393ca37" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, extra_routine_t &gt;</type>
+        <definition>std::unordered_map&lt;std::string, extra_routine_t&gt; EKF::extra_routines</definition>
+        <argsstring></argsstring>
+        <name>extra_routines</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="32" column="22" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="16" column="10" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="16" bodyend="33"/>
+    <listofallmembers>
+      <member refid="struct_e_k_f_1a9957cc3ce06bff2e1cfc89b2e3d7b44b" prot="public" virt="non-virtual"><scope>EKF</scope><name>err_fun</name></member>
+      <member refid="struct_e_k_f_1a998cb254c06623010b3a69b22393ca37" prot="public" virt="non-virtual"><scope>EKF</scope><name>extra_routines</name></member>
+      <member refid="struct_e_k_f_1af497d0bd4a127b937df430bdffaf437f" prot="public" virt="non-virtual"><scope>EKF</scope><name>F_fun</name></member>
+      <member refid="struct_e_k_f_1ada7f9a57c27e97ff7ffab1daa995dc43" prot="public" virt="non-virtual"><scope>EKF</scope><name>f_fun</name></member>
+      <member refid="struct_e_k_f_1a9fccc3b110e37f7621996be8505a6950" prot="public" virt="non-virtual"><scope>EKF</scope><name>feature_kinds</name></member>
+      <member refid="struct_e_k_f_1a7797c90e4949312969c5062d96ea03d9" prot="public" virt="non-virtual"><scope>EKF</scope><name>H_mod_fun</name></member>
+      <member refid="struct_e_k_f_1a1b9f78a26a55477a25dcba4dcb7b891d" prot="public" virt="non-virtual"><scope>EKF</scope><name>Hes</name></member>
+      <member refid="struct_e_k_f_1a447406c439a714a476adbe21f9eae4c2" prot="public" virt="non-virtual"><scope>EKF</scope><name>Hs</name></member>
+      <member refid="struct_e_k_f_1a4a267451cbea863a23c36ae9bd409b8e" prot="public" virt="non-virtual"><scope>EKF</scope><name>hs</name></member>
+      <member refid="struct_e_k_f_1ad814d3c69cd45dc9a97fd46b9eaeed9a" prot="public" virt="non-virtual"><scope>EKF</scope><name>inv_err_fun</name></member>
+      <member refid="struct_e_k_f_1a4d5c37ef901dc1da17c1f0af949e9c13" prot="public" virt="non-virtual"><scope>EKF</scope><name>kinds</name></member>
+      <member refid="struct_e_k_f_1ac0f39760f4ea4485c66525abb0bd2924" prot="public" virt="non-virtual"><scope>EKF</scope><name>name</name></member>
+      <member refid="struct_e_k_f_1af4b04bfa189b8ad277647756b4d4ecd0" prot="public" virt="non-virtual"><scope>EKF</scope><name>predict</name></member>
+      <member refid="struct_e_k_f_1a1885bfa4f4b9b4357e34b481b245e141" prot="public" virt="non-virtual"><scope>EKF</scope><name>sets</name></member>
+      <member refid="struct_e_k_f_1a2a615200787814455d899ab66ecd5b2c" prot="public" virt="non-virtual"><scope>EKF</scope><name>updates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

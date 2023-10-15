@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_wide_from_device_euler" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputWideFromDeviceEuler</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_wide_from_device_euler_1a229cc52dc44589a9fdf189d92fb5a87d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputWideFromDeviceEuler::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="163" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_wide_from_device_euler_1a806bf780e137982bc39966e0ca6a7630" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputWideFromDeviceEuler::std</definition>
+        <argsstring></argsstring>
+        <name>std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="164" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputWideFromDeviceEuler</label>
+        <link refid="struct_model_output_wide_from_device_euler"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mean</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputXYZ</label>
+        <link refid="struct_model_output_x_y_z"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="162" column="37" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="162" bodyend="165"/>
+    <listofallmembers>
+      <member refid="struct_model_output_wide_from_device_euler_1a229cc52dc44589a9fdf189d92fb5a87d" prot="public" virt="non-virtual"><scope>ModelOutputWideFromDeviceEuler</scope><name>mean</name></member>
+      <member refid="struct_model_output_wide_from_device_euler_1a806bf780e137982bc39966e0ca6a7630" prot="public" virt="non-virtual"><scope>ModelOutputWideFromDeviceEuler</scope><name>std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

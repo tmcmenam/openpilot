@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_history_log_model_1_1_message" kind="struct" language="C++" prot="public">
+    <compoundname>HistoryLogModel::Message</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_history_log_model_1_1_message_1a4968822d898c7c2d6be7a17c2dfb40b9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HistoryLogModel::Message::mono_time</definition>
+        <argsstring></argsstring>
+        <name>mono_time</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/historylog.h" line="48" column="14" bodyfile="/tmp/openpilot/tools/cabana/historylog.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_history_log_model_1_1_message_1a0006d084e36290e3da94166d820b43ab" prot="public" static="no" mutable="no">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt;double&gt; HistoryLogModel::Message::sig_values</definition>
+        <argsstring></argsstring>
+        <name>sig_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/historylog.h" line="49" column="13" bodyfile="/tmp/openpilot/tools/cabana/historylog.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_history_log_model_1_1_message_1a9315adf6aa2bed26da524c80ce0b05fb" prot="public" static="no" mutable="no">
+        <type>QByteArray</type>
+        <definition>QByteArray HistoryLogModel::Message::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/historylog.h" line="50" column="16" bodyfile="/tmp/openpilot/tools/cabana/historylog.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_history_log_model_1_1_message_1a5585615e4d7edded6b528aaf82899a37" prot="public" static="no" mutable="no">
+        <type>QVector&lt; QColor &gt;</type>
+        <definition>QVector&lt;QColor&gt; HistoryLogModel::Message::colors</definition>
+        <argsstring></argsstring>
+        <name>colors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/historylog.h" line="51" column="13" bodyfile="/tmp/openpilot/tools/cabana/historylog.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/tools/cabana/historylog.h" line="47" column="16" bodyfile="/tmp/openpilot/tools/cabana/historylog.h" bodystart="47" bodyend="52"/>
+    <listofallmembers>
+      <member refid="struct_history_log_model_1_1_message_1a5585615e4d7edded6b528aaf82899a37" prot="public" virt="non-virtual"><scope>HistoryLogModel::Message</scope><name>colors</name></member>
+      <member refid="struct_history_log_model_1_1_message_1a9315adf6aa2bed26da524c80ce0b05fb" prot="public" virt="non-virtual"><scope>HistoryLogModel::Message</scope><name>data</name></member>
+      <member refid="struct_history_log_model_1_1_message_1a4968822d898c7c2d6be7a17c2dfb40b9" prot="public" virt="non-virtual"><scope>HistoryLogModel::Message</scope><name>mono_time</name></member>
+      <member refid="struct_history_log_model_1_1_message_1a0006d084e36290e3da94166d820b43ab" prot="public" virt="non-virtual"><scope>HistoryLogModel::Message</scope><name>sig_values</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

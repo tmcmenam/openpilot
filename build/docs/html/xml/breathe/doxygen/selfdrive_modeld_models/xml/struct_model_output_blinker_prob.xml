@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_blinker_prob" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputBlinkerProb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_blinker_prob_1a28be5e925ca407d4bb9636266c3bd9cc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputBlinkerProb::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="196" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_blinker_prob_1a681371fa670b9ed53ce9503183128d8d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputBlinkerProb::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="197" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="195" column="29" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="195" bodyend="198"/>
+    <listofallmembers>
+      <member refid="struct_model_output_blinker_prob_1a28be5e925ca407d4bb9636266c3bd9cc" prot="public" virt="non-virtual"><scope>ModelOutputBlinkerProb</scope><name>left</name></member>
+      <member refid="struct_model_output_blinker_prob_1a681371fa670b9ed53ce9503183128d8d" prot="public" virt="non-virtual"><scope>ModelOutputBlinkerProb</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

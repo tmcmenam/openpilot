@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="openpilot docs" name="description" />
+<meta content="op, openpilot, docs, documentation" name="keywords" />
+<meta content="all,follow" name="robots" />
+<meta content="index,follow,snippet,archive" name="googlebot" />
+<meta content="en_US" property="og:locale" />
+<meta content="docs.comma.ai" property="og:site_name" />
+<meta content="https://docs.comma.ai" property="og:url" />
+<meta content="openpilot Documentation" property="og:title" />
+<meta content="website" property="og:type" />
+<meta content="image/jpeg" property="og:image:type" />
+<meta content="400" property="og:image:width" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image:url" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="og:image:secure_url" />
+<meta content="openpilot Documentation" property="og:description" />
+<meta content="summary_large_image" property="twitter:card" />
+<meta content="https://docs.comma.ai/_static/logo.png" property="twitter:logo" />
+<meta content="openpilot Documentation" property="twitter:title" />
+<meta content="openpilot Documentation" property="twitter:description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; openpilot docs 0.9.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.comma.ai/tinygrad_repo/README.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=61b282d3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000000" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            openpilot docs
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.9.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html">Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html#id1">265 Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CARS.html#don-t-see-your-car-here">Don’t see your car here?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../INTEGRATION.html">Integration with Stock Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LIMITATIONS.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SAFETY.html">Safety</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">openpilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#cereal">cereal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#laika">laika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#models">models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#opendbc">opendbc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#panda">panda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#rednose">rednose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#tools">tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">openpilot</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C/C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../c_docs.html">openpilot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">openpilot docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tinygrad_repo/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p align="center">
+  <img src="https://raw.githubusercontent.com/geohot/tinygrad/master/docs/logo.png">
+</p>
+<hr class="docutils" />
+<p><img alt="Unit Tests" src="https://github.com/geohot/tinygrad/workflows/Unit%20Tests/badge.svg" /></p>
+<p><a class="reference external" href="https://discord.gg/ZjZadyC7PK"><img alt="tinygrad discord" src="https://discordapp.com/api/guilds/1068976834382925865/widget.png?style=banner2" /></a></p>
+<p>For something in between a <a class="reference external" href="https://github.com/pytorch/pytorch">pytorch</a> and a <a class="reference external" href="https://github.com/karpathy/micrograd">karpathy/micrograd</a></p>
+<p>This may not be the best deep learning framework, but it is a deep learning framework.</p>
+<p>The sub 1000 line core of it is in <code class="docutils literal notranslate"><span class="pre">tinygrad/</span></code></p>
+<p>Due to its extreme simplicity, it aims to be the easiest framework to add new accelerators to, with support for both inference and training. Support the simple basic ops, and you get SOTA <a class="reference external" href="https://arxiv.org/abs/1905.11946">vision</a> <code class="docutils literal notranslate"><span class="pre">models/efficientnet.py</span></code> and <a class="reference external" href="https://arxiv.org/abs/1706.03762">language</a> <code class="docutils literal notranslate"><span class="pre">models/transformer.py</span></code> models.</p>
+<p>We are working on support for the Apple Neural Engine and the Google TPU in the <code class="docutils literal notranslate"><span class="pre">accel/</span></code> folder. Eventually, <a class="reference external" href="https://geohot.github.io/blog/jekyll/update/2021/06/13/a-breakdown-of-ai-chip-companies.html">we will build custom hardware</a> for tinygrad, and it will be blindingly fast. Now, it is slow.</p>
+<p>This project is maintained by <a class="reference external" href="https://tinygrad.org/">tiny corp</a>.</p>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geohot/tinygrad.git
+<span class="nb">cd</span><span class="w"> </span>tinygrad
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h1>
+<p>There’s a lot of interest in tinygrad lately. Here’s some guidelines for contributing:</p>
+<ul class="simple">
+<li><p>Bugfixes are the best and always welcome! Like <a class="reference external" href="https://github.com/geohot/tinygrad/pull/421/files">this one</a>.</p></li>
+<li><p>If you don’t understand the code you are changing, don’t change it!</p></li>
+<li><p>All code golf PRs will be closed, but <a class="reference external" href="https://github.com/geohot/tinygrad/pull/372/files">conceptual cleanups</a> are great.</p></li>
+<li><p>Features are welcome. Though if you are adding a feature, you need to include tests.</p></li>
+<li><p>Improving test coverage is great, with reliable non brittle tests.</p></li>
+</ul>
+</section>
+<section id="example">
+<h1>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinygrad.tensor</span> <span class="kn">import</span> <span class="n">Tensor</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Tensor</span><span class="p">([[</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">2.0</span><span class="p">]],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">z</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>  <span class="c1"># dz/dx</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>  <span class="c1"># dz/dy</span>
+</pre></div>
+</div>
+</section>
+<section id="same-example-in-torch">
+<h1>Same example in torch<a class="headerlink" href="#same-example-in-torch" title="Link to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">2.0</span><span class="p">]],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">z</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">grad</span><span class="p">)</span>  <span class="c1"># dz/dx</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">grad</span><span class="p">)</span>  <span class="c1"># dz/dy</span>
+</pre></div>
+</div>
+</section>
+<section id="is-tinygrad-fast">
+<h1>Is tinygrad fast?<a class="headerlink" href="#is-tinygrad-fast" title="Link to this heading"></a></h1>
+<p>Try a matmul. See how, despite the style, it is fused into one kernel with the power of laziness.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEBUG</span><span class="o">=</span><span class="mi">3</span> <span class="n">OPTLOCAL</span><span class="o">=</span><span class="mi">1</span> <span class="n">GPU</span><span class="o">=</span><span class="mi">1</span> <span class="n">python3</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;from tinygrad.tensor import Tensor;</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span> <span class="o">@</span> <span class="n">b</span><span class="o">.</span><span class="n">numpy</span><span class="p">()))</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Change to <code class="docutils literal notranslate"><span class="pre">DEBUG=4</span></code> to see the generated code.</p>
+</section>
+<section id="neural-networks">
+<h1>Neural networks?<a class="headerlink" href="#neural-networks" title="Link to this heading"></a></h1>
+<p>It turns out, a decent autograd tensor library is 90% of what you need for neural networks. Add an optimizer (SGD, RMSprop, and Adam implemented) from tinygrad.nn.optim, write some boilerplate minibatching code, and you have all you need.</p>
+<section id="neural-network-example-from-test-test-mnist-py">
+<h2>Neural network example (from test/test_mnist.py)<a class="headerlink" href="#neural-network-example-from-test-test-mnist-py" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinygrad.tensor</span> <span class="kn">import</span> <span class="n">Tensor</span>
+<span class="kn">import</span> <span class="nn">tinygrad.nn.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+
+<span class="k">class</span> <span class="nc">TinyBobNet</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l1</span> <span class="o">=</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">784</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l2</span> <span class="o">=</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">l1</span><span class="p">)</span><span class="o">.</span><span class="n">relu</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">l2</span><span class="p">)</span><span class="o">.</span><span class="n">log_softmax</span><span class="p">()</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">TinyBobNet</span><span class="p">()</span>
+<span class="n">optim</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">([</span><span class="n">model</span><span class="o">.</span><span class="n">l1</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">l2</span><span class="p">],</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+
+<span class="c1"># ... and complete like pytorch, with (x,y) data</span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">optim</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<span class="n">optim</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="gpu-and-accelerator-support">
+<h1>GPU and Accelerator Support<a class="headerlink" href="#gpu-and-accelerator-support" title="Link to this heading"></a></h1>
+<p>tinygrad supports GPUs through PyOpenCL.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinygrad.tensor</span> <span class="kn">import</span> <span class="n">Tensor</span>
+<span class="p">(</span><span class="n">Tensor</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">gpu</span><span class="p">()</span> <span class="o">+</span> <span class="n">Tensor</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">gpu</span><span class="p">())</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="ane-support-broken">
+<h2>ANE Support?! (broken)<a class="headerlink" href="#ane-support-broken" title="Link to this heading"></a></h2>
+<p>If all you want to do is ReLU, you are in luck! You can do very fast ReLU (at least 30 MEGAReLUs/sec confirmed)</p>
+<p>Requires your Python to be signed with <code class="docutils literal notranslate"><span class="pre">ane/lib/sign_python.sh</span></code> to add the <code class="docutils literal notranslate"><span class="pre">com.apple.ane.iokit-user-access</span></code> entitlement, which also requires <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nvram</span> <span class="pre">boot-args=&quot;amfi_get_out_of_my_way=1</span> <span class="pre">ipc_control_port_options=0&quot;</span></code>. Build the library with <code class="docutils literal notranslate"><span class="pre">ane/lib/build.sh</span></code></p>
+<p>In order to set boot-args and for the AMFI kext to respect that arg, run <code class="docutils literal notranslate"><span class="pre">csrutil</span> <span class="pre">enable</span> <span class="pre">--without-kext</span> <span class="pre">--without-nvram</span></code> in recovery mode.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinygrad.tensor</span> <span class="kn">import</span> <span class="n">Tensor</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Tensor</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">ane</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">relu</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">cpu</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Warning: do not rely on the ANE port. It segfaults sometimes. So if you were doing something important with tinygrad and wanted to use the ANE, you might have a bad time.</p>
+</section>
+<section id="hlops-in-tensor-py">
+<h2>hlops (in tensor.py)<a class="headerlink" href="#hlops-in-tensor-py" title="Link to this heading"></a></h2>
+<p>hlops are syntactic sugar around mlops. They support most things torch does.</p>
+</section>
+<section id="mlops">
+<h2>mlops<a class="headerlink" href="#mlops" title="Link to this heading"></a></h2>
+<p>mlops are mid level ops. They understand derivatives. They are very simple.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Log</span><span class="p">,</span> <span class="n">Exp</span>                                       <span class="c1"># unary ops</span>
+<span class="n">Sum</span><span class="p">,</span> <span class="n">Max</span>                                       <span class="c1"># reduce ops (with axis argument)</span>
+<span class="n">Maximum</span><span class="p">,</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Sub</span><span class="p">,</span> <span class="n">Mul</span><span class="p">,</span> <span class="n">Pow</span><span class="p">,</span> <span class="n">Div</span><span class="p">,</span> <span class="n">Equal</span>        <span class="c1"># binary ops (no broadcasting, use expand)</span>
+<span class="n">Expand</span><span class="p">,</span> <span class="n">Reshape</span><span class="p">,</span> <span class="n">Permute</span><span class="p">,</span> <span class="n">Pad</span><span class="p">,</span> <span class="n">Shrink</span><span class="p">,</span> <span class="n">Flip</span>    <span class="c1"># movement ops</span>
+</pre></div>
+</div>
+<p>You no longer need to write mlops for a new accelerator</p>
+</section>
+<section id="adding-an-accelerator-llops">
+<h2>Adding an accelerator (llops)<a class="headerlink" href="#adding-an-accelerator-llops" title="Link to this heading"></a></h2>
+<p>The autodiff stuff is all in mlops now so you can focus on the raw operations</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Buffer</span>                                                     <span class="c1"># class of memory on this device</span>
+<span class="n">unary_op</span>  <span class="p">(</span><span class="n">NOOP</span><span class="p">,</span> <span class="n">NEG</span><span class="p">,</span> <span class="n">NOT</span><span class="p">,</span> <span class="n">EXP</span><span class="p">,</span> <span class="n">LOG</span><span class="p">)</span>                       <span class="c1"># A -&gt; A</span>
+<span class="n">reduce_op</span> <span class="p">(</span><span class="n">SUM</span><span class="p">,</span> <span class="n">MAX</span><span class="p">)</span>                                       <span class="c1"># A -&gt; B (smaller size, B has 1 in shape)</span>
+<span class="n">binary_op</span> <span class="p">(</span><span class="n">ADD</span><span class="p">,</span> <span class="n">SUB</span><span class="p">,</span> <span class="n">MUL</span><span class="p">,</span> <span class="n">DIV</span><span class="p">,</span> <span class="n">POW</span><span class="p">,</span> <span class="n">CMPEQ</span><span class="p">,</span> <span class="n">MAX</span><span class="p">)</span>            <span class="c1"># A + A -&gt; A (all the same size)</span>
+<span class="n">movement_op</span> <span class="p">(</span><span class="n">EXPAND</span><span class="p">,</span> <span class="n">RESHAPE</span><span class="p">,</span> <span class="n">PERMUTE</span><span class="p">,</span> <span class="n">PAD</span><span class="p">,</span> <span class="n">SHRINK</span><span class="p">,</span> <span class="n">FLIP</span><span class="p">)</span>  <span class="c1"># A -&gt; B (different size)</span>
+<span class="n">fused_op</span> <span class="p">[[</span><span class="n">optional</span><span class="p">]]</span> <span class="p">(</span><span class="n">MULACC</span><span class="p">)</span>                             <span class="c1"># A * A -&gt; B</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="imagenet-inference">
+<h1>ImageNet inference<a class="headerlink" href="#imagenet-inference" title="Link to this heading"></a></h1>
+<p>Despite being tiny, tinygrad supports the full EfficientNet. Pass in a picture to discover what it is.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipython3<span class="w"> </span>examples/efficientnet.py<span class="w"> </span>https://media.istockphoto.com/photos/hen-picture-id831791190
+</pre></div>
+</div>
+<p>Or, if you have a webcam and cv2 installed</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipython3<span class="w"> </span>examples/efficientnet.py<span class="w"> </span>webcam
+</pre></div>
+</div>
+<p>PROTIP: Set “GPU=1” environment variable if you want this to go faster.</p>
+<p>PROPROTIP: Set “DEBUG=1” environment variable if you want to see why it’s slow.</p>
+<section id="tinygrad-supports-stable-diffusion">
+<h2>tinygrad supports Stable Diffusion!<a class="headerlink" href="#tinygrad-supports-stable-diffusion" title="Link to this heading"></a></h2>
+<p>You might need to download the <a class="reference external" href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt">weight</a> of Stable Diffusion and put it into weights/</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">GPU=1</span> <span class="pre">python3</span> <span class="pre">examples/stable_diffusion.py</span></code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geohot/tinygrad/master/docs/stable_diffusion_by_tinygrad.jpg">
+</p>
+<p align="center">
+"a horse sized cat eating a bagel"
+</p>
+</section>
+<section id="tinygrad-supports-gans">
+<h2>tinygrad supports GANs<a class="headerlink" href="#tinygrad-supports-gans" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">examples/mnist_gan.py</span></code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geohot/tinygrad/master/docs/mnist_by_tinygrad.jpg">
+</p>
+</section>
+<section id="tinygrad-supports-yolo">
+<h2>tinygrad supports yolo<a class="headerlink" href="#tinygrad-supports-yolo" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">examples/yolov3.py</span></code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/geohot/tinygrad/master/docs/yolo_by_tinygrad.jpg">
+</p>
+</section>
+</section>
+<section id="the-promise-of-small">
+<h1>The promise of small<a class="headerlink" href="#the-promise-of-small" title="Link to this heading"></a></h1>
+<p>tinygrad will always be below 1000 lines. If it isn’t, we will revert commits until tinygrad becomes smaller.</p>
+<section id="drawing-execution-graph">
+<h2>Drawing Execution Graph<a class="headerlink" href="#drawing-execution-graph" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Nodes are Tensors</p></li>
+<li><p>Black edge is a forward pass</p></li>
+<li><p>Blue edge is a backward pass</p></li>
+<li><p>Red edge is data the backward pass depends on</p></li>
+<li><p>Purple edge is intermediates created in the forward</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">GRAPH</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>python3<span class="w"> </span>test/test_mnist.py<span class="w"> </span>TestMNIST.test_sgd_onestep
+<span class="c1"># requires dot, outputs /tmp/net.svg</span>
+</pre></div>
+</div>
+</section>
+<section id="running-tests">
+<h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading"></a></h2>
+<p>For more examples on how to run the full test suite please refer to the <a class="reference internal" href="#.github/workflows/test.yml"><span class="xref myst">CI workflow</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;.[testing]&#39;</span>
+python3<span class="w"> </span>-m<span class="w"> </span>pytest
+python3<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>-v<span class="w"> </span>-k<span class="w"> </span>TestTrain
+python3<span class="w"> </span>./test/models/test_train.py<span class="w"> </span>TestTrain.test_efficientnet
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, comma.ai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

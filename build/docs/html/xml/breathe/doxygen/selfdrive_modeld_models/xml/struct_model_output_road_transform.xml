@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_road_transform" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputRoadTransform</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_road_transform_1a3b25f737ae775a0aeb8ea5d3a1be3c5a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputRoadTransform::position_mean</definition>
+        <argsstring></argsstring>
+        <name>position_mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="177" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_road_transform_1a8f6d06d568d99b3150eae487a8f91f19" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputRoadTransform::rotation_mean</definition>
+        <argsstring></argsstring>
+        <name>rotation_mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="178" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_road_transform_1a7d18da6ad0bc3ea3f20a44ec1d392ca0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputRoadTransform::position_std</definition>
+        <argsstring></argsstring>
+        <name>position_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="179" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_road_transform_1acc769cd2c821336d04b88dcbfaa6b81e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputRoadTransform::rotation_std</definition>
+        <argsstring></argsstring>
+        <name>rotation_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="180" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputRoadTransform</label>
+        <link refid="struct_model_output_road_transform"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>position_mean</edgelabel>
+          <edgelabel>rotation_std</edgelabel>
+          <edgelabel>rotation_mean</edgelabel>
+          <edgelabel>position_std</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputXYZ</label>
+        <link refid="struct_model_output_x_y_z"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="176" column="31" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="176" bodyend="181"/>
+    <listofallmembers>
+      <member refid="struct_model_output_road_transform_1a3b25f737ae775a0aeb8ea5d3a1be3c5a" prot="public" virt="non-virtual"><scope>ModelOutputRoadTransform</scope><name>position_mean</name></member>
+      <member refid="struct_model_output_road_transform_1a7d18da6ad0bc3ea3f20a44ec1d392ca0" prot="public" virt="non-virtual"><scope>ModelOutputRoadTransform</scope><name>position_std</name></member>
+      <member refid="struct_model_output_road_transform_1a8f6d06d568d99b3150eae487a8f91f19" prot="public" virt="non-virtual"><scope>ModelOutputRoadTransform</scope><name>rotation_mean</name></member>
+      <member refid="struct_model_output_road_transform_1acc769cd2c821336d04b88dcbfaa6b81e" prot="public" virt="non-virtual"><scope>ModelOutputRoadTransform</scope><name>rotation_std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

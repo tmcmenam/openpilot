@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_desire_prob" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputDesireProb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a4e375f9ce6740075d7461cd37bf4e0a4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::none</definition>
+        <argsstring></argsstring>
+        <name>none</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="204" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a6b776cab70bd7caa4e5d34ff258cbcda" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::turn_left</definition>
+        <argsstring></argsstring>
+        <name>turn_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="205" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a4ecfa3520e1e8da94e5fd060d029a2ae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::turn_right</definition>
+        <argsstring></argsstring>
+        <name>turn_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="206" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a2a7b6ab306184590c038e7ee2e55b347" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::lane_change_left</definition>
+        <argsstring></argsstring>
+        <name>lane_change_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="207" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1af0e54a4607d805f17d93f433a7d033f8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::lane_change_right</definition>
+        <argsstring></argsstring>
+        <name>lane_change_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="208" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1abd8fa02220b3078ee3465cd85d76af4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::keep_left</definition>
+        <argsstring></argsstring>
+        <name>keep_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="209" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1af87bd5a8dfd6d1251fb7933772df4881" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::keep_right</definition>
+        <argsstring></argsstring>
+        <name>keep_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="210" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a233c238285638c772f29d0e636f538cd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDesireProb::null</definition>
+        <argsstring></argsstring>
+        <name>null</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="211" column="13" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a0c7ec713ad46974ee910271806adc092" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, DESIRE_LEN &gt;</type>
+        <definition>std::array&lt;float, DESIRE_LEN&gt; ModelOutputDesireProb::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="214" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_desire_prob_1a7e49ba5ab2a5c246b1b637dac787c9d2" prot="public" static="no" mutable="no">
+        <type>union ModelOutputDesireProb::@0</type>
+        <definition>union ModelOutputDesireProb::@0 ModelOutputDesireProb::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="216" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="201" column="28" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="201" bodyend="217"/>
+    <listofallmembers>
+      <member refid="struct_model_output_desire_prob_1a0c7ec713ad46974ee910271806adc092" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>array</name></member>
+      <member refid="struct_model_output_desire_prob_1abd8fa02220b3078ee3465cd85d76af4e" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>keep_left</name></member>
+      <member refid="struct_model_output_desire_prob_1af87bd5a8dfd6d1251fb7933772df4881" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>keep_right</name></member>
+      <member refid="struct_model_output_desire_prob_1a2a7b6ab306184590c038e7ee2e55b347" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>lane_change_left</name></member>
+      <member refid="struct_model_output_desire_prob_1af0e54a4607d805f17d93f433a7d033f8" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>lane_change_right</name></member>
+      <member refid="struct_model_output_desire_prob_1a4e375f9ce6740075d7461cd37bf4e0a4" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>none</name></member>
+      <member refid="struct_model_output_desire_prob_1a233c238285638c772f29d0e636f538cd" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>null</name></member>
+      <member refid="struct_model_output_desire_prob_1a6b776cab70bd7caa4e5d34ff258cbcda" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>turn_left</name></member>
+      <member refid="struct_model_output_desire_prob_1a4ecfa3520e1e8da94e5fd060d029a2ae" prot="public" virt="non-virtual"><scope>ModelOutputDesireProb</scope><name>turn_right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

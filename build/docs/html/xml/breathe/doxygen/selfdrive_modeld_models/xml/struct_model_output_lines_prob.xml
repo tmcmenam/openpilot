@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_lines_prob" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputLinesProb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_lines_prob_1aa4ee960a59b75e44b3a955b06ebf37a2" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref></type>
+        <definition>ModelOutputLineProbVal ModelOutputLinesProb::left_far</definition>
+        <argsstring></argsstring>
+        <name>left_far</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="96" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_lines_prob_1a6892b90f82cb1064e5e9645dba97f770" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref></type>
+        <definition>ModelOutputLineProbVal ModelOutputLinesProb::left_near</definition>
+        <argsstring></argsstring>
+        <name>left_near</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="97" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_lines_prob_1a5ed04913266ad3aba1a5fc6a9c9215f3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref></type>
+        <definition>ModelOutputLineProbVal ModelOutputLinesProb::right_near</definition>
+        <argsstring></argsstring>
+        <name>right_near</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="98" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_lines_prob_1a6cee3868035c9630ff40bdf20539b502" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref></type>
+        <definition>ModelOutputLineProbVal ModelOutputLinesProb::right_far</definition>
+        <argsstring></argsstring>
+        <name>right_far</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="99" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputLinesProb</label>
+        <link refid="struct_model_output_lines_prob"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>right_far</edgelabel>
+          <edgelabel>left_far</edgelabel>
+          <edgelabel>right_near</edgelabel>
+          <edgelabel>left_near</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputLineProbVal</label>
+        <link refid="struct_model_output_line_prob_val"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="95" column="27" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="95" bodyend="100"/>
+    <listofallmembers>
+      <member refid="struct_model_output_lines_prob_1aa4ee960a59b75e44b3a955b06ebf37a2" prot="public" virt="non-virtual"><scope>ModelOutputLinesProb</scope><name>left_far</name></member>
+      <member refid="struct_model_output_lines_prob_1a6892b90f82cb1064e5e9645dba97f770" prot="public" virt="non-virtual"><scope>ModelOutputLinesProb</scope><name>left_near</name></member>
+      <member refid="struct_model_output_lines_prob_1a6cee3868035c9630ff40bdf20539b502" prot="public" virt="non-virtual"><scope>ModelOutputLinesProb</scope><name>right_far</name></member>
+      <member refid="struct_model_output_lines_prob_1a5ed04913266ad3aba1a5fc6a9c9215f3" prot="public" virt="non-virtual"><scope>ModelOutputLinesProb</scope><name>right_near</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

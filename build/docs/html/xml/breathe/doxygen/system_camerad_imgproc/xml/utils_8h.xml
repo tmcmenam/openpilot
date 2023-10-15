@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">common/clutil.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>/tmp/openpilot/system/camerad/imgproc/utils.h</label>
+        <link refid="utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>common/clutil.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>cstddef</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_lap_conv" prot="public">LapConv</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="utils_8h_1a25046445f87ca31878822a63b74dfb3d" prot="public" static="no">
+        <name>NUM_SEGMENTS_X</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="9" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1ac495efc97d07dffc0b6724aac6acbdf5" prot="public" static="no">
+        <name>NUM_SEGMENTS_Y</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="10" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1a55227629842ce3768546bc9c2eb4b1d2" prot="public" static="no">
+        <name>ROI_X_MIN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="12" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1aede0e9514c86269f066a9842864e4610" prot="public" static="no">
+        <name>ROI_X_MAX</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="13" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1abc1b09f809df15473ad59a821c2fdb37" prot="public" static="no">
+        <name>ROI_Y_MIN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="14" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1afaf8e8a5c6ff5f20e3a77aec68b85e33" prot="public" static="no">
+        <name>ROI_Y_MAX</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="15" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1a5de2969f3f7da7f624da7e30a7406bf6" prot="public" static="no">
+        <name>LM_THRESH</name>
+        <initializer>120</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="17" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1a03b55748feb457222e0108ccc8902d73" prot="public" static="no">
+        <name>LM_PREC_THRESH</name>
+        <initializer>0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="18" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1a38754fd2de148117256d7ee96cb2a434" prot="public" static="no">
+        <name>CONV_LOCAL_WORKSIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="19" column="9" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8h_1a27c8f976daf2f6e9c988606f0fc8aafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_blur</definition>
+        <argsstring>(const uint16_t *lapmap, const size_t size)</argsstring>
+        <name>is_blur</name>
+        <param>
+          <type>const uint16_t *</type>
+          <declname>lapmap</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="37" column="6" declfile="/tmp/openpilot/system/camerad/imgproc/utils.h" declline="37" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/clutil.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_SEGMENTS_X<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_SEGMENTS_Y<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROI_X_MIN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROI_X_MAX<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROI_Y_MIN<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROI_Y_MAX<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LM_THRESH<sp/>120</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LM_PREC_THRESH<sp/>0.9<sp/>//<sp/>90<sp/>perc<sp/>is<sp/>blur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONV_LOCAL_WORKSIZE<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_lap_conv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lap_conv" kindref="compound">LapConv</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="class_lap_conv" kindref="compound">LapConv</ref>(cl_device_id<sp/>device_id,<sp/>cl_context<sp/>ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rgb_width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rgb_height,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rgb_stride,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_size);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>~<ref refid="class_lap_conv" kindref="compound">LapConv</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>uint16_t<sp/>Update(cl_command_queue<sp/>q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*rgb_buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>roi_id);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>cl_mem<sp/>roi_cl,<sp/>result_cl,<sp/>filter_cl;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>cl_program<sp/>prg;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>cl_kernel<sp/>krnl;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/>height;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rgb_stride;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>std::vector&lt;uint8_t&gt;<sp/>roi_buf;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>std::vector&lt;int16_t&gt;<sp/>result_buf;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_blur(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>*lapmap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/openpilot/system/camerad/imgproc/utils.h"/>
+  </compounddef>
+</doxygen>

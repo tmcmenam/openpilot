@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_live_stream_1_1_msg" kind="struct" language="C++" prot="private">
+    <compoundname>LiveStream::Msg</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_live_stream_1_1_msg_1a782bc38b05b07b1c44c8212f75b26767" prot="public" static="no" mutable="no">
+        <type>Event *</type>
+        <definition>Event* LiveStream::Msg::event</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/livestream.h" line="40" column="11" bodyfile="/tmp/openpilot/tools/cabana/streams/livestream.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_live_stream_1_1_msg_1a021408f400bd2e053cf76bca65f5b893" prot="public" static="no" mutable="no">
+        <type>AlignedBuffer</type>
+        <definition>AlignedBuffer LiveStream::Msg::aligned_buf</definition>
+        <argsstring></argsstring>
+        <name>aligned_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/livestream.h" line="41" column="19" bodyfile="/tmp/openpilot/tools/cabana/streams/livestream.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_live_stream_1_1_msg_1a2a7af45e7407b91492225e9ce454287d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LiveStream::Msg::Msg</definition>
+        <argsstring>(const char *data, const size_t size)</argsstring>
+        <name>Msg</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/livestream.h" line="36" column="5" bodyfile="/tmp/openpilot/tools/cabana/streams/livestream.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_live_stream_1_1_msg_1aa297ed5577899e366b5e7c4632859c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LiveStream::Msg::~Msg</definition>
+        <argsstring>()</argsstring>
+        <name>~Msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/streams/livestream.h" line="39" column="5" bodyfile="/tmp/openpilot/tools/cabana/streams/livestream.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/tools/cabana/streams/livestream.h" line="35" column="12" bodyfile="/tmp/openpilot/tools/cabana/streams/livestream.h" bodystart="35" bodyend="42"/>
+    <listofallmembers>
+      <member refid="struct_live_stream_1_1_msg_1a021408f400bd2e053cf76bca65f5b893" prot="public" virt="non-virtual"><scope>LiveStream::Msg</scope><name>aligned_buf</name></member>
+      <member refid="struct_live_stream_1_1_msg_1a782bc38b05b07b1c44c8212f75b26767" prot="public" virt="non-virtual"><scope>LiveStream::Msg</scope><name>event</name></member>
+      <member refid="struct_live_stream_1_1_msg_1a2a7af45e7407b91492225e9ce454287d" prot="public" virt="non-virtual"><scope>LiveStream::Msg</scope><name>Msg</name></member>
+      <member refid="struct_live_stream_1_1_msg_1aa297ed5577899e366b5e7c4632859c4d" prot="public" virt="non-virtual"><scope>LiveStream::Msg</scope><name>~Msg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

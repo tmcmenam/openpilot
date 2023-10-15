@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_encoder_info" kind="class"><name>EncoderInfo</name>
+    <member refid="class_encoder_info_1aa6e11f5339b16a8b466d29658b6d07c0" kind="variable"><name>publish_name</name></member>
+    <member refid="class_encoder_info_1a5ef45d193b501a1ee456c804c9de55fb" kind="variable"><name>filename</name></member>
+    <member refid="class_encoder_info_1af28c87112f4d697858dd3e3c53d2273c" kind="variable"><name>record</name></member>
+    <member refid="class_encoder_info_1ada202491970808f37831572479d5c8e1" kind="variable"><name>frame_width</name></member>
+    <member refid="class_encoder_info_1ab87097b044cf43f7f973bf2c60bbb1e2" kind="variable"><name>frame_height</name></member>
+    <member refid="class_encoder_info_1a974c001b49c02509235ee2b6d675eb94" kind="variable"><name>fps</name></member>
+    <member refid="class_encoder_info_1a5e6a69b0c1ebf97e102ae228104b9415" kind="variable"><name>bitrate</name></member>
+    <member refid="class_encoder_info_1ad76fa20880791b0ad1963847b9d01601" kind="variable"><name>encode_type</name></member>
+    <member refid="class_encoder_info_1a03d8e62da6db7916d0b2100f234cb685" kind="variable"><name>get_encode_data_func</name></member>
+    <member refid="class_encoder_info_1aa348fa6feef285151f253bdf7028141d" kind="variable"><name>set_encode_idx_func</name></member>
+    <member refid="class_encoder_info_1ad4214c4eea4ad3032a652a456d275da8" kind="variable"><name>init_encode_data_func</name></member>
+  </compound>
+  <compound refid="class_log_camera_info" kind="class"><name>LogCameraInfo</name>
+    <member refid="class_log_camera_info_1a69b303622e214f2b9298e688a3f0d7f1" kind="variable"><name>thread_name</name></member>
+    <member refid="class_log_camera_info_1aba94b8666a29dd92bfc5bb7a2b1292e4" kind="variable"><name>fps</name></member>
+    <member refid="class_log_camera_info_1a218046ddd8af72c06d4f863768ca5d9a" kind="variable"><name>type</name></member>
+    <member refid="class_log_camera_info_1aafcc0bb276b6a727e1ec5b720c77b6a1" kind="variable"><name>stream_type</name></member>
+    <member refid="class_log_camera_info_1a2420cfac133de03d1d593aaf380e8840" kind="variable"><name>encoder_infos</name></member>
+  </compound>
+  <compound refid="struct_logger_handle" kind="struct"><name>LoggerHandle</name>
+    <member refid="struct_logger_handle_1aefb558a28c1fa4c6330b9ae159f60f5b" kind="variable"><name>lock</name></member>
+    <member refid="struct_logger_handle_1a1205646dcda7894e722c2f99ca0e9f0c" kind="variable"><name>end_sentinel_type</name></member>
+    <member refid="struct_logger_handle_1acc98eef9103704831c65dc02f9bed1d8" kind="variable"><name>exit_signal</name></member>
+    <member refid="struct_logger_handle_1a63f297a3563b46881018b175fcc7c077" kind="variable"><name>refcnt</name></member>
+    <member refid="struct_logger_handle_1a4ffa2968467b883ca690aa7fb4208acb" kind="variable"><name>segment_path</name></member>
+    <member refid="struct_logger_handle_1a6ac889429ad084a2d07cd682cdc3a85f" kind="variable"><name>log_path</name></member>
+    <member refid="struct_logger_handle_1a30475da004232454c548412b0c4640c4" kind="variable"><name>qlog_path</name></member>
+    <member refid="struct_logger_handle_1ad8c9d1ca74afb2009580bb19a5f07f11" kind="variable"><name>lock_path</name></member>
+    <member refid="struct_logger_handle_1a2e6197dbc341c0715b277b26cb0ff6bc" kind="variable"><name>log</name></member>
+    <member refid="struct_logger_handle_1a416b236e0b4c95ad6c3381bdd69460c7" kind="variable"><name>q_log</name></member>
+  </compound>
+  <compound refid="struct_logger_state" kind="struct"><name>LoggerState</name>
+    <member refid="struct_logger_state_1a5a7ceccf4722d819510ea502c654e547" kind="variable"><name>lock</name></member>
+    <member refid="struct_logger_state_1a70703fe43268a10820d5bd6e04e2fc18" kind="variable"><name>part</name></member>
+    <member refid="struct_logger_state_1abe0ce645aebaf3f0bba00682ec1f5175" kind="variable"><name>init_data</name></member>
+    <member refid="struct_logger_state_1a766536cf2fd3a445216d5d7ca35bccd9" kind="variable"><name>route_name</name></member>
+    <member refid="struct_logger_state_1a55a3edef0dad4134c948076b2acfdfe0" kind="variable"><name>log_name</name></member>
+    <member refid="struct_logger_state_1a99c5f7b692701ac95199c993893cfa83" kind="variable"><name>has_qlog</name></member>
+    <member refid="struct_logger_state_1ab4c4309b8312c67b44886c8668b9cc3a" kind="variable"><name>handles</name></member>
+    <member refid="struct_logger_state_1a1a99941c775b96b9107a9c0c2fd8fb93" kind="variable"><name>cur_handle</name></member>
+  </compound>
+  <compound refid="class_raw_file" kind="class"><name>RawFile</name>
+    <member refid="class_raw_file_1a41527880e82906854ab76d2f62cf9e89" kind="variable"><name>file</name></member>
+    <member refid="class_raw_file_1a5ba419c2ec7c577a7e8424b8266cccd4" kind="function"><name>RawFile</name></member>
+    <member refid="class_raw_file_1a4b9944b7b1054e6db433b39c30e599c1" kind="function"><name>~RawFile</name></member>
+    <member refid="class_raw_file_1aeb678aefdf06204855109c5bffab50dc" kind="function"><name>write</name></member>
+    <member refid="class_raw_file_1a3beb392805e7d69fc17d237664c4d9df" kind="function"><name>write</name></member>
+  </compound>
+  <compound refid="class_video_writer" kind="class"><name>VideoWriter</name>
+    <member refid="class_video_writer_1aa1a4522057b23f3d998e4da218b30a52" kind="variable"><name>vid_path</name></member>
+    <member refid="class_video_writer_1a0cda816f11442611911fe4e9a1e9ea62" kind="variable"><name>lock_path</name></member>
+    <member refid="class_video_writer_1a376e8123a654f11b03e81d7d8bcc548d" kind="variable"><name>of</name></member>
+    <member refid="class_video_writer_1a46cb07653a1b0a72b956c3193c7a2144" kind="variable"><name>codec_ctx</name></member>
+    <member refid="class_video_writer_1a181004a6e477edafcbc329002866e229" kind="variable"><name>ofmt_ctx</name></member>
+    <member refid="class_video_writer_1a9df4b37fecaee2c813b8e761bb9e1d69" kind="variable"><name>out_stream</name></member>
+    <member refid="class_video_writer_1af8d4f4f06e2ea9933948105fe924d80e" kind="variable"><name>remuxing</name></member>
+    <member refid="class_video_writer_1a73a49405be421efcb50015d1c0f9f7e3" kind="function"><name>VideoWriter</name></member>
+    <member refid="class_video_writer_1a23191a1bb3e0951c2ae13b6d42577b9a" kind="function"><name>write</name></member>
+    <member refid="class_video_writer_1a9615c5b89442ad74ebe86dce2c6da154" kind="function"><name>~VideoWriter</name></member>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
+    <member refid="logger_8h_1a182955c82621a451ca975ae92d4d4a12" kind="define"><name>LOGGER_MAX_HANDLES</name></member>
+    <member refid="logger_8h_1ad6773aa0a9f14cdee351455ab280affb" kind="typedef"><name>SentinelType</name></member>
+    <member refid="logger_8h_1a7bcab378b94dc005c9ec33ed43aa7b3b" kind="typedef"><name>LoggerHandle</name></member>
+    <member refid="logger_8h_1af62d8dafd3f598c031413768b0179606" kind="typedef"><name>LoggerState</name></member>
+    <member refid="logger_8h_1af40ffdb33b836faae6976ad163be1fad" kind="function"><name>logger_build_init_data</name></member>
+    <member refid="logger_8h_1ac3b799a88394ef771050a70911e7b59d" kind="function"><name>logger_get_route_name</name></member>
+    <member refid="logger_8h_1a63da93893711e5ecb617acfe72182796" kind="function"><name>logger_init</name></member>
+    <member refid="logger_8h_1a099cc418eeeae3bbeb7223dc9269da80" kind="function"><name>logger_next</name></member>
+    <member refid="logger_8h_1af59d9c9ccd2c09011e9db65ef96b08e7" kind="function"><name>logger_get_handle</name></member>
+    <member refid="logger_8h_1a22cf7466de2ac7688ff4e2629b470af1" kind="function"><name>logger_close</name></member>
+    <member refid="logger_8h_1a8273c1b66f23fdd39b3a35b113d81a2a" kind="function"><name>logger_log</name></member>
+    <member refid="logger_8h_1a3fb14d26e4d437ea9538ecd46c9f16f4" kind="function"><name>lh_log</name></member>
+    <member refid="logger_8h_1a9f6cf2cf32a3de7323fc293645df95ac" kind="function"><name>lh_close</name></member>
+  </compound>
+  <compound refid="loggerd_8h" kind="file"><name>loggerd.h</name>
+    <member refid="loggerd_8h_1a2475aafb75a03a6d1dc170f3b840331f" kind="define"><name>NO_CAMERA_PATIENCE</name></member>
+    <member refid="loggerd_8h_1ac2f2a17a6a47b62c5d9b228a9af8db4c" kind="define"><name>INIT_ENCODE_FUNCTIONS</name></member>
+    <member refid="loggerd_8h_1a32e1300c170ae918b7102b472832a777" kind="variable"><name>MAIN_FPS</name></member>
+    <member refid="loggerd_8h_1a8e1ad04e860e371760d66b28ea52c14a" kind="variable"><name>MAIN_BITRATE</name></member>
+    <member refid="loggerd_8h_1ab33c6c7c9282649edd530060cbaf8bca" kind="variable"><name>LIVESTREAM_BITRATE</name></member>
+    <member refid="loggerd_8h_1a8a671e874d49007182992cd8b4b5c932" kind="variable"><name>QCAM_BITRATE</name></member>
+    <member refid="loggerd_8h_1a0714a31125da927c043457899aaf6b6d" kind="variable"><name>LOGGERD_TEST</name></member>
+    <member refid="loggerd_8h_1a42698f672f2ae5437baa1d775b21d2fc" kind="variable"><name>SEGMENT_LENGTH</name></member>
+    <member refid="loggerd_8h_1a1c649a74c23418268fc20c12086e11d1" kind="variable"><name>PRESERVE_ATTR_NAME</name></member>
+    <member refid="loggerd_8h_1aadd9ab9c65ca4687807ee768e8585593" kind="variable"><name>PRESERVE_ATTR_VALUE</name></member>
+    <member refid="loggerd_8h_1a35f590d24c3fe7152fae636f86a4daeb" kind="variable"><name>main_road_encoder_info</name></member>
+    <member refid="loggerd_8h_1a0d59dec6359dc3ae1ea5c3ed746a2c07" kind="variable"><name>main_wide_road_encoder_info</name></member>
+    <member refid="loggerd_8h_1adc35af21b53fc7c15efa58ad97bf0235" kind="variable"><name>main_driver_encoder_info</name></member>
+    <member refid="loggerd_8h_1a0563286535f61a2919729ab7c3100589" kind="variable"><name>stream_road_encoder_info</name></member>
+    <member refid="loggerd_8h_1a4684fd980ef6b2619784210be83f1b7a" kind="variable"><name>stream_wide_road_encoder_info</name></member>
+    <member refid="loggerd_8h_1a705df80ae3abd1bd97dccd947475f3f5" kind="variable"><name>stream_driver_encoder_info</name></member>
+    <member refid="loggerd_8h_1a99965663ba0544b23e1bb2f78c3dc49e" kind="variable"><name>qcam_encoder_info</name></member>
+    <member refid="loggerd_8h_1a644ee9be862cd41e5f3432350e96e0d2" kind="variable"><name>road_camera_info</name></member>
+    <member refid="loggerd_8h_1a5743c1efdc08608fa26151ac0c5db23a" kind="variable"><name>wide_road_camera_info</name></member>
+    <member refid="loggerd_8h_1adc914be6ea8f38135364af089b02fb99" kind="variable"><name>driver_camera_info</name></member>
+    <member refid="loggerd_8h_1a2876281b05a9ae4a00490b2eb1129700" kind="variable"><name>stream_road_camera_info</name></member>
+    <member refid="loggerd_8h_1a3933a9386cf2541be5a8723dab2683f3" kind="variable"><name>stream_wide_road_camera_info</name></member>
+    <member refid="loggerd_8h_1a5f1f72dfce1d89f8a1294fa7093d9ae2" kind="variable"><name>stream_driver_camera_info</name></member>
+    <member refid="loggerd_8h_1aec60e296cab1228846906178e5e55919" kind="variable"><name>cameras_logged</name></member>
+    <member refid="loggerd_8h_1ab5091925bd1a2ec8d3eafcdae9920b08" kind="variable"><name>stream_cameras_logged</name></member>
+  </compound>
+  <compound refid="video__writer_8h" kind="file"><name>video_writer.h</name>
+  </compound>
+  <compound refid="dir_42b7c2576e29583b7687210b6682aac4" kind="dir"><name>/tmp/openpilot/system/loggerd</name>
+  </compound>
+  <compound refid="dir_e8522150b400a43ebfdbd1fed060b8e2" kind="dir"><name>/tmp/openpilot/system</name>
+  </compound>
+</doxygenindex>

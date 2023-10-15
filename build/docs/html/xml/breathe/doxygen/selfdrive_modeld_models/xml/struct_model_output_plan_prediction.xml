@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_plan_prediction" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputPlanPrediction</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_plan_prediction_1a9a27fd8d7c481f2b03764b33f6e5c8be" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_plan_element" kindref="compound">ModelOutputPlanElement</ref>, TRAJECTORY_SIZE &gt;</type>
+        <definition>std::array&lt;ModelOutputPlanElement, TRAJECTORY_SIZE&gt; ModelOutputPlanPrediction::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="60" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_prediction_1ab54e942862aa6bfd77bbc1bb17159ebf" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_plan_element" kindref="compound">ModelOutputPlanElement</ref>, TRAJECTORY_SIZE &gt;</type>
+        <definition>std::array&lt;ModelOutputPlanElement, TRAJECTORY_SIZE&gt; ModelOutputPlanPrediction::std</definition>
+        <argsstring></argsstring>
+        <name>std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="61" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_prediction_1aeed863ad08bace64be444cf1c55e4380" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputPlanPrediction::prob</definition>
+        <argsstring></argsstring>
+        <name>prob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="62" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="59" column="32" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="59" bodyend="63"/>
+    <listofallmembers>
+      <member refid="struct_model_output_plan_prediction_1a9a27fd8d7c481f2b03764b33f6e5c8be" prot="public" virt="non-virtual"><scope>ModelOutputPlanPrediction</scope><name>mean</name></member>
+      <member refid="struct_model_output_plan_prediction_1aeed863ad08bace64be444cf1c55e4380" prot="public" virt="non-virtual"><scope>ModelOutputPlanPrediction</scope><name>prob</name></member>
+      <member refid="struct_model_output_plan_prediction_1ab54e942862aa6bfd77bbc1bb17159ebf" prot="public" virt="non-virtual"><scope>ModelOutputPlanPrediction</scope><name>std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

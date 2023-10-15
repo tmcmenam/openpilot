@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_disengage_prob" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputDisengageProb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1a0510fe3bae01d418cfaded50a6ede0b0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::gas_disengage</definition>
+        <argsstring></argsstring>
+        <name>gas_disengage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="185" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1a382f5d7a5c5eff5f828d464b2d825ed3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::brake_disengage</definition>
+        <argsstring></argsstring>
+        <name>brake_disengage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="186" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1a8772a6cd44875055f56bf6177c1b3a8b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::steer_override</definition>
+        <argsstring></argsstring>
+        <name>steer_override</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="187" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1aeffc80b44a7b8e15a75acaa6350f371a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::brake_3ms2</definition>
+        <argsstring></argsstring>
+        <name>brake_3ms2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="188" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1ab52911efcb3d7cdfa78849659fc3ec17" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::brake_4ms2</definition>
+        <argsstring></argsstring>
+        <name>brake_4ms2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="189" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1afb7f15c27a5ebe2588b1ca66f4d7b504" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::brake_5ms2</definition>
+        <argsstring></argsstring>
+        <name>brake_5ms2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="190" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_disengage_prob_1a4e00e4559e04460e7d0feaeba1f089a3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ModelOutputDisengageProb::gas_pressed</definition>
+        <argsstring></argsstring>
+        <name>gas_pressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="191" column="9" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="184" column="31" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="184" bodyend="192"/>
+    <listofallmembers>
+      <member refid="struct_model_output_disengage_prob_1aeffc80b44a7b8e15a75acaa6350f371a" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>brake_3ms2</name></member>
+      <member refid="struct_model_output_disengage_prob_1ab52911efcb3d7cdfa78849659fc3ec17" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>brake_4ms2</name></member>
+      <member refid="struct_model_output_disengage_prob_1afb7f15c27a5ebe2588b1ca66f4d7b504" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>brake_5ms2</name></member>
+      <member refid="struct_model_output_disengage_prob_1a382f5d7a5c5eff5f828d464b2d825ed3" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>brake_disengage</name></member>
+      <member refid="struct_model_output_disengage_prob_1a0510fe3bae01d418cfaded50a6ede0b0" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>gas_disengage</name></member>
+      <member refid="struct_model_output_disengage_prob_1a4e00e4559e04460e7d0feaeba1f089a3" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>gas_pressed</name></member>
+      <member refid="struct_model_output_disengage_prob_1a8772a6cd44875055f56bf6177c1b3a8b" prot="public" virt="non-virtual"><scope>ModelOutputDisengageProb</scope><name>steer_override</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

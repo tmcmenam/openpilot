@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_edgess_x_y" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputEdgessXY</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_edgess_x_y_1ad2df723e1927a9402536d55306331f54" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref>, TRAJECTORY_SIZE &gt;</type>
+        <definition>std::array&lt;ModelOutputYZ, TRAJECTORY_SIZE&gt; ModelOutputEdgessXY::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="111" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_edgess_x_y_1aad07f894c4adfbfd791e4f01dc2074eb" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref>, TRAJECTORY_SIZE &gt;</type>
+        <definition>std::array&lt;ModelOutputYZ, TRAJECTORY_SIZE&gt; ModelOutputEdgessXY::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="112" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="110" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="110" bodyend="113"/>
+    <listofallmembers>
+      <member refid="struct_model_output_edgess_x_y_1ad2df723e1927a9402536d55306331f54" prot="public" virt="non-virtual"><scope>ModelOutputEdgessXY</scope><name>left</name></member>
+      <member refid="struct_model_output_edgess_x_y_1aad07f894c4adfbfd791e4f01dc2074eb" prot="public" virt="non-virtual"><scope>ModelOutputEdgessXY</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

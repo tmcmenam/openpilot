@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_log_reader" kind="class" language="C++" prot="public">
+    <compoundname>LogReader</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_log_reader_1a280fd85f40fbbe17aeef80b94b41590a" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_event" kindref="compound">Event</ref> * &gt;</type>
+        <definition>std::vector&lt;Event*&gt; LogReader::events</definition>
+        <argsstring></argsstring>
+        <name>events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="61" column="15" bodyfile="/tmp/openpilot/tools/replay/logreader.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_reader_1a17ce2c35071114951954b3de0239d320" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LogReader::raw_</definition>
+        <argsstring></argsstring>
+        <name>raw_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="65" column="15" bodyfile="/tmp/openpilot/tools/replay/logreader.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_reader_1a9fc9e340558852c8a0b20fe77883fcc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogReader::LogReader</definition>
+        <argsstring>(size_t memory_pool_block_size=DEFAULT_EVENT_MEMORY_POOL_BLOCK_SIZE)</argsstring>
+        <name>LogReader</name>
+        <param>
+          <type>size_t</type>
+          <declname>memory_pool_block_size</declname>
+          <defval>DEFAULT_EVENT_MEMORY_POOL_BLOCK_SIZE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="56" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_reader_1a9f1c86665bd26466d0d2c61682bb2f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogReader::~LogReader</definition>
+        <argsstring>()</argsstring>
+        <name>~LogReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="57" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_reader_1a89fe080232d85c34ec51cb10bcb5be2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogReader::load</definition>
+        <argsstring>(const std::string &amp;url, std::atomic&lt; bool &gt; *abort=nullptr, const std::set&lt; cereal::Event::Which &gt; &amp;allow={}, bool local_cache=false, int chunk_size=-1, int retries=0)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>std::atomic&lt; bool &gt; *</type>
+          <declname>abort</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const std::set&lt; cereal::Event::Which &gt; &amp;</type>
+          <declname>allow</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>local_cache</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>chunk_size</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>retries</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="58" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_reader_1a28ff3c5b292626f5c08e5100efaacd86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogReader::load</definition>
+        <argsstring>(const std::byte *data, size_t size, std::atomic&lt; bool &gt; *abort=nullptr)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::byte *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::atomic&lt; bool &gt; *</type>
+          <declname>abort</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="60" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_log_reader_1a3ff574787cc59a904277ce32e4c95af3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogReader::parse</definition>
+        <argsstring>(const std::set&lt; cereal::Event::Which &gt; &amp;allow, std::atomic&lt; bool &gt; *abort)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const std::set&lt; cereal::Event::Which &gt; &amp;</type>
+          <declname>allow</declname>
+        </param>
+        <param>
+          <type>std::atomic&lt; bool &gt; *</type>
+          <declname>abort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/replay/logreader.h" line="64" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/tools/replay/logreader.h" line="54" column="16" bodyfile="/tmp/openpilot/tools/replay/logreader.h" bodystart="54" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_log_reader_1a280fd85f40fbbe17aeef80b94b41590a" prot="public" virt="non-virtual"><scope>LogReader</scope><name>events</name></member>
+      <member refid="class_log_reader_1a89fe080232d85c34ec51cb10bcb5be2d" prot="public" virt="non-virtual"><scope>LogReader</scope><name>load</name></member>
+      <member refid="class_log_reader_1a28ff3c5b292626f5c08e5100efaacd86" prot="public" virt="non-virtual"><scope>LogReader</scope><name>load</name></member>
+      <member refid="class_log_reader_1a9fc9e340558852c8a0b20fe77883fcc8" prot="public" virt="non-virtual"><scope>LogReader</scope><name>LogReader</name></member>
+      <member refid="class_log_reader_1a3ff574787cc59a904277ce32e4c95af3" prot="private" virt="non-virtual"><scope>LogReader</scope><name>parse</name></member>
+      <member refid="class_log_reader_1a17ce2c35071114951954b3de0239d320" prot="private" virt="non-virtual"><scope>LogReader</scope><name>raw_</name></member>
+      <member refid="class_log_reader_1a9f1c86665bd26466d0d2c61682bb2f4f" prot="public" virt="non-virtual"><scope>LogReader</scope><name>~LogReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

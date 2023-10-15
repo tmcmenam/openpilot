@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutput</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_1a94b6e9f34ed1024cb63939d63518b6a9" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_plans" kindref="compound">ModelOutputPlans</ref></type>
+        <definition>const ModelOutputPlans ModelOutput::plans</definition>
+        <argsstring></argsstring>
+        <name>plans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="235" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1a44b3ec50fef60240f71c504fae084b23" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_lane_lines" kindref="compound">ModelOutputLaneLines</ref></type>
+        <definition>const ModelOutputLaneLines ModelOutput::lane_lines</definition>
+        <argsstring></argsstring>
+        <name>lane_lines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="236" column="30" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1af41dcdc3ba546b924eb86f9af98c3eff" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_road_edges" kindref="compound">ModelOutputRoadEdges</ref></type>
+        <definition>const ModelOutputRoadEdges ModelOutput::road_edges</definition>
+        <argsstring></argsstring>
+        <name>road_edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="237" column="30" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1aedde9ef952c91f4e9a853c18e2d6a6c1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_leads" kindref="compound">ModelOutputLeads</ref></type>
+        <definition>const ModelOutputLeads ModelOutput::leads</definition>
+        <argsstring></argsstring>
+        <name>leads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="238" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1a0509b2d45148ca927668b0db06d7f628" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_meta" kindref="compound">ModelOutputMeta</ref></type>
+        <definition>const ModelOutputMeta ModelOutput::meta</definition>
+        <argsstring></argsstring>
+        <name>meta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="239" column="25" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1ad2d9a510a3068a8d69dafca695368d44" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_pose" kindref="compound">ModelOutputPose</ref></type>
+        <definition>const ModelOutputPose ModelOutput::pose</definition>
+        <argsstring></argsstring>
+        <name>pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="240" column="25" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1ac9740400a833667adac95a462e1513b1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_wide_from_device_euler" kindref="compound">ModelOutputWideFromDeviceEuler</ref></type>
+        <definition>const ModelOutputWideFromDeviceEuler ModelOutput::wide_from_device_euler</definition>
+        <argsstring></argsstring>
+        <name>wide_from_device_euler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="241" column="40" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1a398272c0585e5acf22aec75b343e1375" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_temporal_pose" kindref="compound">ModelOutputTemporalPose</ref></type>
+        <definition>const ModelOutputTemporalPose ModelOutput::temporal_pose</definition>
+        <argsstring></argsstring>
+        <name>temporal_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="242" column="33" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_1ab1dccfcfecafa3976057ec9adcaae6e5" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_model_output_road_transform" kindref="compound">ModelOutputRoadTransform</ref></type>
+        <definition>const ModelOutputRoadTransform ModelOutput::road_transform</definition>
+        <argsstring></argsstring>
+        <name>road_transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="243" column="34" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>ModelOutputPose</label>
+        <link refid="struct_model_output_pose"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>velocity_std</edgelabel>
+          <edgelabel>velocity_mean</edgelabel>
+          <edgelabel>rotation_std</edgelabel>
+          <edgelabel>rotation_mean</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ModelOutputLinesProb</label>
+        <link refid="struct_model_output_lines_prob"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>right_far</edgelabel>
+          <edgelabel>left_far</edgelabel>
+          <edgelabel>right_near</edgelabel>
+          <edgelabel>left_near</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ModelOutputLinesXY</label>
+        <link refid="struct_model_output_lines_x_y"/>
+      </node>
+      <node id="15">
+        <label>ModelOutputRoadEdges</label>
+        <link refid="struct_model_output_road_edges"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>mean</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ModelOutputWideFromDeviceEuler</label>
+        <link refid="struct_model_output_wide_from_device_euler"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mean</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ModelOutputDesireProb</label>
+        <link refid="struct_model_output_desire_prob"/>
+      </node>
+      <node id="10">
+        <label>ModelOutputRoadTransform</label>
+        <link refid="struct_model_output_road_transform"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>position_mean</edgelabel>
+          <edgelabel>rotation_std</edgelabel>
+          <edgelabel>rotation_mean</edgelabel>
+          <edgelabel>position_std</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ModelOutputTemporalPose</label>
+        <link refid="struct_model_output_temporal_pose"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>velocity_std</edgelabel>
+          <edgelabel>velocity_mean</edgelabel>
+          <edgelabel>rotation_std</edgelabel>
+          <edgelabel>rotation_mean</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ModelOutputEdgessXY</label>
+        <link refid="struct_model_output_edgess_x_y"/>
+      </node>
+      <node id="9">
+        <label>ModelOutputLeads</label>
+        <link refid="struct_model_output_leads"/>
+      </node>
+      <node id="7">
+        <label>ModelOutputPlans</label>
+        <link refid="struct_model_output_plans"/>
+      </node>
+      <node id="11">
+        <label>ModelOutputLaneLines</label>
+        <link refid="struct_model_output_lane_lines"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>prob</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>mean</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ModelOutputLineProbVal</label>
+        <link refid="struct_model_output_line_prob_val"/>
+      </node>
+      <node id="2">
+        <label>ModelOutputMeta</label>
+        <link refid="struct_model_output_meta"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>desire_state_prob</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ModelOutputXYZ</label>
+        <link refid="struct_model_output_x_y_z"/>
+      </node>
+      <node id="1">
+        <label>ModelOutput</label>
+        <link refid="struct_model_output"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>wide_from_device_euler</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pose</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>plans</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>temporal_pose</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>leads</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>road_transform</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>lane_lines</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>road_edges</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="234" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="234" bodyend="244"/>
+    <listofallmembers>
+      <member refid="struct_model_output_1a44b3ec50fef60240f71c504fae084b23" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>lane_lines</name></member>
+      <member refid="struct_model_output_1aedde9ef952c91f4e9a853c18e2d6a6c1" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>leads</name></member>
+      <member refid="struct_model_output_1a0509b2d45148ca927668b0db06d7f628" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>meta</name></member>
+      <member refid="struct_model_output_1a94b6e9f34ed1024cb63939d63518b6a9" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>plans</name></member>
+      <member refid="struct_model_output_1ad2d9a510a3068a8d69dafca695368d44" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>pose</name></member>
+      <member refid="struct_model_output_1af41dcdc3ba546b924eb86f9af98c3eff" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>road_edges</name></member>
+      <member refid="struct_model_output_1ab1dccfcfecafa3976057ec9adcaae6e5" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>road_transform</name></member>
+      <member refid="struct_model_output_1a398272c0585e5acf22aec75b343e1375" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>temporal_pose</name></member>
+      <member refid="struct_model_output_1ac9740400a833667adac95a462e1513b1" prot="public" virt="non-virtual"><scope>ModelOutput</scope><name>wide_from_device_euler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

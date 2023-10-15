@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_lead_prediction" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputLeadPrediction</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_lead_prediction_1afba2782704bf96d7d67426e2953d7a14" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_lead_element" kindref="compound">ModelOutputLeadElement</ref>, LEAD_TRAJ_LEN &gt;</type>
+        <definition>std::array&lt;ModelOutputLeadElement, LEAD_TRAJ_LEN&gt; ModelOutputLeadPrediction::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="131" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_lead_prediction_1a779dfccff251d9e1477ee7d530272682" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_lead_element" kindref="compound">ModelOutputLeadElement</ref>, LEAD_TRAJ_LEN &gt;</type>
+        <definition>std::array&lt;ModelOutputLeadElement, LEAD_TRAJ_LEN&gt; ModelOutputLeadPrediction::std</definition>
+        <argsstring></argsstring>
+        <name>std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="132" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_lead_prediction_1af16709e191ae81430df94f024aceb27d" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, LEAD_MHP_SELECTION &gt;</type>
+        <definition>std::array&lt;float, LEAD_MHP_SELECTION&gt; ModelOutputLeadPrediction::prob</definition>
+        <argsstring></argsstring>
+        <name>prob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="133" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="130" column="32" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="130" bodyend="134"/>
+    <listofallmembers>
+      <member refid="struct_model_output_lead_prediction_1afba2782704bf96d7d67426e2953d7a14" prot="public" virt="non-virtual"><scope>ModelOutputLeadPrediction</scope><name>mean</name></member>
+      <member refid="struct_model_output_lead_prediction_1af16709e191ae81430df94f024aceb27d" prot="public" virt="non-virtual"><scope>ModelOutputLeadPrediction</scope><name>prob</name></member>
+      <member refid="struct_model_output_lead_prediction_1a779dfccff251d9e1477ee7d530272682" prot="public" virt="non-virtual"><scope>ModelOutputLeadPrediction</scope><name>std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

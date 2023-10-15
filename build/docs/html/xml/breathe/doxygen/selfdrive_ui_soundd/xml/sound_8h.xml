@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sound_8h" kind="file" language="C++">
+    <compoundname>sound.h</compoundname>
+    <includes local="no">tuple</includes>
+    <includes local="no">QMap</includes>
+    <includes local="no">QSoundEffect</includes>
+    <includes local="no">QString</includes>
+    <includes local="yes">system/hardware/hw.h</includes>
+    <includes local="yes">selfdrive/ui/ui.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>QMap</label>
+      </node>
+      <node id="7">
+        <label>selfdrive/ui/ui.h</label>
+      </node>
+      <node id="1">
+        <label>/tmp/openpilot/selfdrive/ui/soundd/sound.h</label>
+        <link refid="sound_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tuple</label>
+      </node>
+      <node id="4">
+        <label>QSoundEffect</label>
+      </node>
+      <node id="5">
+        <label>QString</label>
+      </node>
+      <node id="6">
+        <label>system/hardware/hw.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_sound" prot="public">Sound</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sound_8h_1a6441391c27402a292e549ee344a1fdda" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float MAX_VOLUME</definition>
+        <argsstring></argsstring>
+        <name>MAX_VOLUME</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/soundd/sound.h" line="13" column="13" bodyfile="/tmp/openpilot/selfdrive/ui/soundd/sound.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sound_8h_1a2c56e08a5099cca24755843f8e7f95ee" prot="public" static="no" mutable="no">
+        <type>const std::tuple&lt; AudibleAlert, QString, int, float &gt;</type>
+        <definition>const std::tuple&lt;AudibleAlert, QString, int, float&gt; sound_list[]</definition>
+        <argsstring>[]</argsstring>
+        <name>sound_list</name>
+        <initializer>= {
+  
+  {AudibleAlert::ENGAGE, &quot;engage.wav&quot;, 0, MAX_VOLUME},
+  {AudibleAlert::DISENGAGE, &quot;disengage.wav&quot;, 0, MAX_VOLUME},
+  {AudibleAlert::REFUSE, &quot;refuse.wav&quot;, 0, MAX_VOLUME},
+
+  {AudibleAlert::PROMPT, &quot;prompt.wav&quot;, 0, MAX_VOLUME},
+  {AudibleAlert::PROMPT_REPEAT, &quot;prompt.wav&quot;, QSoundEffect::Infinite, MAX_VOLUME},
+  {AudibleAlert::PROMPT_DISTRACTED, &quot;prompt_distracted.wav&quot;, QSoundEffect::Infinite, MAX_VOLUME},
+
+  {AudibleAlert::WARNING_SOFT, &quot;warning_soft.wav&quot;, QSoundEffect::Infinite, MAX_VOLUME},
+  {AudibleAlert::WARNING_IMMEDIATE, &quot;warning_immediate.wav&quot;, QSoundEffect::Infinite, MAX_VOLUME},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/ui/soundd/sound.h" line="15" column="18" bodyfile="/tmp/openpilot/selfdrive/ui/soundd/sound.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMap&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QSoundEffect&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;system/hardware/hw.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;selfdrive/ui/ui.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>MAX_VOLUME<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::tuple&lt;AudibleAlert,<sp/>QString,<sp/>int,<sp/>float&gt;<sp/>sound_list[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>AudibleAlert,<sp/>file<sp/>name,<sp/>loop<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>{AudibleAlert::ENGAGE,<sp/></highlight><highlight class="stringliteral">&quot;engage.wav&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>{AudibleAlert::DISENGAGE,<sp/></highlight><highlight class="stringliteral">&quot;disengage.wav&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>{AudibleAlert::REFUSE,<sp/></highlight><highlight class="stringliteral">&quot;refuse.wav&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>{AudibleAlert::PROMPT,<sp/></highlight><highlight class="stringliteral">&quot;prompt.wav&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>{AudibleAlert::PROMPT_REPEAT,<sp/></highlight><highlight class="stringliteral">&quot;prompt.wav&quot;</highlight><highlight class="normal">,<sp/>QSoundEffect::Infinite,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>{AudibleAlert::PROMPT_DISTRACTED,<sp/></highlight><highlight class="stringliteral">&quot;prompt_distracted.wav&quot;</highlight><highlight class="normal">,<sp/>QSoundEffect::Infinite,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>{AudibleAlert::WARNING_SOFT,<sp/></highlight><highlight class="stringliteral">&quot;warning_soft.wav&quot;</highlight><highlight class="normal">,<sp/>QSoundEffect::Infinite,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{AudibleAlert::WARNING_IMMEDIATE,<sp/></highlight><highlight class="stringliteral">&quot;warning_immediate.wav&quot;</highlight><highlight class="normal">,<sp/>QSoundEffect::Infinite,<sp/>MAX_VOLUME},</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_sound" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sound" kindref="compound">Sound</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_sound" kindref="compound">Sound</ref>(QObject<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setAlert(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Alert<sp/>&amp;alert);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>SubMaster<sp/>sm;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Alert<sp/>current_alert<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>QMap&lt;AudibleAlert,<sp/>QPair&lt;QSoundEffect<sp/>*,<sp/>int&gt;&gt;<sp/>sounds;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_volume<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/openpilot/selfdrive/ui/soundd/sound.h"/>
+  </compounddef>
+</doxygen>

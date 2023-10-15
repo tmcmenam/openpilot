@@ -1,0 +1,788 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="driving_8h" kind="file" language="C++">
+    <compoundname>driving.h</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">memory</includes>
+    <includes local="yes">cereal/messaging/messaging.h</includes>
+    <includes local="yes">common/modeldata.h</includes>
+    <includes local="yes">common/util.h</includes>
+    <includes refid="commonmodel_8h" local="yes">selfdrive/modeld/models/commonmodel.h</includes>
+    <includes local="yes">selfdrive/modeld/runners/run.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>selfdrive/modeld/transforms/loadyuv.h</label>
+      </node>
+      <node id="7">
+        <label>selfdrive/modeld/models/commonmodel.h</label>
+        <link refid="commonmodel_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>selfdrive/modeld/transforms/transform.h</label>
+      </node>
+      <node id="6">
+        <label>common/util.h</label>
+      </node>
+      <node id="8">
+        <label>cfloat</label>
+      </node>
+      <node id="10">
+        <label>CL/cl.h</label>
+      </node>
+      <node id="1">
+        <label>/tmp/openpilot/selfdrive/modeld/models/driving.h</label>
+        <link refid="driving_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cereal/messaging/messaging.h</label>
+      </node>
+      <node id="5">
+        <label>common/modeldata.h</label>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="14">
+        <label>selfdrive/modeld/runners/run.h</label>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="11">
+        <label>common/mat.h</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_model_output_x_y_z" prot="public">ModelOutputXYZ</innerclass>
+    <innerclass refid="struct_model_output_y_z" prot="public">ModelOutputYZ</innerclass>
+    <innerclass refid="struct_model_output_plan_element" prot="public">ModelOutputPlanElement</innerclass>
+    <innerclass refid="struct_model_output_plan_prediction" prot="public">ModelOutputPlanPrediction</innerclass>
+    <innerclass refid="struct_model_output_plans" prot="public">ModelOutputPlans</innerclass>
+    <innerclass refid="struct_model_output_lines_x_y" prot="public">ModelOutputLinesXY</innerclass>
+    <innerclass refid="struct_model_output_line_prob_val" prot="public">ModelOutputLineProbVal</innerclass>
+    <innerclass refid="struct_model_output_lines_prob" prot="public">ModelOutputLinesProb</innerclass>
+    <innerclass refid="struct_model_output_lane_lines" prot="public">ModelOutputLaneLines</innerclass>
+    <innerclass refid="struct_model_output_edgess_x_y" prot="public">ModelOutputEdgessXY</innerclass>
+    <innerclass refid="struct_model_output_road_edges" prot="public">ModelOutputRoadEdges</innerclass>
+    <innerclass refid="struct_model_output_lead_element" prot="public">ModelOutputLeadElement</innerclass>
+    <innerclass refid="struct_model_output_lead_prediction" prot="public">ModelOutputLeadPrediction</innerclass>
+    <innerclass refid="struct_model_output_leads" prot="public">ModelOutputLeads</innerclass>
+    <innerclass refid="struct_model_output_pose" prot="public">ModelOutputPose</innerclass>
+    <innerclass refid="struct_model_output_wide_from_device_euler" prot="public">ModelOutputWideFromDeviceEuler</innerclass>
+    <innerclass refid="struct_model_output_temporal_pose" prot="public">ModelOutputTemporalPose</innerclass>
+    <innerclass refid="struct_model_output_road_transform" prot="public">ModelOutputRoadTransform</innerclass>
+    <innerclass refid="struct_model_output_disengage_prob" prot="public">ModelOutputDisengageProb</innerclass>
+    <innerclass refid="struct_model_output_blinker_prob" prot="public">ModelOutputBlinkerProb</innerclass>
+    <innerclass refid="struct_model_output_desire_prob" prot="public">ModelOutputDesireProb</innerclass>
+    <innerclass refid="struct_model_output_meta" prot="public">ModelOutputMeta</innerclass>
+    <innerclass refid="struct_model_output_features" prot="public">ModelOutputFeatures</innerclass>
+    <innerclass refid="struct_model_output" prot="public">ModelOutput</innerclass>
+    <innerclass refid="struct_publish_state" prot="public">PublishState</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="driving_8h_1a3a2fb819050da016e7c8bb9603d4e426" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int FEATURE_LEN</definition>
+        <argsstring></argsstring>
+        <name>FEATURE_LEN</name>
+        <initializer>= 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="12" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a7cd0698132b79e2d80a46da1c8258c73" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int HISTORY_BUFFER_LEN</definition>
+        <argsstring></argsstring>
+        <name>HISTORY_BUFFER_LEN</name>
+        <initializer>= 99</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="13" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a65f39695aac807781d5dcb442211eeea" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int DESIRE_LEN</definition>
+        <argsstring></argsstring>
+        <name>DESIRE_LEN</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="14" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a602926b511b1633797c16f2cdec6a042" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int DESIRE_PRED_LEN</definition>
+        <argsstring></argsstring>
+        <name>DESIRE_PRED_LEN</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="15" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1affe09a24437a279da346a235d4f873d7" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int TRAFFIC_CONVENTION_LEN</definition>
+        <argsstring></argsstring>
+        <name>TRAFFIC_CONVENTION_LEN</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="16" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1abcdc6610f894532e3533254480181e40" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int NAV_FEATURE_LEN</definition>
+        <argsstring></argsstring>
+        <name>NAV_FEATURE_LEN</name>
+        <initializer>= 256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="17" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a77be4f471a5e97e597f210db6022b122" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int NAV_INSTRUCTION_LEN</definition>
+        <argsstring></argsstring>
+        <name>NAV_INSTRUCTION_LEN</name>
+        <initializer>= 150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="18" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1afa7e01d1902fb962f2786c1fcb9cc72b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int DRIVING_STYLE_LEN</definition>
+        <argsstring></argsstring>
+        <name>DRIVING_STYLE_LEN</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="19" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1ae53433015395f81da056868eda0d4190" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int MODEL_FREQ</definition>
+        <argsstring></argsstring>
+        <name>MODEL_FREQ</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="20" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1aa415051f4f71e64283d79b51ba8d5ab9" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int DISENGAGE_LEN</definition>
+        <argsstring></argsstring>
+        <name>DISENGAGE_LEN</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="22" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a9d575f400ed54ebdfe16419b3f7e7714" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int BLINKER_LEN</definition>
+        <argsstring></argsstring>
+        <name>BLINKER_LEN</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="23" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1afeae381303f30a52b04629550864e56a" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int META_STRIDE</definition>
+        <argsstring></argsstring>
+        <name>META_STRIDE</name>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="24" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1aa80dbf31ff0380db7898bd1707ee6af1" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int PLAN_MHP_N</definition>
+        <argsstring></argsstring>
+        <name>PLAN_MHP_N</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="26" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1acccd24d2a6b4dfd06c964516c26709f3" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int LEAD_MHP_N</definition>
+        <argsstring></argsstring>
+        <name>LEAD_MHP_N</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="27" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1aa8a520f37539afd835621df908a6f918" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int LEAD_TRAJ_LEN</definition>
+        <argsstring></argsstring>
+        <name>LEAD_TRAJ_LEN</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="28" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1ae6adf1106de1e9ac11876ca75f87777b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int LEAD_MHP_SELECTION</definition>
+        <argsstring></argsstring>
+        <name>LEAD_MHP_SELECTION</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="29" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a1d89e6e48b198e555223e83b66897db2" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int PAD_SIZE</definition>
+        <argsstring></argsstring>
+        <name>PAD_SIZE</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="31" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a0fa7fe14b7016aa08f56caa253356139" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float FCW_THRESHOLD_5MS2_HIGH</definition>
+        <argsstring></argsstring>
+        <name>FCW_THRESHOLD_5MS2_HIGH</name>
+        <initializer>= 0.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="33" column="17" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a1a1152852d13ab11daa41ff467cf8773" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float FCW_THRESHOLD_5MS2_LOW</definition>
+        <argsstring></argsstring>
+        <name>FCW_THRESHOLD_5MS2_LOW</name>
+        <initializer>= 0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="34" column="17" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a494d8a9e6049b624afbb472adbab340d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float FCW_THRESHOLD_3MS2</definition>
+        <argsstring></argsstring>
+        <name>FCW_THRESHOLD_3MS2</name>
+        <initializer>= 0.7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="35" column="17" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1a5c4d2295d6d0c6d03360caf98ebb116f" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int OUTPUT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>OUTPUT_SIZE</name>
+        <initializer>= sizeof(<ref refid="struct_model_output" kindref="compound">ModelOutput</ref>) / sizeof(float)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="246" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="driving_8h_1affb5e99e5554c8f9749c973aca4e6174" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int NET_OUTPUT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>NET_OUTPUT_SIZE</name>
+        <initializer>= OUTPUT_SIZE + FEATURE_LEN + PAD_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="247" column="15" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="driving_8h_1ad85867c01628a3edb60d541dc20a13c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fill_model_msg</definition>
+        <argsstring>(MessageBuilder &amp;msg, float *net_output_data, PublishState &amp;ps, uint32_t vipc_frame_id, uint32_t vipc_frame_id_extra, uint32_t frame_id, float frame_drop, uint64_t timestamp_eof, uint64_t timestamp_llk, float model_execution_time, const bool nav_enabled, const bool valid)</argsstring>
+        <name>fill_model_msg</name>
+        <param>
+          <type>MessageBuilder &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>net_output_data</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_publish_state" kindref="compound">PublishState</ref> &amp;</type>
+          <declname>ps</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>vipc_frame_id</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>vipc_frame_id_extra</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frame_id</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>frame_drop</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>timestamp_eof</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>timestamp_llk</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>model_execution_time</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>nav_enabled</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="255" column="6" declfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" declline="255" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="driving_8h_1a1a7d25c6bcb935b3b3faf5cb173a9461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fill_pose_msg</definition>
+        <argsstring>(MessageBuilder &amp;msg, float *net_outputs, uint32_t vipc_frame_id, uint32_t vipc_dropped_frames, uint64_t timestamp_eof, const bool valid)</argsstring>
+        <name>fill_pose_msg</name>
+        <param>
+          <type>MessageBuilder &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>net_outputs</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>vipc_frame_id</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>vipc_dropped_frames</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>timestamp_eof</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="257" column="6" declfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" declline="257" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cereal/messaging/messaging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/modeldata.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/util.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;selfdrive/modeld/models/commonmodel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;selfdrive/modeld/runners/run.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FEATURE_LEN<sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>HISTORY_BUFFER_LEN<sp/>=<sp/>99;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DESIRE_LEN<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DESIRE_PRED_LEN<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TRAFFIC_CONVENTION_LEN<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NAV_FEATURE_LEN<sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NAV_INSTRUCTION_LEN<sp/>=<sp/>150;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DRIVING_STYLE_LEN<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MODEL_FREQ<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DISENGAGE_LEN<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>BLINKER_LEN<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>META_STRIDE<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PLAN_MHP_N<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LEAD_MHP_N<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LEAD_TRAJ_LEN<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LEAD_MHP_SELECTION<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Padding<sp/>to<sp/>get<sp/>output<sp/>shape<sp/>as<sp/>multiple<sp/>of<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PAD_SIZE<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>FCW_THRESHOLD_5MS2_HIGH<sp/>=<sp/>0.15;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>FCW_THRESHOLD_5MS2_LOW<sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>FCW_THRESHOLD_3MS2<sp/>=<sp/>0.7;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="struct_model_output_x_y_z" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*3);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct_model_output_y_z" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*2);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="struct_model_output_plan_element" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_plan_element" kindref="compound">ModelOutputPlanElement</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>position;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>velocity;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>acceleration;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_rate;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_plan_element" kindref="compound">ModelOutputPlanElement</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)*5);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_model_output_plan_prediction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputPlanElement,<sp/>TRAJECTORY_SIZE&gt;<sp/>mean;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputPlanElement,<sp/>TRAJECTORY_SIZE&gt;<sp/>std;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>prob;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_plan_element" kindref="compound">ModelOutputPlanElement</ref>)*TRAJECTORY_SIZE*2)<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct_model_output_plans" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_plans" kindref="compound">ModelOutputPlans</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputPlanPrediction,<sp/>PLAN_MHP_N&gt;<sp/>prediction;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref><sp/>&amp;get_best_prediction()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>prediction.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prediction[i].prob<sp/>&gt;<sp/>prediction[max_idx].prob)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_idx<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prediction[max_idx];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_plans" kindref="compound">ModelOutputPlans</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref>)*PLAN_MHP_N);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="struct_model_output_lines_x_y" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_lines_x_y" kindref="compound">ModelOutputLinesXY</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>left_far;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>left_near;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>right_near;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>right_far;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lines_x_y" kindref="compound">ModelOutputLinesXY</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref>)*TRAJECTORY_SIZE*4);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="struct_model_output_line_prob_val" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val_deprecated;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*2);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct_model_output_lines_prob" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_lines_prob" kindref="compound">ModelOutputLinesProb</ref><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref><sp/>left_far;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref><sp/>left_near;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref><sp/>right_near;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref><sp/>right_far;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lines_prob" kindref="compound">ModelOutputLinesProb</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_line_prob_val" kindref="compound">ModelOutputLineProbVal</ref>)*4);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="struct_model_output_lane_lines" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_lane_lines" kindref="compound">ModelOutputLaneLines</ref><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_lines_x_y" kindref="compound">ModelOutputLinesXY</ref><sp/>mean;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_lines_x_y" kindref="compound">ModelOutputLinesXY</ref><sp/>std;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_lines_prob" kindref="compound">ModelOutputLinesProb</ref><sp/>prob;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lane_lines" kindref="compound">ModelOutputLaneLines</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lines_x_y" kindref="compound">ModelOutputLinesXY</ref>)*2)<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lines_prob" kindref="compound">ModelOutputLinesProb</ref>));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="struct_model_output_edgess_x_y" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>left;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputYZ,<sp/>TRAJECTORY_SIZE&gt;<sp/>right;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_y_z" kindref="compound">ModelOutputYZ</ref>)*TRAJECTORY_SIZE*2);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="struct_model_output_road_edges" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_road_edges" kindref="compound">ModelOutputRoadEdges</ref><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref><sp/>mean;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref><sp/>std;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_road_edges" kindref="compound">ModelOutputRoadEdges</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref>)*2));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="struct_model_output_lead_element" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_lead_element" kindref="compound">ModelOutputLeadElement</ref><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acceleration;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lead_element" kindref="compound">ModelOutputLeadElement</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*4);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="struct_model_output_lead_prediction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_lead_prediction" kindref="compound">ModelOutputLeadPrediction</ref><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputLeadElement,<sp/>LEAD_TRAJ_LEN&gt;<sp/>mean;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputLeadElement,<sp/>LEAD_TRAJ_LEN&gt;<sp/>std;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>LEAD_MHP_SELECTION&gt;<sp/>prob;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lead_prediction" kindref="compound">ModelOutputLeadPrediction</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lead_element" kindref="compound">ModelOutputLeadElement</ref>)*LEAD_TRAJ_LEN*2)<sp/>+<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*LEAD_MHP_SELECTION));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="struct_model_output_leads" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_leads" kindref="compound">ModelOutputLeads</ref><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputLeadPrediction,<sp/>LEAD_MHP_N&gt;<sp/>prediction;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>LEAD_MHP_SELECTION&gt;<sp/>prob;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_lead_prediction" kindref="compound">ModelOutputLeadPrediction</ref><sp/>&amp;get_best_prediction(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_idx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>prediction.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prediction[i].prob[t_idx]<sp/>&gt;<sp/>prediction[max_idx].prob[t_idx])<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_idx<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prediction[max_idx];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_leads" kindref="compound">ModelOutputLeads</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_lead_prediction" kindref="compound">ModelOutputLeadPrediction</ref>)*LEAD_MHP_N)<sp/>+<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*LEAD_MHP_SELECTION));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="struct_model_output_pose" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_pose" kindref="compound">ModelOutputPose</ref><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>velocity_mean;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_mean;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>velocity_std;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_std;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_pose" kindref="compound">ModelOutputPose</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)*4);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="struct_model_output_wide_from_device_euler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_wide_from_device_euler" kindref="compound">ModelOutputWideFromDeviceEuler</ref><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>mean;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>std;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_wide_from_device_euler" kindref="compound">ModelOutputWideFromDeviceEuler</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)*2);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="struct_model_output_temporal_pose" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_temporal_pose" kindref="compound">ModelOutputTemporalPose</ref><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>velocity_mean;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_mean;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>velocity_std;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_std;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_temporal_pose" kindref="compound">ModelOutputTemporalPose</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)*4);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="struct_model_output_road_transform" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_road_transform" kindref="compound">ModelOutputRoadTransform</ref><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>position_mean;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_mean;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>position_std;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref><sp/>rotation_std;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_road_transform" kindref="compound">ModelOutputRoadTransform</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref>)*4);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="struct_model_output_disengage_prob" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_disengage_prob" kindref="compound">ModelOutputDisengageProb</ref><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gas_disengage;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>brake_disengage;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>steer_override;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>brake_3ms2;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>brake_4ms2;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>brake_5ms2;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gas_pressed;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_disengage_prob" kindref="compound">ModelOutputDisengageProb</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*7);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="struct_model_output_blinker_prob" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_blinker_prob" kindref="compound">ModelOutputBlinkerProb</ref><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>left;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_blinker_prob" kindref="compound">ModelOutputBlinkerProb</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*2);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="struct_model_output_desire_prob" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_desire_prob" kindref="compound">ModelOutputDesireProb</ref><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>none;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>turn_left;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>turn_right;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lane_change_left;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lane_change_right;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>keep_left;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>keep_right;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::array&lt;float,<sp/>DESIRE_LEN&gt;<sp/>array;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_desire_prob" kindref="compound">ModelOutputDesireProb</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*DESIRE_LEN);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="struct_model_output_meta" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_meta" kindref="compound">ModelOutputMeta</ref><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><ref refid="struct_model_output_desire_prob" kindref="compound">ModelOutputDesireProb</ref><sp/>desire_state_prob;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>engaged_prob;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputDisengageProb,<sp/>DISENGAGE_LEN&gt;<sp/>disengage_prob;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputBlinkerProb,<sp/>BLINKER_LEN&gt;<sp/>blinker_prob;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>std::array&lt;ModelOutputDesireProb,<sp/>DESIRE_PRED_LEN&gt;<sp/>desire_pred_prob;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_meta" kindref="compound">ModelOutputMeta</ref>)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_desire_prob" kindref="compound">ModelOutputDesireProb</ref>)<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>+<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_disengage_prob" kindref="compound">ModelOutputDisengageProb</ref>)*DISENGAGE_LEN)<sp/>+<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_blinker_prob" kindref="compound">ModelOutputBlinkerProb</ref>)*BLINKER_LEN)<sp/>+<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_desire_prob" kindref="compound">ModelOutputDesireProb</ref>)*DESIRE_PRED_LEN));</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="struct_model_output_features" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output_features" kindref="compound">ModelOutputFeatures</ref><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>FEATURE_LEN&gt;<sp/>feature;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output_features" kindref="compound">ModelOutputFeatures</ref>)<sp/>==<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)*FEATURE_LEN));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="struct_model_output" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_model_output" kindref="compound">ModelOutput</ref><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_plans" kindref="compound">ModelOutputPlans</ref><sp/>plans;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_lane_lines" kindref="compound">ModelOutputLaneLines</ref><sp/>lane_lines;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_road_edges" kindref="compound">ModelOutputRoadEdges</ref><sp/>road_edges;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_leads" kindref="compound">ModelOutputLeads</ref><sp/>leads;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_meta" kindref="compound">ModelOutputMeta</ref><sp/>meta;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_pose" kindref="compound">ModelOutputPose</ref><sp/>pose;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_wide_from_device_euler" kindref="compound">ModelOutputWideFromDeviceEuler</ref><sp/>wide_from_device_euler;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_temporal_pose" kindref="compound">ModelOutputTemporalPose</ref><sp/>temporal_pose;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_model_output_road_transform" kindref="compound">ModelOutputRoadTransform</ref><sp/>road_transform;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>OUTPUT_SIZE<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_model_output" kindref="compound">ModelOutput</ref>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NET_OUTPUT_SIZE<sp/>=<sp/>OUTPUT_SIZE<sp/>+<sp/>FEATURE_LEN<sp/>+<sp/>PAD_SIZE;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="struct_publish_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_publish_state" kindref="compound">PublishState</ref><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>DISENGAGE_LEN<sp/>*<sp/>DISENGAGE_LEN&gt;<sp/>disengage_buffer<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>5&gt;<sp/>prev_brake_5ms2_probs<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>3&gt;<sp/>prev_brake_3ms2_probs<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fill_model_msg(MessageBuilder<sp/>&amp;msg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*net_output_data,<sp/><ref refid="struct_publish_state" kindref="compound">PublishState</ref><sp/>&amp;ps,<sp/>uint32_t<sp/>vipc_frame_id,<sp/>uint32_t<sp/>vipc_frame_id_extra,<sp/>uint32_t<sp/>frame_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_drop,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>timestamp_eof,<sp/>uint64_t<sp/>timestamp_llk,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>model_execution_time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nav_enabled,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fill_pose_msg(MessageBuilder<sp/>&amp;msg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*net_outputs,<sp/>uint32_t<sp/>vipc_frame_id,<sp/>uint32_t<sp/>vipc_dropped_frames,<sp/>uint64_t<sp/>timestamp_eof,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid);</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h"/>
+  </compounddef>
+</doxygen>

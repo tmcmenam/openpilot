@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_model_frame" kind="class"><name>ModelFrame</name>
+    <member refid="class_model_frame_1a8f2898476fae86793e771c35c2bb14fa" kind="variable"><name>MODEL_WIDTH</name></member>
+    <member refid="class_model_frame_1ae3b2724cb7026051075e3206722997e1" kind="variable"><name>MODEL_HEIGHT</name></member>
+    <member refid="class_model_frame_1a099c979dd265224783d9cfef5bb2828f" kind="variable"><name>MODEL_FRAME_SIZE</name></member>
+    <member refid="class_model_frame_1aa21797dfa55b6847b96d0dced7438219" kind="variable"><name>buf_size</name></member>
+    <member refid="class_model_frame_1ab159df6085d6d655dcc49a8a90b7c720" kind="variable"><name>transform</name></member>
+    <member refid="class_model_frame_1a1adf4fc1af4053d5488d5170b2119339" kind="variable"><name>loadyuv</name></member>
+    <member refid="class_model_frame_1a56e996c53ee1582366e2bc256c091128" kind="variable"><name>q</name></member>
+    <member refid="class_model_frame_1a2a4f4480325ace6dbfb3752b8bc4916d" kind="variable"><name>y_cl</name></member>
+    <member refid="class_model_frame_1ad71364f9c35280cab21a3ca57f3a5ffd" kind="variable"><name>u_cl</name></member>
+    <member refid="class_model_frame_1a6787b6a4ecb47660b635014a6e4dd3e5" kind="variable"><name>v_cl</name></member>
+    <member refid="class_model_frame_1a229eddaf18c323431b0da4652703b5c9" kind="variable"><name>net_input_cl</name></member>
+    <member refid="class_model_frame_1ab06e186648355bb3eb09858f43906d7a" kind="variable"><name>input_frames</name></member>
+    <member refid="class_model_frame_1a7725614f6b5a79e6af470d9dd833a6a0" kind="function"><name>ModelFrame</name></member>
+    <member refid="class_model_frame_1aaf70866b4b78eccc02377bf7634544ab" kind="function"><name>~ModelFrame</name></member>
+    <member refid="class_model_frame_1a8b3f492f26c47cfeff890e6ad8c86d85" kind="function"><name>prepare</name></member>
+  </compound>
+  <compound refid="struct_model_output" kind="struct"><name>ModelOutput</name>
+    <member refid="struct_model_output_1a94b6e9f34ed1024cb63939d63518b6a9" kind="variable"><name>plans</name></member>
+    <member refid="struct_model_output_1a44b3ec50fef60240f71c504fae084b23" kind="variable"><name>lane_lines</name></member>
+    <member refid="struct_model_output_1af41dcdc3ba546b924eb86f9af98c3eff" kind="variable"><name>road_edges</name></member>
+    <member refid="struct_model_output_1aedde9ef952c91f4e9a853c18e2d6a6c1" kind="variable"><name>leads</name></member>
+    <member refid="struct_model_output_1a0509b2d45148ca927668b0db06d7f628" kind="variable"><name>meta</name></member>
+    <member refid="struct_model_output_1ad2d9a510a3068a8d69dafca695368d44" kind="variable"><name>pose</name></member>
+    <member refid="struct_model_output_1ac9740400a833667adac95a462e1513b1" kind="variable"><name>wide_from_device_euler</name></member>
+    <member refid="struct_model_output_1a398272c0585e5acf22aec75b343e1375" kind="variable"><name>temporal_pose</name></member>
+    <member refid="struct_model_output_1ab1dccfcfecafa3976057ec9adcaae6e5" kind="variable"><name>road_transform</name></member>
+  </compound>
+  <compound refid="struct_model_output_blinker_prob" kind="struct"><name>ModelOutputBlinkerProb</name>
+    <member refid="struct_model_output_blinker_prob_1a28be5e925ca407d4bb9636266c3bd9cc" kind="variable"><name>left</name></member>
+    <member refid="struct_model_output_blinker_prob_1a681371fa670b9ed53ce9503183128d8d" kind="variable"><name>right</name></member>
+  </compound>
+  <compound refid="struct_model_output_desire_prob" kind="struct"><name>ModelOutputDesireProb</name>
+    <member refid="struct_model_output_desire_prob_1a4e375f9ce6740075d7461cd37bf4e0a4" kind="variable"><name>none</name></member>
+    <member refid="struct_model_output_desire_prob_1a6b776cab70bd7caa4e5d34ff258cbcda" kind="variable"><name>turn_left</name></member>
+    <member refid="struct_model_output_desire_prob_1a4ecfa3520e1e8da94e5fd060d029a2ae" kind="variable"><name>turn_right</name></member>
+    <member refid="struct_model_output_desire_prob_1a2a7b6ab306184590c038e7ee2e55b347" kind="variable"><name>lane_change_left</name></member>
+    <member refid="struct_model_output_desire_prob_1af0e54a4607d805f17d93f433a7d033f8" kind="variable"><name>lane_change_right</name></member>
+    <member refid="struct_model_output_desire_prob_1abd8fa02220b3078ee3465cd85d76af4e" kind="variable"><name>keep_left</name></member>
+    <member refid="struct_model_output_desire_prob_1af87bd5a8dfd6d1251fb7933772df4881" kind="variable"><name>keep_right</name></member>
+    <member refid="struct_model_output_desire_prob_1a233c238285638c772f29d0e636f538cd" kind="variable"><name>null</name></member>
+    <member refid="struct_model_output_desire_prob_1a0c7ec713ad46974ee910271806adc092" kind="variable"><name>array</name></member>
+    <member refid="struct_model_output_desire_prob_1a7e49ba5ab2a5c246b1b637dac787c9d2" kind="variable"><name>@1</name></member>
+  </compound>
+  <compound refid="struct_model_output_disengage_prob" kind="struct"><name>ModelOutputDisengageProb</name>
+    <member refid="struct_model_output_disengage_prob_1a0510fe3bae01d418cfaded50a6ede0b0" kind="variable"><name>gas_disengage</name></member>
+    <member refid="struct_model_output_disengage_prob_1a382f5d7a5c5eff5f828d464b2d825ed3" kind="variable"><name>brake_disengage</name></member>
+    <member refid="struct_model_output_disengage_prob_1a8772a6cd44875055f56bf6177c1b3a8b" kind="variable"><name>steer_override</name></member>
+    <member refid="struct_model_output_disengage_prob_1aeffc80b44a7b8e15a75acaa6350f371a" kind="variable"><name>brake_3ms2</name></member>
+    <member refid="struct_model_output_disengage_prob_1ab52911efcb3d7cdfa78849659fc3ec17" kind="variable"><name>brake_4ms2</name></member>
+    <member refid="struct_model_output_disengage_prob_1afb7f15c27a5ebe2588b1ca66f4d7b504" kind="variable"><name>brake_5ms2</name></member>
+    <member refid="struct_model_output_disengage_prob_1a4e00e4559e04460e7d0feaeba1f089a3" kind="variable"><name>gas_pressed</name></member>
+  </compound>
+  <compound refid="struct_model_output_edgess_x_y" kind="struct"><name>ModelOutputEdgessXY</name>
+    <member refid="struct_model_output_edgess_x_y_1ad2df723e1927a9402536d55306331f54" kind="variable"><name>left</name></member>
+    <member refid="struct_model_output_edgess_x_y_1aad07f894c4adfbfd791e4f01dc2074eb" kind="variable"><name>right</name></member>
+  </compound>
+  <compound refid="struct_model_output_features" kind="struct"><name>ModelOutputFeatures</name>
+    <member refid="struct_model_output_features_1ad1288cdb9a729e2f48812030de0ef8f8" kind="variable"><name>feature</name></member>
+  </compound>
+  <compound refid="struct_model_output_lane_lines" kind="struct"><name>ModelOutputLaneLines</name>
+    <member refid="struct_model_output_lane_lines_1af69594c688f1d481cf332ab0780d6747" kind="variable"><name>mean</name></member>
+    <member refid="struct_model_output_lane_lines_1a2853f4d218db6f17a304f3e6e87a0036" kind="variable"><name>std</name></member>
+    <member refid="struct_model_output_lane_lines_1ad0dab90476c68d856c61edf59754c54a" kind="variable"><name>prob</name></member>
+  </compound>
+  <compound refid="struct_model_output_lead_element" kind="struct"><name>ModelOutputLeadElement</name>
+    <member refid="struct_model_output_lead_element_1a57aa05c4f0425203666db35c918410ca" kind="variable"><name>x</name></member>
+    <member refid="struct_model_output_lead_element_1a7da8843514ae3f3dce9526c591466691" kind="variable"><name>y</name></member>
+    <member refid="struct_model_output_lead_element_1a3709a8998412760546d39aa629771fd2" kind="variable"><name>velocity</name></member>
+    <member refid="struct_model_output_lead_element_1aa3c0e1d04da10757fe550c11a2077700" kind="variable"><name>acceleration</name></member>
+  </compound>
+  <compound refid="struct_model_output_lead_prediction" kind="struct"><name>ModelOutputLeadPrediction</name>
+    <member refid="struct_model_output_lead_prediction_1afba2782704bf96d7d67426e2953d7a14" kind="variable"><name>mean</name></member>
+    <member refid="struct_model_output_lead_prediction_1a779dfccff251d9e1477ee7d530272682" kind="variable"><name>std</name></member>
+    <member refid="struct_model_output_lead_prediction_1af16709e191ae81430df94f024aceb27d" kind="variable"><name>prob</name></member>
+  </compound>
+  <compound refid="struct_model_output_leads" kind="struct"><name>ModelOutputLeads</name>
+    <member refid="struct_model_output_leads_1a033adc56e6df51bac629fd930cfec3a4" kind="variable"><name>prediction</name></member>
+    <member refid="struct_model_output_leads_1a317f4bb621a0c7a49b97a71196c78d17" kind="variable"><name>prob</name></member>
+    <member refid="struct_model_output_leads_1a1680e14bae6d1b22458a2ccd3e205a84" kind="function"><name>get_best_prediction</name></member>
+  </compound>
+  <compound refid="struct_model_output_line_prob_val" kind="struct"><name>ModelOutputLineProbVal</name>
+    <member refid="struct_model_output_line_prob_val_1af255a8592ddc527b6e7ebf52fcb272cd" kind="variable"><name>val_deprecated</name></member>
+    <member refid="struct_model_output_line_prob_val_1a121051608eb4e24ac5d0d3d56a08e9cd" kind="variable"><name>val</name></member>
+  </compound>
+  <compound refid="struct_model_output_lines_prob" kind="struct"><name>ModelOutputLinesProb</name>
+    <member refid="struct_model_output_lines_prob_1aa4ee960a59b75e44b3a955b06ebf37a2" kind="variable"><name>left_far</name></member>
+    <member refid="struct_model_output_lines_prob_1a6892b90f82cb1064e5e9645dba97f770" kind="variable"><name>left_near</name></member>
+    <member refid="struct_model_output_lines_prob_1a5ed04913266ad3aba1a5fc6a9c9215f3" kind="variable"><name>right_near</name></member>
+    <member refid="struct_model_output_lines_prob_1a6cee3868035c9630ff40bdf20539b502" kind="variable"><name>right_far</name></member>
+  </compound>
+  <compound refid="struct_model_output_lines_x_y" kind="struct"><name>ModelOutputLinesXY</name>
+    <member refid="struct_model_output_lines_x_y_1a211e6117a0c46320bf702952fe81a73f" kind="variable"><name>left_far</name></member>
+    <member refid="struct_model_output_lines_x_y_1ab3c72fe45e45bb43ecc27efef9d9d3bb" kind="variable"><name>left_near</name></member>
+    <member refid="struct_model_output_lines_x_y_1a09f2aed5b4666e14d999a9ba9b549652" kind="variable"><name>right_near</name></member>
+    <member refid="struct_model_output_lines_x_y_1a1e3f58740c3d13106f9405e013829027" kind="variable"><name>right_far</name></member>
+  </compound>
+  <compound refid="struct_model_output_meta" kind="struct"><name>ModelOutputMeta</name>
+    <member refid="struct_model_output_meta_1a2cd28c4569e51a7b7c3117f0f5f6fede" kind="variable"><name>desire_state_prob</name></member>
+    <member refid="struct_model_output_meta_1a9325a787c963d26c9f94c5ac8abc3ee7" kind="variable"><name>engaged_prob</name></member>
+    <member refid="struct_model_output_meta_1a38e28925aba4e15098d42a2b071f654b" kind="variable"><name>disengage_prob</name></member>
+    <member refid="struct_model_output_meta_1a10eb4f82c9377be48e3258e3b434b855" kind="variable"><name>blinker_prob</name></member>
+    <member refid="struct_model_output_meta_1acc285be077eeef4b030c4adb47fd702f" kind="variable"><name>desire_pred_prob</name></member>
+  </compound>
+  <compound refid="struct_model_output_plan_element" kind="struct"><name>ModelOutputPlanElement</name>
+    <member refid="struct_model_output_plan_element_1a0f157482e5e58f09bad4f1d883c60397" kind="variable"><name>position</name></member>
+    <member refid="struct_model_output_plan_element_1a190d31a9ece8681b684c701292be0866" kind="variable"><name>velocity</name></member>
+    <member refid="struct_model_output_plan_element_1aaa18257b7905896b01887373c7292d0b" kind="variable"><name>acceleration</name></member>
+    <member refid="struct_model_output_plan_element_1a79dee1b1c515b257854f31a31c1879b8" kind="variable"><name>rotation</name></member>
+    <member refid="struct_model_output_plan_element_1a1ec8e114142029c6e73f8f5c3dc6b58d" kind="variable"><name>rotation_rate</name></member>
+  </compound>
+  <compound refid="struct_model_output_plan_prediction" kind="struct"><name>ModelOutputPlanPrediction</name>
+    <member refid="struct_model_output_plan_prediction_1a9a27fd8d7c481f2b03764b33f6e5c8be" kind="variable"><name>mean</name></member>
+    <member refid="struct_model_output_plan_prediction_1ab54e942862aa6bfd77bbc1bb17159ebf" kind="variable"><name>std</name></member>
+    <member refid="struct_model_output_plan_prediction_1aeed863ad08bace64be444cf1c55e4380" kind="variable"><name>prob</name></member>
+  </compound>
+  <compound refid="struct_model_output_plans" kind="struct"><name>ModelOutputPlans</name>
+    <member refid="struct_model_output_plans_1ae4364b5b1cfbdbd9c7dc842d113c4677" kind="variable"><name>prediction</name></member>
+    <member refid="struct_model_output_plans_1a04424fcbac05eec7ca74dbf2267996f8" kind="function"><name>get_best_prediction</name></member>
+  </compound>
+  <compound refid="struct_model_output_pose" kind="struct"><name>ModelOutputPose</name>
+    <member refid="struct_model_output_pose_1a9625469b74afd0b99ddd644225d02a49" kind="variable"><name>velocity_mean</name></member>
+    <member refid="struct_model_output_pose_1aeee16971c58c071591015d8ace5a04d6" kind="variable"><name>rotation_mean</name></member>
+    <member refid="struct_model_output_pose_1aec050ead8321c731231608698d7cabca" kind="variable"><name>velocity_std</name></member>
+    <member refid="struct_model_output_pose_1ad7cf664d4fcd3f1bb0f9ff1f5e766210" kind="variable"><name>rotation_std</name></member>
+  </compound>
+  <compound refid="struct_model_output_road_edges" kind="struct"><name>ModelOutputRoadEdges</name>
+    <member refid="struct_model_output_road_edges_1a7d00521b9175b45f0729d5346bcb3e25" kind="variable"><name>mean</name></member>
+    <member refid="struct_model_output_road_edges_1ae7e1c8940bd4a40e430eeb344d163244" kind="variable"><name>std</name></member>
+  </compound>
+  <compound refid="struct_model_output_road_transform" kind="struct"><name>ModelOutputRoadTransform</name>
+    <member refid="struct_model_output_road_transform_1a3b25f737ae775a0aeb8ea5d3a1be3c5a" kind="variable"><name>position_mean</name></member>
+    <member refid="struct_model_output_road_transform_1a8f6d06d568d99b3150eae487a8f91f19" kind="variable"><name>rotation_mean</name></member>
+    <member refid="struct_model_output_road_transform_1a7d18da6ad0bc3ea3f20a44ec1d392ca0" kind="variable"><name>position_std</name></member>
+    <member refid="struct_model_output_road_transform_1acc769cd2c821336d04b88dcbfaa6b81e" kind="variable"><name>rotation_std</name></member>
+  </compound>
+  <compound refid="struct_model_output_temporal_pose" kind="struct"><name>ModelOutputTemporalPose</name>
+    <member refid="struct_model_output_temporal_pose_1abb978c8bd3cb552c54671a2c9cb8d869" kind="variable"><name>velocity_mean</name></member>
+    <member refid="struct_model_output_temporal_pose_1ab90c8e6d82fcf2ceecaf5f878674090f" kind="variable"><name>rotation_mean</name></member>
+    <member refid="struct_model_output_temporal_pose_1a83d4238e054bfae5178124ac68deed11" kind="variable"><name>velocity_std</name></member>
+    <member refid="struct_model_output_temporal_pose_1a90d1f1422d4bbd1c2e37defdbc5bc40e" kind="variable"><name>rotation_std</name></member>
+  </compound>
+  <compound refid="struct_model_output_wide_from_device_euler" kind="struct"><name>ModelOutputWideFromDeviceEuler</name>
+    <member refid="struct_model_output_wide_from_device_euler_1a229cc52dc44589a9fdf189d92fb5a87d" kind="variable"><name>mean</name></member>
+    <member refid="struct_model_output_wide_from_device_euler_1a806bf780e137982bc39966e0ca6a7630" kind="variable"><name>std</name></member>
+  </compound>
+  <compound refid="struct_model_output_x_y_z" kind="struct"><name>ModelOutputXYZ</name>
+    <member refid="struct_model_output_x_y_z_1ad3ee2190d2639bc34d754a518a7eb57f" kind="variable"><name>x</name></member>
+    <member refid="struct_model_output_x_y_z_1a8bdb10679e85d91013d7a635cf6233b6" kind="variable"><name>y</name></member>
+    <member refid="struct_model_output_x_y_z_1a65bef551fe281d0bc43acf2a7577cfa4" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="struct_model_output_y_z" kind="struct"><name>ModelOutputYZ</name>
+    <member refid="struct_model_output_y_z_1a784e35e30126a0daeb30e68e56276167" kind="variable"><name>y</name></member>
+    <member refid="struct_model_output_y_z_1a4b6eb591969367f6127ce25697526433" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="struct_publish_state" kind="struct"><name>PublishState</name>
+    <member refid="struct_publish_state_1a3db58ca293fee8b79be8c6a09e642fbd" kind="variable"><name>disengage_buffer</name></member>
+    <member refid="struct_publish_state_1aafe8f71173f0caa4fdd52c1e0b2aa8bf" kind="variable"><name>prev_brake_5ms2_probs</name></member>
+    <member refid="struct_publish_state_1ad7fa83bc5dcd745303f904d11aaf2575" kind="variable"><name>prev_brake_3ms2_probs</name></member>
+  </compound>
+  <compound refid="commonmodel_8h" kind="file"><name>commonmodel.h</name>
+    <member refid="commonmodel_8h_1a16605039b395344c0b68b435e197b8bd" kind="define"><name>CL_USE_DEPRECATED_OPENCL_1_2_APIS</name></member>
+    <member refid="commonmodel_8h_1a80bf6d1fd0debb7d28525ee08d7f9ac0" kind="variable"><name>send_raw_pred</name></member>
+    <member refid="commonmodel_8h_1a6a464d0419e201a1d08ae61885214cfc" kind="function"><name>softmax</name></member>
+    <member refid="commonmodel_8h_1aa20134f5fe893e3014529d5152317711" kind="function"><name>sigmoid</name></member>
+    <member refid="commonmodel_8h_1aa29df93f1541ab2c42b75650f1d8e555" kind="function"><name>to_kj_array_ptr</name></member>
+  </compound>
+  <compound refid="driving_8h" kind="file"><name>driving.h</name>
+    <member refid="driving_8h_1a3a2fb819050da016e7c8bb9603d4e426" kind="variable"><name>FEATURE_LEN</name></member>
+    <member refid="driving_8h_1a7cd0698132b79e2d80a46da1c8258c73" kind="variable"><name>HISTORY_BUFFER_LEN</name></member>
+    <member refid="driving_8h_1a65f39695aac807781d5dcb442211eeea" kind="variable"><name>DESIRE_LEN</name></member>
+    <member refid="driving_8h_1a602926b511b1633797c16f2cdec6a042" kind="variable"><name>DESIRE_PRED_LEN</name></member>
+    <member refid="driving_8h_1affe09a24437a279da346a235d4f873d7" kind="variable"><name>TRAFFIC_CONVENTION_LEN</name></member>
+    <member refid="driving_8h_1abcdc6610f894532e3533254480181e40" kind="variable"><name>NAV_FEATURE_LEN</name></member>
+    <member refid="driving_8h_1a77be4f471a5e97e597f210db6022b122" kind="variable"><name>NAV_INSTRUCTION_LEN</name></member>
+    <member refid="driving_8h_1afa7e01d1902fb962f2786c1fcb9cc72b" kind="variable"><name>DRIVING_STYLE_LEN</name></member>
+    <member refid="driving_8h_1ae53433015395f81da056868eda0d4190" kind="variable"><name>MODEL_FREQ</name></member>
+    <member refid="driving_8h_1aa415051f4f71e64283d79b51ba8d5ab9" kind="variable"><name>DISENGAGE_LEN</name></member>
+    <member refid="driving_8h_1a9d575f400ed54ebdfe16419b3f7e7714" kind="variable"><name>BLINKER_LEN</name></member>
+    <member refid="driving_8h_1afeae381303f30a52b04629550864e56a" kind="variable"><name>META_STRIDE</name></member>
+    <member refid="driving_8h_1aa80dbf31ff0380db7898bd1707ee6af1" kind="variable"><name>PLAN_MHP_N</name></member>
+    <member refid="driving_8h_1acccd24d2a6b4dfd06c964516c26709f3" kind="variable"><name>LEAD_MHP_N</name></member>
+    <member refid="driving_8h_1aa8a520f37539afd835621df908a6f918" kind="variable"><name>LEAD_TRAJ_LEN</name></member>
+    <member refid="driving_8h_1ae6adf1106de1e9ac11876ca75f87777b" kind="variable"><name>LEAD_MHP_SELECTION</name></member>
+    <member refid="driving_8h_1a1d89e6e48b198e555223e83b66897db2" kind="variable"><name>PAD_SIZE</name></member>
+    <member refid="driving_8h_1a0fa7fe14b7016aa08f56caa253356139" kind="variable"><name>FCW_THRESHOLD_5MS2_HIGH</name></member>
+    <member refid="driving_8h_1a1a1152852d13ab11daa41ff467cf8773" kind="variable"><name>FCW_THRESHOLD_5MS2_LOW</name></member>
+    <member refid="driving_8h_1a494d8a9e6049b624afbb472adbab340d" kind="variable"><name>FCW_THRESHOLD_3MS2</name></member>
+    <member refid="driving_8h_1a5c4d2295d6d0c6d03360caf98ebb116f" kind="variable"><name>OUTPUT_SIZE</name></member>
+    <member refid="driving_8h_1affb5e99e5554c8f9749c973aca4e6174" kind="variable"><name>NET_OUTPUT_SIZE</name></member>
+    <member refid="driving_8h_1ad85867c01628a3edb60d541dc20a13c7" kind="function"><name>fill_model_msg</name></member>
+    <member refid="driving_8h_1a1a7d25c6bcb935b3b3faf5cb173a9461" kind="function"><name>fill_pose_msg</name></member>
+  </compound>
+  <compound refid="dir_4fa2f1243fe3973035256d28e2e01272" kind="dir"><name>/tmp/openpilot/selfdrive/modeld</name>
+  </compound>
+  <compound refid="dir_3429783376bd7939a4a1d4958fbd6fec" kind="dir"><name>/tmp/openpilot/selfdrive/modeld/models</name>
+  </compound>
+  <compound refid="dir_9433856cffa03fcf414f88edc3657f68" kind="dir"><name>/tmp/openpilot/selfdrive</name>
+  </compound>
+</doxygenindex>

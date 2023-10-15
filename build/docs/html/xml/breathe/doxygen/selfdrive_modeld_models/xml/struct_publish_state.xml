@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_publish_state" kind="struct" language="C++" prot="public">
+    <compoundname>PublishState</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_publish_state_1a3db58ca293fee8b79be8c6a09e642fbd" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, DISENGAGE_LEN *DISENGAGE_LEN &gt;</type>
+        <definition>std::array&lt;float, DISENGAGE_LEN * DISENGAGE_LEN&gt; PublishState::disengage_buffer</definition>
+        <argsstring></argsstring>
+        <name>disengage_buffer</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="250" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_publish_state_1aafe8f71173f0caa4fdd52c1e0b2aa8bf" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, 5 &gt;</type>
+        <definition>std::array&lt;float, 5&gt; PublishState::prev_brake_5ms2_probs</definition>
+        <argsstring></argsstring>
+        <name>prev_brake_5ms2_probs</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="251" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_publish_state_1ad7fa83bc5dcd745303f904d11aaf2575" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, 3 &gt;</type>
+        <definition>std::array&lt;float, 3&gt; PublishState::prev_brake_3ms2_probs</definition>
+        <argsstring></argsstring>
+        <name>prev_brake_3ms2_probs</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="252" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="249" column="19" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="249" bodyend="253"/>
+    <listofallmembers>
+      <member refid="struct_publish_state_1a3db58ca293fee8b79be8c6a09e642fbd" prot="public" virt="non-virtual"><scope>PublishState</scope><name>disengage_buffer</name></member>
+      <member refid="struct_publish_state_1ad7fa83bc5dcd745303f904d11aaf2575" prot="public" virt="non-virtual"><scope>PublishState</scope><name>prev_brake_3ms2_probs</name></member>
+      <member refid="struct_publish_state_1aafe8f71173f0caa4fdd52c1e0b2aa8bf" prot="public" virt="non-virtual"><scope>PublishState</scope><name>prev_brake_5ms2_probs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

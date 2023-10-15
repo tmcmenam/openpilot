@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selfdrive package &mdash; openpilot docs 0.9.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.comma.ai/selfdrive.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=61b282d3"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="selfdrive.athena package" href="selfdrive.athena.html" />
+    <link rel="prev" title="panda.python package" href="panda.python.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000000" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            openpilot docs
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.9.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html">Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#id1">265 Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#don-t-see-your-car-here">Don’t see your car here?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INTEGRATION.html">Integration with Stock Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LIMITATIONS.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAFETY.html">Safety</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">openpilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#cereal">cereal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#laika">laika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#models">models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#opendbc">opendbc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#panda">panda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#rednose">rednose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#tools">tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">openpilot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cereal.html">cereal package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common.html">common package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conftest.html">conftest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opendbc.html">opendbc package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openpilot.html">openpilot package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="panda.html">panda package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">selfdrive package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.athena.html">selfdrive.athena package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.boardd.html">selfdrive.boardd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html">selfdrive.car package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.html">selfdrive.controls package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html">selfdrive.locationd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.manager.html">selfdrive.manager package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.navd.html">selfdrive.navd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.thermald.html">selfdrive.thermald package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfdrive-sentry-module">selfdrive.sentry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfdrive-statsd-module">selfdrive.statsd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfdrive-tombstoned-module">selfdrive.tombstoned module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfdrive-updated-module">selfdrive.updated module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-selfdrive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="system.html">system package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">tools package</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C/C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="c_docs.html">openpilot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">openpilot docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">openpilot</a></li>
+      <li class="breadcrumb-item active">selfdrive package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/selfdrive.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selfdrive-package">
+<h1>selfdrive package<a class="headerlink" href="#selfdrive-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.athena.html">selfdrive.athena package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.athena.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.athena.html#selfdrive-athena-athenad-module">selfdrive.athena.athenad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.athena.html#selfdrive-athena-manage-athenad-module">selfdrive.athena.manage_athenad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.athena.html#selfdrive-athena-registration-module">selfdrive.athena.registration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.athena.html#module-selfdrive.athena">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.boardd.html">selfdrive.boardd package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#selfdrive-boardd-boardd-module">selfdrive.boardd.boardd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#selfdrive-boardd-boardd-api-impl-module">selfdrive.boardd.boardd_api_impl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#selfdrive-boardd-pandad-module">selfdrive.boardd.pandad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#module-selfdrive.boardd.set_time">selfdrive.boardd.set_time module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.boardd.html#selfdrive.boardd.set_time.set_time"><code class="docutils literal notranslate"><span class="pre">set_time()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.boardd.html#module-selfdrive.boardd">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.car.html">selfdrive.car package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.body.html">selfdrive.car.body package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#module-selfdrive.car.body.bodycan">selfdrive.car.body.bodycan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#selfdrive-car-body-carcontroller-module">selfdrive.car.body.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#selfdrive-car-body-carstate-module">selfdrive.car.body.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#selfdrive-car-body-interface-module">selfdrive.car.body.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#selfdrive-car-body-radar-interface-module">selfdrive.car.body.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#module-selfdrive.car.body.values">selfdrive.car.body.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.body.html#module-selfdrive.car.body">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.chrysler.html">selfdrive.car.chrysler package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#selfdrive-car-chrysler-carcontroller-module">selfdrive.car.chrysler.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#selfdrive-car-chrysler-carstate-module">selfdrive.car.chrysler.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#module-selfdrive.car.chrysler.chryslercan">selfdrive.car.chrysler.chryslercan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#selfdrive-car-chrysler-interface-module">selfdrive.car.chrysler.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#selfdrive-car-chrysler-radar-interface-module">selfdrive.car.chrysler.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#module-selfdrive.car.chrysler.values">selfdrive.car.chrysler.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.chrysler.html#module-selfdrive.car.chrysler">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.ford.html">selfdrive.car.ford package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#selfdrive-car-ford-carcontroller-module">selfdrive.car.ford.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#selfdrive-car-ford-carstate-module">selfdrive.car.ford.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#module-selfdrive.car.ford.fordcan">selfdrive.car.ford.fordcan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#selfdrive-car-ford-interface-module">selfdrive.car.ford.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#selfdrive-car-ford-radar-interface-module">selfdrive.car.ford.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#module-selfdrive.car.ford.values">selfdrive.car.ford.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.ford.html#module-selfdrive.car.ford">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.gm.html">selfdrive.car.gm package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#selfdrive-car-gm-carcontroller-module">selfdrive.car.gm.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#selfdrive-car-gm-carstate-module">selfdrive.car.gm.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#module-selfdrive.car.gm.gmcan">selfdrive.car.gm.gmcan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#selfdrive-car-gm-interface-module">selfdrive.car.gm.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#selfdrive-car-gm-radar-interface-module">selfdrive.car.gm.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#module-selfdrive.car.gm.values">selfdrive.car.gm.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.gm.html#module-selfdrive.car.gm">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.honda.html">selfdrive.car.honda package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#selfdrive-car-honda-carcontroller-module">selfdrive.car.honda.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#selfdrive-car-honda-carstate-module">selfdrive.car.honda.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#module-selfdrive.car.honda.hondacan">selfdrive.car.honda.hondacan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#selfdrive-car-honda-interface-module">selfdrive.car.honda.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#selfdrive-car-honda-radar-interface-module">selfdrive.car.honda.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#module-selfdrive.car.honda.values">selfdrive.car.honda.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.honda.html#module-selfdrive.car.honda">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.hyundai.html">selfdrive.car.hyundai package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#selfdrive-car-hyundai-carcontroller-module">selfdrive.car.hyundai.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#selfdrive-car-hyundai-carstate-module">selfdrive.car.hyundai.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#module-selfdrive.car.hyundai.hyundaican">selfdrive.car.hyundai.hyundaican module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#module-selfdrive.car.hyundai.hyundaicanfd">selfdrive.car.hyundai.hyundaicanfd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#selfdrive-car-hyundai-interface-module">selfdrive.car.hyundai.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#selfdrive-car-hyundai-radar-interface-module">selfdrive.car.hyundai.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#module-selfdrive.car.hyundai.values">selfdrive.car.hyundai.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.hyundai.html#module-selfdrive.car.hyundai">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.mazda.html">selfdrive.car.mazda package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#selfdrive-car-mazda-carcontroller-module">selfdrive.car.mazda.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#selfdrive-car-mazda-carstate-module">selfdrive.car.mazda.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#selfdrive-car-mazda-interface-module">selfdrive.car.mazda.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#module-selfdrive.car.mazda.mazdacan">selfdrive.car.mazda.mazdacan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#selfdrive-car-mazda-radar-interface-module">selfdrive.car.mazda.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#module-selfdrive.car.mazda.values">selfdrive.car.mazda.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mazda.html#module-selfdrive.car.mazda">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.mock.html">selfdrive.car.mock package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mock.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mock.html#selfdrive-car-mock-interface-module">selfdrive.car.mock.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mock.html#selfdrive-car-mock-radar-interface-module">selfdrive.car.mock.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mock.html#module-selfdrive.car.mock.values">selfdrive.car.mock.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.mock.html#module-selfdrive.car.mock">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.nissan.html">selfdrive.car.nissan package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#selfdrive-car-nissan-carcontroller-module">selfdrive.car.nissan.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#selfdrive-car-nissan-carstate-module">selfdrive.car.nissan.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#selfdrive-car-nissan-interface-module">selfdrive.car.nissan.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#module-selfdrive.car.nissan.nissancan">selfdrive.car.nissan.nissancan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#selfdrive-car-nissan-radar-interface-module">selfdrive.car.nissan.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#module-selfdrive.car.nissan.values">selfdrive.car.nissan.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.nissan.html#module-selfdrive.car.nissan">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.subaru.html">selfdrive.car.subaru package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#selfdrive-car-subaru-carcontroller-module">selfdrive.car.subaru.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#selfdrive-car-subaru-carstate-module">selfdrive.car.subaru.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#selfdrive-car-subaru-interface-module">selfdrive.car.subaru.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#selfdrive-car-subaru-radar-interface-module">selfdrive.car.subaru.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#module-selfdrive.car.subaru.subarucan">selfdrive.car.subaru.subarucan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#module-selfdrive.car.subaru.values">selfdrive.car.subaru.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.subaru.html#module-selfdrive.car.subaru">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.tesla.html">selfdrive.car.tesla package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#selfdrive-car-tesla-carcontroller-module">selfdrive.car.tesla.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#selfdrive-car-tesla-carstate-module">selfdrive.car.tesla.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#selfdrive-car-tesla-interface-module">selfdrive.car.tesla.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#selfdrive-car-tesla-radar-interface-module">selfdrive.car.tesla.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#module-selfdrive.car.tesla.teslacan">selfdrive.car.tesla.teslacan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#module-selfdrive.car.tesla.values">selfdrive.car.tesla.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.tesla.html#module-selfdrive.car.tesla">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.toyota.html">selfdrive.car.toyota package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#selfdrive-car-toyota-carcontroller-module">selfdrive.car.toyota.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#selfdrive-car-toyota-carstate-module">selfdrive.car.toyota.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#selfdrive-car-toyota-interface-module">selfdrive.car.toyota.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#selfdrive-car-toyota-radar-interface-module">selfdrive.car.toyota.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#module-selfdrive.car.toyota.toyotacan">selfdrive.car.toyota.toyotacan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#module-selfdrive.car.toyota.values">selfdrive.car.toyota.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.toyota.html#module-selfdrive.car.toyota">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.volkswagen.html">selfdrive.car.volkswagen package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#selfdrive-car-volkswagen-carcontroller-module">selfdrive.car.volkswagen.carcontroller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#selfdrive-car-volkswagen-carstate-module">selfdrive.car.volkswagen.carstate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#selfdrive-car-volkswagen-interface-module">selfdrive.car.volkswagen.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#module-selfdrive.car.volkswagen.mqbcan">selfdrive.car.volkswagen.mqbcan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#module-selfdrive.car.volkswagen.pqcan">selfdrive.car.volkswagen.pqcan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#selfdrive-car-volkswagen-radar-interface-module">selfdrive.car.volkswagen.radar_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#selfdrive-car-volkswagen-values-module">selfdrive.car.volkswagen.values module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.volkswagen.html#module-selfdrive.car.volkswagen">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-car-helpers-module">selfdrive.car.car_helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-disable-ecu-module">selfdrive.car.disable_ecu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-docs-module">selfdrive.car.docs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#module-selfdrive.car.docs_definitions">selfdrive.car.docs_definitions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Accessory"><code class="docutils literal notranslate"><span class="pre">Accessory</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Accessory.comma_power_v2"><code class="docutils literal notranslate"><span class="pre">Accessory.comma_power_v2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Accessory.harness_box"><code class="docutils literal notranslate"><span class="pre">Accessory.harness_box</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BaseCarHarness"><code class="docutils literal notranslate"><span class="pre">BaseCarHarness</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BaseCarHarness.has_connector"><code class="docutils literal notranslate"><span class="pre">BaseCarHarness.has_connector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BaseCarHarness.parts"><code class="docutils literal notranslate"><span class="pre">BaseCarHarness.parts</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BasePart"><code class="docutils literal notranslate"><span class="pre">BasePart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BasePart.all_parts"><code class="docutils literal notranslate"><span class="pre">BasePart.all_parts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BasePart.name"><code class="docutils literal notranslate"><span class="pre">BasePart.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.BasePart.parts"><code class="docutils literal notranslate"><span class="pre">BasePart.parts</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable"><code class="docutils literal notranslate"><span class="pre">Cable</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.long_obdc_cable"><code class="docutils literal notranslate"><span class="pre">Cable.long_obdc_cable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.obd_c_cable_1_5ft"><code class="docutils literal notranslate"><span class="pre">Cable.obd_c_cable_1_5ft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.right_angle_obd_c_cable_1_5ft"><code class="docutils literal notranslate"><span class="pre">Cable.right_angle_obd_c_cable_1_5ft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.rj45_cable_7ft"><code class="docutils literal notranslate"><span class="pre">Cable.rj45_cable_7ft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.usb_a_2_a_cable"><code class="docutils literal notranslate"><span class="pre">Cable.usb_a_2_a_cable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.usbc_coupler"><code class="docutils literal notranslate"><span class="pre">Cable.usbc_coupler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Cable.usbc_otg_cable"><code class="docutils literal notranslate"><span class="pre">Cable.usbc_otg_cable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarFootnote"><code class="docutils literal notranslate"><span class="pre">CarFootnote</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarFootnote.column"><code class="docutils literal notranslate"><span class="pre">CarFootnote.column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarFootnote.docs_only"><code class="docutils literal notranslate"><span class="pre">CarFootnote.docs_only</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarFootnote.shop_footnote"><code class="docutils literal notranslate"><span class="pre">CarFootnote.shop_footnote</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarFootnote.text"><code class="docutils literal notranslate"><span class="pre">CarFootnote.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness"><code class="docutils literal notranslate"><span class="pre">CarHarness</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.bosch_a"><code class="docutils literal notranslate"><span class="pre">CarHarness.bosch_a</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.bosch_b"><code class="docutils literal notranslate"><span class="pre">CarHarness.bosch_b</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.custom"><code class="docutils literal notranslate"><span class="pre">CarHarness.custom</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.fca"><code class="docutils literal notranslate"><span class="pre">CarHarness.fca</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.ford_q3"><code class="docutils literal notranslate"><span class="pre">CarHarness.ford_q3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.ford_q4"><code class="docutils literal notranslate"><span class="pre">CarHarness.ford_q4</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.gm"><code class="docutils literal notranslate"><span class="pre">CarHarness.gm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_a"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_a</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_b"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_b</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_c"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_c</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_d"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_e"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_e</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_f"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_f</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_g"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_g</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_h"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_h</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_i"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_i</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_j"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_j</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_k"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_k</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_l"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_l</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_m"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_m</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_n"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_o"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_o</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_p"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_p</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_q"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_q</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.hyundai_r"><code class="docutils literal notranslate"><span class="pre">CarHarness.hyundai_r</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.j533"><code class="docutils literal notranslate"><span class="pre">CarHarness.j533</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.mazda"><code class="docutils literal notranslate"><span class="pre">CarHarness.mazda</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.nidec"><code class="docutils literal notranslate"><span class="pre">CarHarness.nidec</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.nissan_a"><code class="docutils literal notranslate"><span class="pre">CarHarness.nissan_a</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.nissan_b"><code class="docutils literal notranslate"><span class="pre">CarHarness.nissan_b</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.obd_ii"><code class="docutils literal notranslate"><span class="pre">CarHarness.obd_ii</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.ram"><code class="docutils literal notranslate"><span class="pre">CarHarness.ram</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.subaru_a"><code class="docutils literal notranslate"><span class="pre">CarHarness.subaru_a</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.subaru_b"><code class="docutils literal notranslate"><span class="pre">CarHarness.subaru_b</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.subaru_c"><code class="docutils literal notranslate"><span class="pre">CarHarness.subaru_c</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.subaru_d"><code class="docutils literal notranslate"><span class="pre">CarHarness.subaru_d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.toyota_a"><code class="docutils literal notranslate"><span class="pre">CarHarness.toyota_a</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.toyota_b"><code class="docutils literal notranslate"><span class="pre">CarHarness.toyota_b</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarHarness.vw"><code class="docutils literal notranslate"><span class="pre">CarHarness.vw</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo"><code class="docutils literal notranslate"><span class="pre">CarInfo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.auto_resume"><code class="docutils literal notranslate"><span class="pre">CarInfo.auto_resume</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.car_parts"><code class="docutils literal notranslate"><span class="pre">CarInfo.car_parts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.footnotes"><code class="docutils literal notranslate"><span class="pre">CarInfo.footnotes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.get_column"><code class="docutils literal notranslate"><span class="pre">CarInfo.get_column()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.get_detail_sentence"><code class="docutils literal notranslate"><span class="pre">CarInfo.get_detail_sentence()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.init"><code class="docutils literal notranslate"><span class="pre">CarInfo.init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.init_make"><code class="docutils literal notranslate"><span class="pre">CarInfo.init_make()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.min_enable_speed"><code class="docutils literal notranslate"><span class="pre">CarInfo.min_enable_speed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.min_steer_speed"><code class="docutils literal notranslate"><span class="pre">CarInfo.min_steer_speed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.name"><code class="docutils literal notranslate"><span class="pre">CarInfo.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.package"><code class="docutils literal notranslate"><span class="pre">CarInfo.package</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.requirements"><code class="docutils literal notranslate"><span class="pre">CarInfo.requirements</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarInfo.video_link"><code class="docutils literal notranslate"><span class="pre">CarInfo.video_link</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarParts"><code class="docutils literal notranslate"><span class="pre">CarParts</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarParts.all_parts"><code class="docutils literal notranslate"><span class="pre">CarParts.all_parts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarParts.common"><code class="docutils literal notranslate"><span class="pre">CarParts.common()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CarParts.parts"><code class="docutils literal notranslate"><span class="pre">CarParts.parts</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column"><code class="docutils literal notranslate"><span class="pre">Column</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.AUTO_RESUME"><code class="docutils literal notranslate"><span class="pre">Column.AUTO_RESUME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.FSR_LONGITUDINAL"><code class="docutils literal notranslate"><span class="pre">Column.FSR_LONGITUDINAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.FSR_STEERING"><code class="docutils literal notranslate"><span class="pre">Column.FSR_STEERING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.HARDWARE"><code class="docutils literal notranslate"><span class="pre">Column.HARDWARE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.LONGITUDINAL"><code class="docutils literal notranslate"><span class="pre">Column.LONGITUDINAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.MAKE"><code class="docutils literal notranslate"><span class="pre">Column.MAKE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.MODEL"><code class="docutils literal notranslate"><span class="pre">Column.MODEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.PACKAGE"><code class="docutils literal notranslate"><span class="pre">Column.PACKAGE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.STEERING_TORQUE"><code class="docutils literal notranslate"><span class="pre">Column.STEERING_TORQUE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Column.VIDEO"><code class="docutils literal notranslate"><span class="pre">Column.VIDEO</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CommonFootnote"><code class="docutils literal notranslate"><span class="pre">CommonFootnote</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CommonFootnote.EXP_LONG_AVAIL"><code class="docutils literal notranslate"><span class="pre">CommonFootnote.EXP_LONG_AVAIL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.CommonFootnote.EXP_LONG_DSU"><code class="docutils literal notranslate"><span class="pre">CommonFootnote.EXP_LONG_DSU</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Device"><code class="docutils literal notranslate"><span class="pre">Device</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Device.red_panda"><code class="docutils literal notranslate"><span class="pre">Device.red_panda</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Device.threex"><code class="docutils literal notranslate"><span class="pre">Device.threex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Device.threex_angled_mount"><code class="docutils literal notranslate"><span class="pre">Device.threex_angled_mount</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.EnumBase"><code class="docutils literal notranslate"><span class="pre">EnumBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.EnumBase.part_type"><code class="docutils literal notranslate"><span class="pre">EnumBase.part_type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Kit"><code class="docutils literal notranslate"><span class="pre">Kit</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Kit.red_panda_kit"><code class="docutils literal notranslate"><span class="pre">Kit.red_panda_kit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Mount"><code class="docutils literal notranslate"><span class="pre">Mount</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Mount.angled_mount_8_degrees"><code class="docutils literal notranslate"><span class="pre">Mount.angled_mount_8_degrees</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Mount.mount"><code class="docutils literal notranslate"><span class="pre">Mount.mount</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType"><code class="docutils literal notranslate"><span class="pre">PartType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.accessory"><code class="docutils literal notranslate"><span class="pre">PartType.accessory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.cable"><code class="docutils literal notranslate"><span class="pre">PartType.cable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.connector"><code class="docutils literal notranslate"><span class="pre">PartType.connector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.device"><code class="docutils literal notranslate"><span class="pre">PartType.device</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.kit"><code class="docutils literal notranslate"><span class="pre">PartType.kit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.mount"><code class="docutils literal notranslate"><span class="pre">PartType.mount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.PartType.tool"><code class="docutils literal notranslate"><span class="pre">PartType.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Star"><code class="docutils literal notranslate"><span class="pre">Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Star.EMPTY"><code class="docutils literal notranslate"><span class="pre">Star.EMPTY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Star.FULL"><code class="docutils literal notranslate"><span class="pre">Star.FULL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Star.HALF"><code class="docutils literal notranslate"><span class="pre">Star.HALF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Tool"><code class="docutils literal notranslate"><span class="pre">Tool</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Tool.pry_tool"><code class="docutils literal notranslate"><span class="pre">Tool.pry_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.Tool.socket_8mm_deep"><code class="docutils literal notranslate"><span class="pre">Tool.socket_8mm_deep</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.get_footnotes"><code class="docutils literal notranslate"><span class="pre">get_footnotes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.get_year_list"><code class="docutils literal notranslate"><span class="pre">get_year_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.docs_definitions.split_name"><code class="docutils literal notranslate"><span class="pre">split_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-ecu-addrs-module">selfdrive.car.ecu_addrs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-fingerprints-module">selfdrive.car.fingerprints module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#module-selfdrive.car.fw_query_definitions">selfdrive.car.fw_query_definitions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.FwQueryConfig"><code class="docutils literal notranslate"><span class="pre">FwQueryConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.FwQueryConfig.extra_ecus"><code class="docutils literal notranslate"><span class="pre">FwQueryConfig.extra_ecus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.FwQueryConfig.match_fw_to_car_fuzzy"><code class="docutils literal notranslate"><span class="pre">FwQueryConfig.match_fw_to_car_fuzzy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.FwQueryConfig.non_essential_ecus"><code class="docutils literal notranslate"><span class="pre">FwQueryConfig.non_essential_ecus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.FwQueryConfig.requests"><code class="docutils literal notranslate"><span class="pre">FwQueryConfig.requests</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request"><code class="docutils literal notranslate"><span class="pre">Request</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.auxiliary"><code class="docutils literal notranslate"><span class="pre">Request.auxiliary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.bus"><code class="docutils literal notranslate"><span class="pre">Request.bus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.logging"><code class="docutils literal notranslate"><span class="pre">Request.logging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.obd_multiplexing"><code class="docutils literal notranslate"><span class="pre">Request.obd_multiplexing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.request"><code class="docutils literal notranslate"><span class="pre">Request.request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.response"><code class="docutils literal notranslate"><span class="pre">Request.response</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.rx_offset"><code class="docutils literal notranslate"><span class="pre">Request.rx_offset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.Request.whitelist_ecus"><code class="docutils literal notranslate"><span class="pre">Request.whitelist_ecus</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries"><code class="docutils literal notranslate"><span class="pre">StdQueries</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.DEFAULT_DIAGNOSTIC_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.DEFAULT_DIAGNOSTIC_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.DEFAULT_DIAGNOSTIC_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.DEFAULT_DIAGNOSTIC_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.EXTENDED_DIAGNOSTIC_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.EXTENDED_DIAGNOSTIC_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.EXTENDED_DIAGNOSTIC_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.EXTENDED_DIAGNOSTIC_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.MANUFACTURER_SOFTWARE_VERSION_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.MANUFACTURER_SOFTWARE_VERSION_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.MANUFACTURER_SOFTWARE_VERSION_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.MANUFACTURER_SOFTWARE_VERSION_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.OBD_VERSION_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.OBD_VERSION_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.OBD_VERSION_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.OBD_VERSION_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.OBD_VIN_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.OBD_VIN_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.OBD_VIN_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.OBD_VIN_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.SHORT_TESTER_PRESENT_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.SHORT_TESTER_PRESENT_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.SHORT_TESTER_PRESENT_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.SHORT_TESTER_PRESENT_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.TESTER_PRESENT_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.TESTER_PRESENT_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.TESTER_PRESENT_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.TESTER_PRESENT_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.UDS_VERSION_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.UDS_VERSION_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.UDS_VERSION_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.UDS_VERSION_RESPONSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.UDS_VIN_REQUEST"><code class="docutils literal notranslate"><span class="pre">StdQueries.UDS_VIN_REQUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.StdQueries.UDS_VIN_RESPONSE"><code class="docutils literal notranslate"><span class="pre">StdQueries.UDS_VIN_RESPONSE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.fw_query_definitions.p16"><code class="docutils literal notranslate"><span class="pre">p16()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-fw-versions-module">selfdrive.car.fw_versions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-interfaces-module">selfdrive.car.interfaces module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-isotp-parallel-query-module">selfdrive.car.isotp_parallel_query module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#selfdrive-car-vin-module">selfdrive.car.vin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.car.html#module-selfdrive.car">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.AngleRateLimit"><code class="docutils literal notranslate"><span class="pre">AngleRateLimit</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.AngleRateLimit.angle_v"><code class="docutils literal notranslate"><span class="pre">AngleRateLimit.angle_v</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.AngleRateLimit.speed_bp"><code class="docutils literal notranslate"><span class="pre">AngleRateLimit.speed_bp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.CanBusBase"><code class="docutils literal notranslate"><span class="pre">CanBusBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.CanBusBase.offset"><code class="docutils literal notranslate"><span class="pre">CanBusBase.offset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.CanSignalRateCalculator"><code class="docutils literal notranslate"><span class="pre">CanSignalRateCalculator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.CanSignalRateCalculator.update"><code class="docutils literal notranslate"><span class="pre">CanSignalRateCalculator.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.CENTER_TO_FRONT"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.CENTER_TO_FRONT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.CENTER_TO_REAR"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.CENTER_TO_REAR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.MASS"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.MASS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.ROTATIONAL_INERTIA"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.ROTATIONAL_INERTIA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.TIRE_STIFFNESS_FRONT"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.TIRE_STIFFNESS_FRONT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.TIRE_STIFFNESS_REAR"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.TIRE_STIFFNESS_REAR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.VehicleDynamicsParams.WHEELBASE"><code class="docutils literal notranslate"><span class="pre">VehicleDynamicsParams.WHEELBASE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.apply_dist_to_meas_limits"><code class="docutils literal notranslate"><span class="pre">apply_dist_to_meas_limits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.apply_driver_steer_torque_limits"><code class="docutils literal notranslate"><span class="pre">apply_driver_steer_torque_limits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.apply_hysteresis"><code class="docutils literal notranslate"><span class="pre">apply_hysteresis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.apply_meas_steer_torque_limits"><code class="docutils literal notranslate"><span class="pre">apply_meas_steer_torque_limits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.apply_std_steer_angle_limits"><code class="docutils literal notranslate"><span class="pre">apply_std_steer_angle_limits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.common_fault_avoidance"><code class="docutils literal notranslate"><span class="pre">common_fault_avoidance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.crc8_pedal"><code class="docutils literal notranslate"><span class="pre">crc8_pedal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.create_button_events"><code class="docutils literal notranslate"><span class="pre">create_button_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.create_gas_interceptor_command"><code class="docutils literal notranslate"><span class="pre">create_gas_interceptor_command()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.dbc_dict"><code class="docutils literal notranslate"><span class="pre">dbc_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.gen_empty_fingerprint"><code class="docutils literal notranslate"><span class="pre">gen_empty_fingerprint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.get_safety_config"><code class="docutils literal notranslate"><span class="pre">get_safety_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.make_can_msg"><code class="docutils literal notranslate"><span class="pre">make_can_msg()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.scale_rot_inertia"><code class="docutils literal notranslate"><span class="pre">scale_rot_inertia()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.car.html#selfdrive.car.scale_tire_stiffness"><code class="docutils literal notranslate"><span class="pre">scale_tire_stiffness()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.controls.html">selfdrive.controls package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.controls.lib.html">selfdrive.controls.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#selfdrive-controls-lib-alertmanager-module">selfdrive.controls.lib.alertmanager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.desire_helper">selfdrive.controls.lib.desire_helper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.drive_helpers">selfdrive.controls.lib.drive_helpers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#selfdrive-controls-lib-events-module">selfdrive.controls.lib.events module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.latcontrol">selfdrive.controls.lib.latcontrol module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.latcontrol_angle">selfdrive.controls.lib.latcontrol_angle module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.latcontrol_pid">selfdrive.controls.lib.latcontrol_pid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.latcontrol_torque">selfdrive.controls.lib.latcontrol_torque module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#selfdrive-controls-lib-lateral-planner-module">selfdrive.controls.lib.lateral_planner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.longcontrol">selfdrive.controls.lib.longcontrol module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#selfdrive-controls-lib-longitudinal-planner-module">selfdrive.controls.lib.longitudinal_planner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.pid">selfdrive.controls.lib.pid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib.vehicle_model">selfdrive.controls.lib.vehicle_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.lib.html#module-selfdrive.controls.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#selfdrive-controls-controlsd-module">selfdrive.controls.controlsd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#selfdrive-controls-plannerd-module">selfdrive.controls.plannerd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#selfdrive-controls-radard-module">selfdrive.controls.radard module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.html#module-selfdrive.controls">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.locationd.html">selfdrive.locationd package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html">selfdrive.locationd.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive-locationd-models-car-kf-module">selfdrive.locationd.models.car_kf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.constants">selfdrive.locationd.models.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.gnss_helpers">selfdrive.locationd.models.gnss_helpers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive-locationd-models-gnss-kf-module">selfdrive.locationd.models.gnss_kf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.lane_kf">selfdrive.locationd.models.lane_kf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.live_kf">selfdrive.locationd.models.live_kf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.loc_kf">selfdrive.locationd.models.loc_kf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#selfdrive-locationd-calibrationd-module">selfdrive.locationd.calibrationd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#module-selfdrive.locationd.helpers">selfdrive.locationd.helpers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.NPQueue"><code class="docutils literal notranslate"><span class="pre">NPQueue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.NPQueue.append"><code class="docutils literal notranslate"><span class="pre">NPQueue.append()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets"><code class="docutils literal notranslate"><span class="pre">PointBuckets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets.add_point"><code class="docutils literal notranslate"><span class="pre">PointBuckets.add_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets.bucket_lengths"><code class="docutils literal notranslate"><span class="pre">PointBuckets.bucket_lengths()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets.get_points"><code class="docutils literal notranslate"><span class="pre">PointBuckets.get_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets.is_valid"><code class="docutils literal notranslate"><span class="pre">PointBuckets.is_valid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html#selfdrive.locationd.helpers.PointBuckets.load_points"><code class="docutils literal notranslate"><span class="pre">PointBuckets.load_points()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#selfdrive-locationd-laikad-module">selfdrive.locationd.laikad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#selfdrive-locationd-paramsd-module">selfdrive.locationd.paramsd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#selfdrive-locationd-torqued-module">selfdrive.locationd.torqued module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.html#module-selfdrive.locationd">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.manager.html">selfdrive.manager package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#module-selfdrive.manager.build">selfdrive.manager.build module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.manager.html#selfdrive.manager.build.build"><code class="docutils literal notranslate"><span class="pre">build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#module-selfdrive.manager.helpers">selfdrive.manager.helpers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.manager.html#selfdrive.manager.helpers.unblock_stdout"><code class="docutils literal notranslate"><span class="pre">unblock_stdout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.manager.html#selfdrive.manager.helpers.write_onroad_params"><code class="docutils literal notranslate"><span class="pre">write_onroad_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#selfdrive-manager-manager-module">selfdrive.manager.manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#selfdrive-manager-process-module">selfdrive.manager.process module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#selfdrive-manager-process-config-module">selfdrive.manager.process_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.manager.html#module-selfdrive.manager">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.navd.html">selfdrive.navd package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#selfdrive-navd-helpers-module">selfdrive.navd.helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#module-selfdrive.navd.map_renderer">selfdrive.navd.map_renderer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.coords_to_polyline"><code class="docutils literal notranslate"><span class="pre">coords_to_polyline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.get_ffi"><code class="docutils literal notranslate"><span class="pre">get_ffi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.get_image"><code class="docutils literal notranslate"><span class="pre">get_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.navRoute_to_polyline"><code class="docutils literal notranslate"><span class="pre">navRoute_to_polyline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.polyline_to_coords"><code class="docutils literal notranslate"><span class="pre">polyline_to_coords()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.navd.html#selfdrive.navd.map_renderer.wait_ready"><code class="docutils literal notranslate"><span class="pre">wait_ready()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#selfdrive-navd-navd-module">selfdrive.navd.navd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#selfdrive-navd-set-destination-module">selfdrive.navd.set_destination module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.navd.html#module-selfdrive.navd">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.thermald.html">selfdrive.thermald package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.thermald.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.thermald.html#module-selfdrive.thermald.fan_controller">selfdrive.thermald.fan_controller module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.thermald.html#selfdrive.thermald.fan_controller.BaseFanController"><code class="docutils literal notranslate"><span class="pre">BaseFanController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.thermald.html#selfdrive.thermald.fan_controller.BaseFanController.update"><code class="docutils literal notranslate"><span class="pre">BaseFanController.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.thermald.html#selfdrive.thermald.fan_controller.TiciFanController"><code class="docutils literal notranslate"><span class="pre">TiciFanController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.thermald.html#selfdrive.thermald.fan_controller.TiciFanController.update"><code class="docutils literal notranslate"><span class="pre">TiciFanController.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.thermald.html#selfdrive-thermald-power-monitoring-module">selfdrive.thermald.power_monitoring module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.thermald.html#selfdrive-thermald-thermald-module">selfdrive.thermald.thermald module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.thermald.html#module-selfdrive.thermald">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-sentry-module">
+<h2>selfdrive.sentry module<a class="headerlink" href="#selfdrive-sentry-module" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-statsd-module">
+<h2>selfdrive.statsd module<a class="headerlink" href="#selfdrive-statsd-module" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-tombstoned-module">
+<h2>selfdrive.tombstoned module<a class="headerlink" href="#selfdrive-tombstoned-module" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-updated-module">
+<h2>selfdrive.updated module<a class="headerlink" href="#selfdrive-updated-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-selfdrive" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="panda.python.html" class="btn btn-neutral float-left" title="panda.python package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="selfdrive.athena.html" class="btn btn-neutral float-right" title="selfdrive.athena package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, comma.ai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

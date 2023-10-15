@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceutils" kind="namespace" language="C++">
+    <compoundname>utils</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="util_8h_1a5e85822221a3c6d6002f18fb772f7009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPixmap</type>
+        <definition>QPixmap utils::icon</definition>
+        <argsstring>(const QString &amp;id)</argsstring>
+        <name>icon</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/util.h" line="104" column="9" declfile="/tmp/openpilot/tools/cabana/util.h" declline="104" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a49a737fc5e418625f436a09a6a5e411d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utils::setTheme</definition>
+        <argsstring>(int theme)</argsstring>
+        <name>setTheme</name>
+        <param>
+          <type>int</type>
+          <declname>theme</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/util.h" line="105" column="6" declfile="/tmp/openpilot/tools/cabana/util.h" declline="105" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a7a778a1b0463c3794a84bd91dd52eacb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString utils::formatSeconds</definition>
+        <argsstring>(int seconds)</argsstring>
+        <name>formatSeconds</name>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/util.h" line="106" column="16" bodyfile="/tmp/openpilot/tools/cabana/util.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a4d309a2e24fed9d09ec13352e6083013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void utils::drawStaticText</definition>
+        <argsstring>(QPainter *p, const QRect &amp;r, const QStaticText &amp;text)</argsstring>
+        <name>drawStaticText</name>
+        <param>
+          <type>QPainter *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const QStaticText &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/util.h" line="109" column="13" bodyfile="/tmp/openpilot/tools/cabana/util.h" bodystart="109" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/tools/cabana/util.h" line="103" column="15"/>
+  </compounddef>
+</doxygen>

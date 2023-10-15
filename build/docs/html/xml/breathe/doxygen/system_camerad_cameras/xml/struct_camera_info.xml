@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_camera_info" kind="struct" language="C++" prot="public">
+    <compoundname>CameraInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_camera_info_1a2b03f7085b63dcffedcc532074c5a99c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CameraInfo::frame_width</definition>
+        <argsstring></argsstring>
+        <name>frame_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="46" column="12" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1aaba2610d1050a54c373f8f7010501a47" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CameraInfo::frame_height</definition>
+        <argsstring></argsstring>
+        <name>frame_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="46" column="24" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1ae5dec9087391c67734da6048b2115f3a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CameraInfo::frame_stride</definition>
+        <argsstring></argsstring>
+        <name>frame_stride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="47" column="12" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1aac2aaefe450e093eae7092c2a97f4f0f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CameraInfo::frame_offset</definition>
+        <argsstring></argsstring>
+        <name>frame_offset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="48" column="12" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1a803f8ebdb755b7d556dc72293d272730" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CameraInfo::extra_height</definition>
+        <argsstring></argsstring>
+        <name>extra_height</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="49" column="12" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1a1f7c830e624634e0cea756f708e3e4b7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CameraInfo::registers_offset</definition>
+        <argsstring></argsstring>
+        <name>registers_offset</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="50" column="7" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_camera_info_1a14766a42ae41a6f13ea82fff3fe966a8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CameraInfo::stats_offset</definition>
+        <argsstring></argsstring>
+        <name>stats_offset</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="51" column="7" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/system/camerad/cameras/camera_common.h" line="45" column="25" bodyfile="/tmp/openpilot/system/camerad/cameras/camera_common.h" bodystart="45" bodyend="52"/>
+    <listofallmembers>
+      <member refid="struct_camera_info_1a803f8ebdb755b7d556dc72293d272730" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>extra_height</name></member>
+      <member refid="struct_camera_info_1aaba2610d1050a54c373f8f7010501a47" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>frame_height</name></member>
+      <member refid="struct_camera_info_1aac2aaefe450e093eae7092c2a97f4f0f" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>frame_offset</name></member>
+      <member refid="struct_camera_info_1ae5dec9087391c67734da6048b2115f3a" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>frame_stride</name></member>
+      <member refid="struct_camera_info_1a2b03f7085b63dcffedcc532074c5a99c" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>frame_width</name></member>
+      <member refid="struct_camera_info_1a1f7c830e624634e0cea756f708e3e4b7" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>registers_offset</name></member>
+      <member refid="struct_camera_info_1a14766a42ae41a6f13ea82fff3fe966a8" prot="public" virt="non-virtual"><scope>CameraInfo</scope><name>stats_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

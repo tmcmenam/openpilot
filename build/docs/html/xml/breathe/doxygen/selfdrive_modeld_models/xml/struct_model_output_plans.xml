@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_plans" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputPlans</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_plans_1ae4364b5b1cfbdbd9c7dc842d113c4677" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref>, PLAN_MHP_N &gt;</type>
+        <definition>std::array&lt;ModelOutputPlanPrediction, PLAN_MHP_N&gt; ModelOutputPlans::prediction</definition>
+        <argsstring></argsstring>
+        <name>prediction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="67" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_model_output_plans_1a04424fcbac05eec7ca74dbf2267996f8" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr const <ref refid="struct_model_output_plan_prediction" kindref="compound">ModelOutputPlanPrediction</ref> &amp;</type>
+        <definition>constexpr const ModelOutputPlanPrediction&amp; ModelOutputPlans::get_best_prediction</definition>
+        <argsstring>() const</argsstring>
+        <name>get_best_prediction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="69" column="45" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="69" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="66" column="23" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="66" bodyend="78"/>
+    <listofallmembers>
+      <member refid="struct_model_output_plans_1a04424fcbac05eec7ca74dbf2267996f8" prot="public" virt="non-virtual"><scope>ModelOutputPlans</scope><name>get_best_prediction</name></member>
+      <member refid="struct_model_output_plans_1ae4364b5b1cfbdbd9c7dc842d113c4677" prot="public" virt="non-virtual"><scope>ModelOutputPlans</scope><name>prediction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

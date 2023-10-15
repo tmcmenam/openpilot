@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_plan_element" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputPlanElement</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_plan_element_1a0f157482e5e58f09bad4f1d883c60397" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPlanElement::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="51" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_element_1a190d31a9ece8681b684c701292be0866" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPlanElement::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="52" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_element_1aaa18257b7905896b01887373c7292d0b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPlanElement::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="53" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_element_1a79dee1b1c515b257854f31a31c1879b8" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPlanElement::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="54" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_plan_element_1a1ec8e114142029c6e73f8f5c3dc6b58d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPlanElement::rotation_rate</definition>
+        <argsstring></argsstring>
+        <name>rotation_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="55" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputPlanElement</label>
+        <link refid="struct_model_output_plan_element"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>rotation</edgelabel>
+          <edgelabel>rotation_rate</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>velocity</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputXYZ</label>
+        <link refid="struct_model_output_x_y_z"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="50" column="29" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="50" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_model_output_plan_element_1aaa18257b7905896b01887373c7292d0b" prot="public" virt="non-virtual"><scope>ModelOutputPlanElement</scope><name>acceleration</name></member>
+      <member refid="struct_model_output_plan_element_1a0f157482e5e58f09bad4f1d883c60397" prot="public" virt="non-virtual"><scope>ModelOutputPlanElement</scope><name>position</name></member>
+      <member refid="struct_model_output_plan_element_1a79dee1b1c515b257854f31a31c1879b8" prot="public" virt="non-virtual"><scope>ModelOutputPlanElement</scope><name>rotation</name></member>
+      <member refid="struct_model_output_plan_element_1a1ec8e114142029c6e73f8f5c3dc6b58d" prot="public" virt="non-virtual"><scope>ModelOutputPlanElement</scope><name>rotation_rate</name></member>
+      <member refid="struct_model_output_plan_element_1a190d31a9ece8681b684c701292be0866" prot="public" virt="non-virtual"><scope>ModelOutputPlanElement</scope><name>velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

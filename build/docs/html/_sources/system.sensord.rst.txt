@@ -1,0 +1,21 @@
+system.sensord package
+======================
+
+Submodules
+----------
+
+system.sensord.pigeond module
+-----------------------------
+
+.. automodule:: system.sensord.pigeond
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: system.sensord
+   :members:
+   :undoc-members:
+   :show-inheritance:

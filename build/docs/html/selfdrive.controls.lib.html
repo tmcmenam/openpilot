@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selfdrive.controls.lib package &mdash; openpilot docs 0.9.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.comma.ai/selfdrive.controls.lib.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=61b282d3"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="selfdrive.controls.lib.lateral_mpc_lib package" href="selfdrive.controls.lib.lateral_mpc_lib.html" />
+    <link rel="prev" title="selfdrive.controls package" href="selfdrive.controls.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000000" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            openpilot docs
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.9.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html">Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#id1">265 Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#don-t-see-your-car-here">Don’t see your car here?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INTEGRATION.html">Integration with Stock Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LIMITATIONS.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAFETY.html">Safety</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">openpilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#cereal">cereal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#laika">laika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#models">models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#opendbc">opendbc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#panda">panda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#rednose">rednose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#tools">tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">openpilot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cereal.html">cereal package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common.html">common package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conftest.html">conftest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opendbc.html">opendbc package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openpilot.html">openpilot package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="panda.html">panda package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="selfdrive.html">selfdrive package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="selfdrive.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.athena.html">selfdrive.athena package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.boardd.html">selfdrive.boardd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html">selfdrive.car package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="selfdrive.controls.html">selfdrive.controls package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.html">selfdrive.locationd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.manager.html">selfdrive.manager package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.navd.html">selfdrive.navd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.thermald.html">selfdrive.thermald package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-sentry-module">selfdrive.sentry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-statsd-module">selfdrive.statsd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-tombstoned-module">selfdrive.tombstoned module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-updated-module">selfdrive.updated module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#module-selfdrive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="system.html">system package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">tools package</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C/C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="c_docs.html">openpilot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">openpilot docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">openpilot</a></li>
+          <li class="breadcrumb-item"><a href="selfdrive.html">selfdrive package</a></li>
+          <li class="breadcrumb-item"><a href="selfdrive.controls.html">selfdrive.controls package</a></li>
+      <li class="breadcrumb-item active">selfdrive.controls.lib package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/selfdrive.controls.lib.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selfdrive-controls-lib-package">
+<h1>selfdrive.controls.lib package<a class="headerlink" href="#selfdrive-controls-lib-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.controls.lib.lateral_mpc_lib.html">selfdrive.controls.lib.lateral_mpc_lib package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.lateral_mpc_lib.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.lateral_mpc_lib.html#selfdrive-controls-lib-lateral-mpc-lib-lat-mpc-module">selfdrive.controls.lib.lateral_mpc_lib.lat_mpc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.lateral_mpc_lib.html#module-selfdrive.controls.lib.lateral_mpc_lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.controls.lib.longitudinal_mpc_lib.html">selfdrive.controls.lib.longitudinal_mpc_lib package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.longitudinal_mpc_lib.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.longitudinal_mpc_lib.html#selfdrive-controls-lib-longitudinal-mpc-lib-long-mpc-module">selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.controls.lib.longitudinal_mpc_lib.html#module-selfdrive.controls.lib.longitudinal_mpc_lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-controls-lib-alertmanager-module">
+<h2>selfdrive.controls.lib.alertmanager module<a class="headerlink" href="#selfdrive-controls-lib-alertmanager-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.controls.lib.desire_helper">
+<span id="selfdrive-controls-lib-desire-helper-module"></span><h2>selfdrive.controls.lib.desire_helper module<a class="headerlink" href="#module-selfdrive.controls.lib.desire_helper" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.desire_helper.DesireHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.desire_helper.</span></span><span class="sig-name descname"><span class="pre">DesireHelper</span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/desire_helper.html#DesireHelper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.desire_helper.DesireHelper" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.desire_helper.DesireHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">carstate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lateral_active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lane_change_prob</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/desire_helper.html#DesireHelper.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.desire_helper.DesireHelper.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib.drive_helpers">
+<span id="selfdrive-controls-lib-drive-helpers-module"></span><h2>selfdrive.controls.lib.drive_helpers module<a class="headerlink" href="#module-selfdrive.controls.lib.drive_helpers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.VCruiseHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">VCruiseHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#VCruiseHelper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.VCruiseHelper" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.VCruiseHelper.initialize_v_cruise">
+<span class="sig-name descname"><span class="pre">initialize_v_cruise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experimental_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#VCruiseHelper.initialize_v_cruise"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.VCruiseHelper.initialize_v_cruise" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.VCruiseHelper.update_button_timers">
+<span class="sig-name descname"><span class="pre">update_button_timers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#VCruiseHelper.update_button_timers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.VCruiseHelper.update_button_timers" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.VCruiseHelper.update_v_cruise">
+<span class="sig-name descname"><span class="pre">update_v_cruise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_metric</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#VCruiseHelper.update_v_cruise"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.VCruiseHelper.update_v_cruise" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.VCruiseHelper.v_cruise_initialized">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">v_cruise_initialized</span></span><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.VCruiseHelper.v_cruise_initialized" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.apply_center_deadzone">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">apply_center_deadzone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deadzone</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#apply_center_deadzone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.apply_center_deadzone" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.apply_deadzone">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">apply_deadzone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deadzone</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#apply_deadzone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.apply_deadzone" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.get_friction">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">get_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lateral_accel_error:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lateral_accel_deadzone:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">friction_threshold:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">torque_params:</span> <span class="pre">&lt;capnp.lib.capnp._StructModule</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2a2be1b690&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">friction_compensation:</span> <span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#get_friction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.get_friction" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.get_lag_adjusted_curvature">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">get_lag_adjusted_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_ego</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curvatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curvature_rates</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#get_lag_adjusted_curvature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.get_lag_adjusted_curvature" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.get_speed_error">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">get_speed_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modelV2:</span> <span class="pre">&lt;capnp.lib.capnp._StructModule</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2a2bdc8410&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_ego:</span> <span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#get_speed_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.get_speed_error" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.drive_helpers.rate_limit">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.drive_helpers.</span></span><span class="sig-name descname"><span class="pre">rate_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dw_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/drive_helpers.html#rate_limit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.drive_helpers.rate_limit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="selfdrive-controls-lib-events-module">
+<h2>selfdrive.controls.lib.events module<a class="headerlink" href="#selfdrive-controls-lib-events-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.controls.lib.latcontrol">
+<span id="selfdrive-controls-lib-latcontrol-module"></span><h2>selfdrive.controls.lib.latcontrol module<a class="headerlink" href="#module-selfdrive.controls.lib.latcontrol" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol.LatControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.latcontrol.</span></span><span class="sig-name descname"><span class="pre">LatControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CI</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol.html#LatControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol.LatControl" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol.LatControl.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol.html#LatControl.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol.LatControl.reset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol.LatControl.update">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_actuators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steer_limited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol.html#LatControl.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol.LatControl.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib.latcontrol_angle">
+<span id="selfdrive-controls-lib-latcontrol-angle-module"></span><h2>selfdrive.controls.lib.latcontrol_angle module<a class="headerlink" href="#module-selfdrive.controls.lib.latcontrol_angle" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_angle.LatControlAngle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.latcontrol_angle.</span></span><span class="sig-name descname"><span class="pre">LatControlAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CI</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_angle.html#LatControlAngle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_angle.LatControlAngle" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LatControl</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_angle.LatControlAngle.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_actuators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steer_limited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_angle.html#LatControlAngle.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_angle.LatControlAngle.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib.latcontrol_pid">
+<span id="selfdrive-controls-lib-latcontrol-pid-module"></span><h2>selfdrive.controls.lib.latcontrol_pid module<a class="headerlink" href="#module-selfdrive.controls.lib.latcontrol_pid" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_pid.LatControlPID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.latcontrol_pid.</span></span><span class="sig-name descname"><span class="pre">LatControlPID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CI</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_pid.html#LatControlPID"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_pid.LatControlPID" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LatControl</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_pid.LatControlPID.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_pid.html#LatControlPID.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_pid.LatControlPID.reset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_pid.LatControlPID.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_actuators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steer_limited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_pid.html#LatControlPID.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_pid.LatControlPID.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib.latcontrol_torque">
+<span id="selfdrive-controls-lib-latcontrol-torque-module"></span><h2>selfdrive.controls.lib.latcontrol_torque module<a class="headerlink" href="#module-selfdrive.controls.lib.latcontrol_torque" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_torque.LatControlTorque">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.latcontrol_torque.</span></span><span class="sig-name descname"><span class="pre">LatControlTorque</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CI</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_torque.html#LatControlTorque"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_torque.LatControlTorque" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LatControl</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_torque.LatControlTorque.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_actuators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steer_limited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_curvature_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_torque.html#LatControlTorque.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_torque.LatControlTorque.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.latcontrol_torque.LatControlTorque.update_live_torque_params">
+<span class="sig-name descname"><span class="pre">update_live_torque_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latAccelFactor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latAccelOffset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">friction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/latcontrol_torque.html#LatControlTorque.update_live_torque_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.latcontrol_torque.LatControlTorque.update_live_torque_params" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="selfdrive-controls-lib-lateral-planner-module">
+<h2>selfdrive.controls.lib.lateral_planner module<a class="headerlink" href="#selfdrive-controls-lib-lateral-planner-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.controls.lib.longcontrol">
+<span id="selfdrive-controls-lib-longcontrol-module"></span><h2>selfdrive.controls.lib.longcontrol module<a class="headerlink" href="#module-selfdrive.controls.lib.longcontrol" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.longcontrol.LongControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.longcontrol.</span></span><span class="sig-name descname"><span class="pre">LongControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/longcontrol.html#LongControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.longcontrol.LongControl" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.longcontrol.LongControl.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v_pid</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/longcontrol.html#LongControl.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.longcontrol.LongControl.reset" title="Link to this definition"></a></dt>
+<dd><p>Reset PID controller and change setpoint</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.longcontrol.LongControl.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long_plan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accel_limits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_since_plan</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/longcontrol.html#LongControl.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.longcontrol.LongControl.update" title="Link to this definition"></a></dt>
+<dd><p>Update longitudinal control. This updates the state machine and runs a PID loop</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.longcontrol.long_control_state_trans">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.longcontrol.</span></span><span class="sig-name descname"><span class="pre">long_control_state_trans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long_control_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_ego</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_target_1sec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brake_pressed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cruise_standstill</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/longcontrol.html#long_control_state_trans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.longcontrol.long_control_state_trans" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="selfdrive-controls-lib-longitudinal-planner-module">
+<h2>selfdrive.controls.lib.longitudinal_planner module<a class="headerlink" href="#selfdrive-controls-lib-longitudinal-planner-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.controls.lib.pid">
+<span id="selfdrive-controls-lib-pid-module"></span><h2>selfdrive.controls.lib.pid module<a class="headerlink" href="#module-selfdrive.controls.lib.pid" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.pid.</span></span><span class="sig-name descname"><span class="pre">PIDController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e+308</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neg_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1e+308</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/pid.html#PIDController"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.error_integral">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_integral</span></span><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.error_integral" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.k_d">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k_d</span></span><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.k_d" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.k_i">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k_i</span></span><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.k_i" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.k_p">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k_p</span></span><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.k_p" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/pid.html#PIDController.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.reset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.pid.PIDController.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feedforward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeze_integrator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/pid.html#PIDController.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.pid.PIDController.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib.vehicle_model">
+<span id="selfdrive-controls-lib-vehicle-model-module"></span><h2>selfdrive.controls.lib.vehicle_model module<a class="headerlink" href="#module-selfdrive.controls.lib.vehicle_model" title="Link to this heading"></a></h2>
+<p>Dynamic bicycle model from “The Science of Vehicle Dynamics (2014), M. Guiggiani”</p>
+<p>The state is x = [v, r]^T
+with v lateral speed [m/s], and r rotational speed [rad/s]</p>
+<p>The input u is the steering angle [rad], and roll [rad]</p>
+<p>The system is defined by
+x_dot = A*x + B*u</p>
+<p>A depends on longitudinal speed, u [m/s], and vehicle parameters CP</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.vehicle_model.</span></span><span class="sig-name descname"><span class="pre">VehicleModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CP:</span> <span class="pre">&lt;capnp.lib.capnp._StructModule</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2a2be1a890&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.calc_curvature">
+<span class="sig-name descname"><span class="pre">calc_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.calc_curvature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.calc_curvature" title="Link to this definition"></a></dt>
+<dd><p>Returns the curvature. Multiplied by the speed this will give the yaw rate.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sa: Steering wheel angle [rad]
+u: Speed [m/s]
+roll: Road Roll [rad]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Curvature factor [1/m]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.curvature_factor">
+<span class="sig-name descname"><span class="pre">curvature_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.curvature_factor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.curvature_factor" title="Link to this definition"></a></dt>
+<dd><p>Returns the curvature factor.
+Multiplied by wheel angle (not steering wheel angle) this will give the curvature.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>u: Speed [m/s]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Curvature factor [1/m]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.get_steer_from_curvature">
+<span class="sig-name descname"><span class="pre">get_steer_from_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.get_steer_from_curvature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.get_steer_from_curvature" title="Link to this definition"></a></dt>
+<dd><p>Calculates the required steering wheel angle for a given curvature</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>curv: Desired curvature [1/m]
+u: Speed [m/s]
+roll: Road Roll [rad]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Steering wheel angle [rad]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.get_steer_from_yaw_rate">
+<span class="sig-name descname"><span class="pre">get_steer_from_yaw_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.get_steer_from_yaw_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.get_steer_from_yaw_rate" title="Link to this definition"></a></dt>
+<dd><p>Calculates the required steering wheel angle for a given yaw_rate</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>yaw_rate: Desired yaw rate [rad/s]
+u: Speed [m/s]
+roll: Road Roll [rad]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Steering wheel angle [rad]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.roll_compensation">
+<span class="sig-name descname"><span class="pre">roll_compensation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.roll_compensation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.roll_compensation" title="Link to this definition"></a></dt>
+<dd><p>Calculates the roll-compensation to curvature</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>roll: Road Roll [rad]
+u: Speed [m/s]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Roll compensation curvature [rad]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.steady_state_sol">
+<span class="sig-name descname"><span class="pre">steady_state_sol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.steady_state_sol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.steady_state_sol" title="Link to this definition"></a></dt>
+<dd><p>Returns the steady state solution.</p>
+<p>If the speed is too low we can’t use the dynamic model (tire slip is undefined),
+we then have to use the kinematic model</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sa: Steering wheel angle [rad]
+u: Speed [m/s]
+roll: Road Roll [rad]</p>
+</dd>
+<dt>Returns:</dt><dd><p>2x1 matrix with steady state solution (lateral speed, rotational speed)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.update_params">
+<span class="sig-name descname"><span class="pre">update_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stiffness_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steer_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.update_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.update_params" title="Link to this definition"></a></dt>
+<dd><p>Update the vehicle model with a new stiffness factor and steer ratio</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.VehicleModel.yaw_rate">
+<span class="sig-name descname"><span class="pre">yaw_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#VehicleModel.yaw_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.VehicleModel.yaw_rate" title="Link to this definition"></a></dt>
+<dd><p>Calculate yaw rate</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sa: Steering wheel angle [rad]
+u: Speed [m/s]
+roll: Road Roll [rad]</p>
+</dd>
+<dt>Returns:</dt><dd><p>Yaw rate [rad/s]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.calc_slip_factor">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.vehicle_model.</span></span><span class="sig-name descname"><span class="pre">calc_slip_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#selfdrive.controls.lib.vehicle_model.VehicleModel" title="selfdrive.controls.lib.vehicle_model.VehicleModel"><span class="pre">VehicleModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#calc_slip_factor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.calc_slip_factor" title="Link to this definition"></a></dt>
+<dd><p>The slip factor is a measure of how the curvature changes with speed
+it’s positive for Oversteering vehicle, negative (usual case) otherwise.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.create_dyn_state_matrices">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.vehicle_model.</span></span><span class="sig-name descname"><span class="pre">create_dyn_state_matrices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#selfdrive.controls.lib.vehicle_model.VehicleModel" title="selfdrive.controls.lib.vehicle_model.VehicleModel"><span class="pre">VehicleModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#create_dyn_state_matrices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.create_dyn_state_matrices" title="Link to this definition"></a></dt>
+<dd><p>Returns the A and B matrix for the dynamics system</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>u: Vehicle speed [m/s]
+VM: Vehicle model</p>
+</dd>
+<dt>Returns:</dt><dd><p>A tuple with the 2x2 A matrix, and 2x2 B matrix</p>
+</dd>
+<dt>Parameters in the vehicle model:</dt><dd><p>cF: Tire stiffness Front [N/rad]
+cR: Tire stiffness Front [N/rad]
+aF: Distance from CG to front wheels [m]
+aR: Distance from CG to rear wheels [m]
+m: Mass [kg]
+j: Rotational inertia [kg m^2]
+sR: Steering ratio [-]
+chi: Steer ratio rear [-]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.dyn_ss_sol">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.vehicle_model.</span></span><span class="sig-name descname"><span class="pre">dyn_ss_sol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#selfdrive.controls.lib.vehicle_model.VehicleModel" title="selfdrive.controls.lib.vehicle_model.VehicleModel"><span class="pre">VehicleModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#dyn_ss_sol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.dyn_ss_sol" title="Link to this definition"></a></dt>
+<dd><p>Calculate the steady state solution when x_dot = 0,
+Ax + Bu = 0 =&gt; x = -A^{-1} B u</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sa: Steering angle [rad]
+u: Speed [m/s]
+roll: Road Roll [rad]
+VM: Vehicle model</p>
+</dd>
+<dt>Returns:</dt><dd><p>2x1 matrix with steady state solution</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selfdrive.controls.lib.vehicle_model.kin_ss_sol">
+<span class="sig-prename descclassname"><span class="pre">selfdrive.controls.lib.vehicle_model.</span></span><span class="sig-name descname"><span class="pre">kin_ss_sol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#selfdrive.controls.lib.vehicle_model.VehicleModel" title="selfdrive.controls.lib.vehicle_model.VehicleModel"><span class="pre">VehicleModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/selfdrive/controls/lib/vehicle_model.html#kin_ss_sol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.controls.lib.vehicle_model.kin_ss_sol" title="Link to this definition"></a></dt>
+<dd><p>Calculate the steady state solution at low speeds
+At low speeds the tire slip is undefined, so a kinematic
+model is used.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sa: Steering angle [rad]
+u: Speed [m/s]
+VM: Vehicle model</p>
+</dd>
+<dt>Returns:</dt><dd><p>2x1 matrix with steady state solution</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-selfdrive.controls.lib">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-selfdrive.controls.lib" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selfdrive.controls.html" class="btn btn-neutral float-left" title="selfdrive.controls package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="selfdrive.controls.lib.lateral_mpc_lib.html" class="btn btn-neutral float-right" title="selfdrive.controls.lib.lateral_mpc_lib package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, comma.ai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_features" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputFeatures</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_features_1ad1288cdb9a729e2f48812030de0ef8f8" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, FEATURE_LEN &gt;</type>
+        <definition>std::array&lt;float, FEATURE_LEN&gt; ModelOutputFeatures::feature</definition>
+        <argsstring></argsstring>
+        <name>feature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="230" column="14" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="229" column="26" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="229" bodyend="231"/>
+    <listofallmembers>
+      <member refid="struct_model_output_features_1ad1288cdb9a729e2f48812030de0ef8f8" prot="public" virt="non-virtual"><scope>ModelOutputFeatures</scope><name>feature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

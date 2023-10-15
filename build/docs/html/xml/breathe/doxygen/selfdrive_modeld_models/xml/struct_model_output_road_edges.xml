@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_road_edges" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputRoadEdges</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_road_edges_1a7d00521b9175b45f0729d5346bcb3e25" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref></type>
+        <definition>ModelOutputEdgessXY ModelOutputRoadEdges::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="117" column="23" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_road_edges_1ae7e1c8940bd4a40e430eeb344d163244" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_edgess_x_y" kindref="compound">ModelOutputEdgessXY</ref></type>
+        <definition>ModelOutputEdgessXY ModelOutputRoadEdges::std</definition>
+        <argsstring></argsstring>
+        <name>std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="118" column="23" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputRoadEdges</label>
+        <link refid="struct_model_output_road_edges"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mean</edgelabel>
+          <edgelabel>std</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputEdgessXY</label>
+        <link refid="struct_model_output_edgess_x_y"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="116" column="27" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="116" bodyend="119"/>
+    <listofallmembers>
+      <member refid="struct_model_output_road_edges_1a7d00521b9175b45f0729d5346bcb3e25" prot="public" virt="non-virtual"><scope>ModelOutputRoadEdges</scope><name>mean</name></member>
+      <member refid="struct_model_output_road_edges_1ae7e1c8940bd4a40e430eeb344d163244" prot="public" virt="non-virtual"><scope>ModelOutputRoadEdges</scope><name>std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

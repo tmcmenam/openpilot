@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_model_output_pose" kind="struct" language="C++" prot="public">
+    <compoundname>ModelOutputPose</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_model_output_pose_1a9625469b74afd0b99ddd644225d02a49" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPose::velocity_mean</definition>
+        <argsstring></argsstring>
+        <name>velocity_mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="155" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_pose_1aeee16971c58c071591015d8ace5a04d6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPose::rotation_mean</definition>
+        <argsstring></argsstring>
+        <name>rotation_mean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="156" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_pose_1aec050ead8321c731231608698d7cabca" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPose::velocity_std</definition>
+        <argsstring></argsstring>
+        <name>velocity_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="157" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_model_output_pose_1ad7cf664d4fcd3f1bb0f9ff1f5e766210" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_model_output_x_y_z" kindref="compound">ModelOutputXYZ</ref></type>
+        <definition>ModelOutputXYZ ModelOutputPose::rotation_std</definition>
+        <argsstring></argsstring>
+        <name>rotation_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="158" column="18" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ModelOutputPose</label>
+        <link refid="struct_model_output_pose"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>velocity_std</edgelabel>
+          <edgelabel>velocity_mean</edgelabel>
+          <edgelabel>rotation_std</edgelabel>
+          <edgelabel>rotation_mean</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelOutputXYZ</label>
+        <link refid="struct_model_output_x_y_z"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/selfdrive/modeld/models/driving.h" line="154" column="22" bodyfile="/tmp/openpilot/selfdrive/modeld/models/driving.h" bodystart="154" bodyend="159"/>
+    <listofallmembers>
+      <member refid="struct_model_output_pose_1aeee16971c58c071591015d8ace5a04d6" prot="public" virt="non-virtual"><scope>ModelOutputPose</scope><name>rotation_mean</name></member>
+      <member refid="struct_model_output_pose_1ad7cf664d4fcd3f1bb0f9ff1f5e766210" prot="public" virt="non-virtual"><scope>ModelOutputPose</scope><name>rotation_std</name></member>
+      <member refid="struct_model_output_pose_1a9625469b74afd0b99ddd644225d02a49" prot="public" virt="non-virtual"><scope>ModelOutputPose</scope><name>velocity_mean</name></member>
+      <member refid="struct_model_output_pose_1aec050ead8321c731231608698d7cabca" prot="public" virt="non-virtual"><scope>ModelOutputPose</scope><name>velocity_std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

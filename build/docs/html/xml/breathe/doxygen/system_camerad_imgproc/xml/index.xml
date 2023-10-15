@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_lap_conv" kind="class"><name>LapConv</name>
+    <member refid="class_lap_conv_1ad7f1e61dbef4dd5254cd499d63790260" kind="variable"><name>roi_cl</name></member>
+    <member refid="class_lap_conv_1a236510fd119facc21a3840ac71bb1feb" kind="variable"><name>result_cl</name></member>
+    <member refid="class_lap_conv_1aaf5f4355dc65e4bb6396942574c76548" kind="variable"><name>filter_cl</name></member>
+    <member refid="class_lap_conv_1a094845c3f7b946a467770ef3009d5f85" kind="variable"><name>prg</name></member>
+    <member refid="class_lap_conv_1a9bcd74e4649fe8bc136c4d7312fccba3" kind="variable"><name>krnl</name></member>
+    <member refid="class_lap_conv_1a357e7087ca4adf0b2519e5e1692bfcb0" kind="variable"><name>width</name></member>
+    <member refid="class_lap_conv_1a375aaddb11892f61edf3be986e8d99c0" kind="variable"><name>height</name></member>
+    <member refid="class_lap_conv_1af092acf2559e2d9e233087cdc62ec44c" kind="variable"><name>rgb_stride</name></member>
+    <member refid="class_lap_conv_1aa0a75d4641bf1244dfb10e7cae49b0e7" kind="variable"><name>roi_buf</name></member>
+    <member refid="class_lap_conv_1a26ea6774833a4335e9c76c4c43a981fe" kind="variable"><name>result_buf</name></member>
+    <member refid="class_lap_conv_1a740160e8cc886ebe4bacc04bfa50a0d9" kind="function"><name>LapConv</name></member>
+    <member refid="class_lap_conv_1ae5cc0ae8ea4ee2a4dd765e2a78170c3f" kind="function"><name>~LapConv</name></member>
+    <member refid="class_lap_conv_1a3abbaa5d93c9561e74fef125842b85b1" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="utils_8h" kind="file"><name>utils.h</name>
+    <member refid="utils_8h_1a25046445f87ca31878822a63b74dfb3d" kind="define"><name>NUM_SEGMENTS_X</name></member>
+    <member refid="utils_8h_1ac495efc97d07dffc0b6724aac6acbdf5" kind="define"><name>NUM_SEGMENTS_Y</name></member>
+    <member refid="utils_8h_1a55227629842ce3768546bc9c2eb4b1d2" kind="define"><name>ROI_X_MIN</name></member>
+    <member refid="utils_8h_1aede0e9514c86269f066a9842864e4610" kind="define"><name>ROI_X_MAX</name></member>
+    <member refid="utils_8h_1abc1b09f809df15473ad59a821c2fdb37" kind="define"><name>ROI_Y_MIN</name></member>
+    <member refid="utils_8h_1afaf8e8a5c6ff5f20e3a77aec68b85e33" kind="define"><name>ROI_Y_MAX</name></member>
+    <member refid="utils_8h_1a5de2969f3f7da7f624da7e30a7406bf6" kind="define"><name>LM_THRESH</name></member>
+    <member refid="utils_8h_1a03b55748feb457222e0108ccc8902d73" kind="define"><name>LM_PREC_THRESH</name></member>
+    <member refid="utils_8h_1a38754fd2de148117256d7ee96cb2a434" kind="define"><name>CONV_LOCAL_WORKSIZE</name></member>
+    <member refid="utils_8h_1a27c8f976daf2f6e9c988606f0fc8aafe" kind="function"><name>is_blur</name></member>
+  </compound>
+  <compound refid="dir_73e1e99cbf2c6293c3b654076665ac3e" kind="dir"><name>/tmp/openpilot/system/camerad</name>
+  </compound>
+  <compound refid="dir_48236b32600353eb4fe9283a82024c2d" kind="dir"><name>/tmp/openpilot/system/camerad/imgproc</name>
+  </compound>
+  <compound refid="dir_e8522150b400a43ebfdbd1fed060b8e2" kind="dir"><name>/tmp/openpilot/system</name>
+  </compound>
+</doxygenindex>

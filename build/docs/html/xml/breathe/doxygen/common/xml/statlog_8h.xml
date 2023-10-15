@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="statlog_8h" kind="file" language="C++">
+    <compoundname>statlog.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="statlog_8h_1a06af85565c5447d4f094947bab6654b6" prot="public" static="no">
+        <name>STATLOG_GAUGE</name>
+        <initializer>&quot;g&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="3" column="9" bodyfile="/tmp/openpilot/common/statlog.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="statlog_8h_1ab3bcb5718bdc0d4002f8c15fdfd7dd1d" prot="public" static="no">
+        <name>STATLOG_SAMPLE</name>
+        <initializer>&quot;sa&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="4" column="9" bodyfile="/tmp/openpilot/common/statlog.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="statlog_8h_1a6f0e819f27887fdb83a648d0cd72a16a" prot="public" static="no">
+        <name>statlog_gauge</name>
+        <param><defname>metric</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>statlog_log(STATLOG_GAUGE, metric, value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="9" column="9" bodyfile="/tmp/openpilot/common/statlog.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="statlog_8h_1a2ebec620d89bbb719e9d7c0ae4991a9d" prot="public" static="no">
+        <name>statlog_sample</name>
+        <param><defname>metric</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>statlog_log(STATLOG_SAMPLE, metric, value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="10" column="9" bodyfile="/tmp/openpilot/common/statlog.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="statlog_8h_1ac9abd2d1b3b2d337ca68ac851c68eca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void statlog_log</definition>
+        <argsstring>(const char *metric_type, const char *metric, int value)</argsstring>
+        <name>statlog_log</name>
+        <param>
+          <type>const char *</type>
+          <declname>metric_type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>metric</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="6" column="6" declfile="/tmp/openpilot/common/statlog.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="statlog_8h_1a410612c71faf1377b8878b1d33f6d5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void statlog_log</definition>
+        <argsstring>(const char *metric_type, const char *metric, float value)</argsstring>
+        <name>statlog_log</name>
+        <param>
+          <type>const char *</type>
+          <declname>metric_type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>metric</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/statlog.h" line="7" column="6" declfile="/tmp/openpilot/common/statlog.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATLOG_GAUGE<sp/>&quot;g&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATLOG_SAMPLE<sp/>&quot;sa&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>statlog_log(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>metric_type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>metric,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>statlog_log(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>metric_type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>metric,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>statlog_gauge(metric,<sp/>value)<sp/>statlog_log(STATLOG_GAUGE,<sp/>metric,<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>statlog_sample(metric,<sp/>value)<sp/>statlog_log(STATLOG_SAMPLE,<sp/>metric,<sp/>value)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/openpilot/common/statlog.h"/>
+  </compounddef>
+</doxygen>

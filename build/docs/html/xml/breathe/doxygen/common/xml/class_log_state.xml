@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_log_state" kind="class" language="C++" prot="public">
+    <compoundname>LogState</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_log_state_1af61614ff9be8f17c4d6e8b46782d6a40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogState::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="186" column="8" bodyfile="/tmp/openpilot/common/util.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_state_1ab6d912e5ef13958f3da2e3335d1bf077" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex LogState::lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="187" column="14" bodyfile="/tmp/openpilot/common/util.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_state_1ab99f5aae85a9049cb8796933bc3d9aac" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* LogState::zctx</definition>
+        <argsstring></argsstring>
+        <name>zctx</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="188" column="8" bodyfile="/tmp/openpilot/common/util.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_state_1a97a52fa00b099ae010bda7ad7345e6d7" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* LogState::sock</definition>
+        <argsstring></argsstring>
+        <name>sock</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="189" column="8" bodyfile="/tmp/openpilot/common/util.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_state_1aa4149967ebe758e924cbc831911730e3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LogState::print_level</definition>
+        <argsstring></argsstring>
+        <name>print_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="190" column="7" bodyfile="/tmp/openpilot/common/util.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_state_1ac0458fb50f03689b1d1577da79417143" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LogState::endpoint</definition>
+        <argsstring></argsstring>
+        <name>endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="191" column="15" bodyfile="/tmp/openpilot/common/util.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_state_1a9feb5d9c76092208065b0d389283aa39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LogState::LogState</definition>
+        <argsstring>(std::string _endpoint)</argsstring>
+        <name>LogState</name>
+        <param>
+          <type>std::string</type>
+          <declname>_endpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="193" column="3" bodyfile="/tmp/openpilot/common/util.h" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_state_1a209fdc81101c50cf77ff1e8d7ae3c43d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LogState::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="197" column="15" bodyfile="/tmp/openpilot/common/util.h" bodystart="197" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_state_1a3afa69cf82942f25cacc092022a6df18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LogState::~LogState</definition>
+        <argsstring>()</argsstring>
+        <name>~LogState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/common/util.h" line="209" column="3" bodyfile="/tmp/openpilot/common/util.h" bodystart="209" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/common/util.h" line="184" column="15" bodyfile="/tmp/openpilot/common/util.h" bodystart="184" bodyend="215"/>
+    <listofallmembers>
+      <member refid="class_log_state_1ac0458fb50f03689b1d1577da79417143" prot="public" virt="non-virtual"><scope>LogState</scope><name>endpoint</name></member>
+      <member refid="class_log_state_1a209fdc81101c50cf77ff1e8d7ae3c43d" prot="public" virt="non-virtual"><scope>LogState</scope><name>initialize</name></member>
+      <member refid="class_log_state_1af61614ff9be8f17c4d6e8b46782d6a40" prot="public" virt="non-virtual"><scope>LogState</scope><name>initialized</name></member>
+      <member refid="class_log_state_1ab6d912e5ef13958f3da2e3335d1bf077" prot="public" virt="non-virtual"><scope>LogState</scope><name>lock</name></member>
+      <member refid="class_log_state_1a9feb5d9c76092208065b0d389283aa39" prot="public" virt="non-virtual"><scope>LogState</scope><name>LogState</name></member>
+      <member refid="class_log_state_1aa4149967ebe758e924cbc831911730e3" prot="public" virt="non-virtual"><scope>LogState</scope><name>print_level</name></member>
+      <member refid="class_log_state_1a97a52fa00b099ae010bda7ad7345e6d7" prot="public" virt="non-virtual"><scope>LogState</scope><name>sock</name></member>
+      <member refid="class_log_state_1ab99f5aae85a9049cb8796933bc3d9aac" prot="public" virt="non-virtual"><scope>LogState</scope><name>zctx</name></member>
+      <member refid="class_log_state_1a3afa69cf82942f25cacc092022a6df18" prot="public" virt="non-virtual"><scope>LogState</scope><name>~LogState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

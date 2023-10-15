@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_logger_state" kind="struct" language="C++" prot="public">
+    <compoundname>LoggerState</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_logger_state_1a5a7ceccf4722d819510ea502c654e547" prot="public" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t LoggerState::lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="57" column="19" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1a70703fe43268a10820d5bd6e04e2fc18" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LoggerState::part</definition>
+        <argsstring></argsstring>
+        <name>part</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="58" column="7" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1abe0ce645aebaf3f0bba00682ec1f5175" prot="public" static="no" mutable="no">
+        <type>kj::Array&lt; capnp::word &gt;</type>
+        <definition>kj::Array&lt;capnp::word&gt; LoggerState::init_data</definition>
+        <argsstring></argsstring>
+        <name>init_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="59" column="13" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1a766536cf2fd3a445216d5d7ca35bccd9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LoggerState::route_name</definition>
+        <argsstring></argsstring>
+        <name>route_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="60" column="15" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1a55a3edef0dad4134c948076b2acfdfe0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char LoggerState::log_name[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>log_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="61" column="8" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1a99c5f7b692701ac95199c993893cfa83" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LoggerState::has_qlog</definition>
+        <argsstring></argsstring>
+        <name>has_qlog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="62" column="8" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1ab4c4309b8312c67b44886c8668b9cc3a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_logger_handle" kindref="compound">LoggerHandle</ref></type>
+        <definition>LoggerHandle LoggerState::handles[LOGGER_MAX_HANDLES]</definition>
+        <argsstring>[LOGGER_MAX_HANDLES]</argsstring>
+        <name>handles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="64" column="16" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_logger_state_1a1a99941c775b96b9107a9c0c2fd8fb93" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_logger_handle" kindref="compound">LoggerHandle</ref> *</type>
+        <definition>LoggerHandle* LoggerState::cur_handle</definition>
+        <argsstring></argsstring>
+        <name>cur_handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/loggerd/logger.h" line="65" column="16" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>LoggerState</label>
+        <link refid="struct_logger_state"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>handles</edgelabel>
+          <edgelabel>cur_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LoggerHandle</label>
+        <link refid="struct_logger_handle"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/system/loggerd/logger.h" line="56" column="26" bodyfile="/tmp/openpilot/system/loggerd/logger.h" bodystart="56" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct_logger_state_1a1a99941c775b96b9107a9c0c2fd8fb93" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>cur_handle</name></member>
+      <member refid="struct_logger_state_1ab4c4309b8312c67b44886c8668b9cc3a" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>handles</name></member>
+      <member refid="struct_logger_state_1a99c5f7b692701ac95199c993893cfa83" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>has_qlog</name></member>
+      <member refid="struct_logger_state_1abe0ce645aebaf3f0bba00682ec1f5175" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>init_data</name></member>
+      <member refid="struct_logger_state_1a5a7ceccf4722d819510ea502c654e547" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>lock</name></member>
+      <member refid="struct_logger_state_1a55a3edef0dad4134c948076b2acfdfe0" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>log_name</name></member>
+      <member refid="struct_logger_state_1a70703fe43268a10820d5bd6e04e2fc18" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>part</name></member>
+      <member refid="struct_logger_state_1a766536cf2fd3a445216d5d7ca35bccd9" prot="public" virt="non-virtual"><scope>LoggerState</scope><name>route_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_lap_conv" kind="class" language="C++" prot="public">
+    <compoundname>LapConv</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lap_conv_1ad7f1e61dbef4dd5254cd499d63790260" prot="private" static="no" mutable="no">
+        <type>cl_mem</type>
+        <definition>cl_mem LapConv::roi_cl</definition>
+        <argsstring></argsstring>
+        <name>roi_cl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="28" column="10" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a236510fd119facc21a3840ac71bb1feb" prot="private" static="no" mutable="no">
+        <type>cl_mem</type>
+        <definition>cl_mem LapConv::result_cl</definition>
+        <argsstring></argsstring>
+        <name>result_cl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="28" column="17" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1aaf5f4355dc65e4bb6396942574c76548" prot="private" static="no" mutable="no">
+        <type>cl_mem</type>
+        <definition>cl_mem LapConv::filter_cl</definition>
+        <argsstring></argsstring>
+        <name>filter_cl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="28" column="27" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a094845c3f7b946a467770ef3009d5f85" prot="private" static="no" mutable="no">
+        <type>cl_program</type>
+        <definition>cl_program LapConv::prg</definition>
+        <argsstring></argsstring>
+        <name>prg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="29" column="14" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a9bcd74e4649fe8bc136c4d7312fccba3" prot="private" static="no" mutable="no">
+        <type>cl_kernel</type>
+        <definition>cl_kernel LapConv::krnl</definition>
+        <argsstring></argsstring>
+        <name>krnl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="30" column="13" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a357e7087ca4adf0b2519e5e1692bfcb0" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int LapConv::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="31" column="13" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a375aaddb11892f61edf3be986e8d99c0" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int LapConv::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="31" column="19" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1af092acf2559e2d9e233087cdc62ec44c" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int LapConv::rgb_stride</definition>
+        <argsstring></argsstring>
+        <name>rgb_stride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="32" column="13" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1aa0a75d4641bf1244dfb10e7cae49b0e7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; LapConv::roi_buf</definition>
+        <argsstring></argsstring>
+        <name>roi_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="33" column="15" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lap_conv_1a26ea6774833a4335e9c76c4c43a981fe" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int16_t &gt;</type>
+        <definition>std::vector&lt;int16_t&gt; LapConv::result_buf</definition>
+        <argsstring></argsstring>
+        <name>result_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="34" column="15" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lap_conv_1a740160e8cc886ebe4bacc04bfa50a0d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LapConv::LapConv</definition>
+        <argsstring>(cl_device_id device_id, cl_context ctx, int rgb_width, int rgb_height, int rgb_stride, int filter_size)</argsstring>
+        <name>LapConv</name>
+        <param>
+          <type>cl_device_id</type>
+          <declname>device_id</declname>
+        </param>
+        <param>
+          <type>cl_context</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rgb_width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rgb_height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rgb_stride</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filter_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="23" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lap_conv_1ae5cc0ae8ea4ee2a4dd765e2a78170c3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LapConv::~LapConv</definition>
+        <argsstring>()</argsstring>
+        <name>~LapConv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="24" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lap_conv_1a3abbaa5d93c9561e74fef125842b85b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t LapConv::Update</definition>
+        <argsstring>(cl_command_queue q, const uint8_t *rgb_buf, const int roi_id)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>cl_command_queue</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>rgb_buf</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>roi_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="25" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/openpilot/system/camerad/imgproc/utils.h" line="21" column="14" bodyfile="/tmp/openpilot/system/camerad/imgproc/utils.h" bodystart="21" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_lap_conv_1aaf5f4355dc65e4bb6396942574c76548" prot="private" virt="non-virtual"><scope>LapConv</scope><name>filter_cl</name></member>
+      <member refid="class_lap_conv_1a375aaddb11892f61edf3be986e8d99c0" prot="private" virt="non-virtual"><scope>LapConv</scope><name>height</name></member>
+      <member refid="class_lap_conv_1a9bcd74e4649fe8bc136c4d7312fccba3" prot="private" virt="non-virtual"><scope>LapConv</scope><name>krnl</name></member>
+      <member refid="class_lap_conv_1a740160e8cc886ebe4bacc04bfa50a0d9" prot="public" virt="non-virtual"><scope>LapConv</scope><name>LapConv</name></member>
+      <member refid="class_lap_conv_1a094845c3f7b946a467770ef3009d5f85" prot="private" virt="non-virtual"><scope>LapConv</scope><name>prg</name></member>
+      <member refid="class_lap_conv_1a26ea6774833a4335e9c76c4c43a981fe" prot="private" virt="non-virtual"><scope>LapConv</scope><name>result_buf</name></member>
+      <member refid="class_lap_conv_1a236510fd119facc21a3840ac71bb1feb" prot="private" virt="non-virtual"><scope>LapConv</scope><name>result_cl</name></member>
+      <member refid="class_lap_conv_1af092acf2559e2d9e233087cdc62ec44c" prot="private" virt="non-virtual"><scope>LapConv</scope><name>rgb_stride</name></member>
+      <member refid="class_lap_conv_1aa0a75d4641bf1244dfb10e7cae49b0e7" prot="private" virt="non-virtual"><scope>LapConv</scope><name>roi_buf</name></member>
+      <member refid="class_lap_conv_1ad7f1e61dbef4dd5254cd499d63790260" prot="private" virt="non-virtual"><scope>LapConv</scope><name>roi_cl</name></member>
+      <member refid="class_lap_conv_1a3abbaa5d93c9561e74fef125842b85b1" prot="public" virt="non-virtual"><scope>LapConv</scope><name>Update</name></member>
+      <member refid="class_lap_conv_1a357e7087ca4adf0b2519e5e1692bfcb0" prot="private" virt="non-virtual"><scope>LapConv</scope><name>width</name></member>
+      <member refid="class_lap_conv_1ae5cc0ae8ea4ee2a4dd765e2a78170c3f" prot="public" virt="non-virtual"><scope>LapConv</scope><name>~LapConv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

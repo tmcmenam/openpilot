@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="common__ekf_8h" kind="file" language="C++">
+    <compoundname>common_ekf.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">map</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">eigen3/Eigen/Dense</includes>
+    <includedby refid="ekf__sym_8h" local="yes">/tmp/openpilot/rednose_repo/rednose/helpers/ekf_sym.h</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cassert</label>
+      </node>
+      <node id="10">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h</label>
+        <link refid="common__ekf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>deque</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h</label>
+        <link refid="common__ekf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/tmp/openpilot/rednose_repo/rednose/helpers/ekf_sym.h</label>
+        <link refid="ekf__sym_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_e_k_f" prot="public">EKF</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="common__ekf_8h_1a57126cba6f1748c3243d7d13142bbdb6" prot="public" static="no">
+        <name>ekf_init</name>
+        <param><defname>ekf</defname></param>
+        <initializer>static void __attribute__((constructor)) do_ekf_init_ ## ekf(void) { \
+  ekf_register(&amp;ekf); \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="40" column="9" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="common__ekf_8h_1a4904c9a9647bebf6b4552b68d2005265" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* extra_routine_t) (double *, double *)</definition>
+        <argsstring>)(double *, double *)</argsstring>
+        <name>extra_routine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="14" column="9" bodyfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="common__ekf_8h_1ac2b6135184e759178287fe747996b991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; const <ref refid="struct_e_k_f" kindref="compound">EKF</ref> * &gt; &amp;</type>
+        <definition>std::vector&lt;const EKF*&gt;&amp; get_ekfs</definition>
+        <argsstring>()</argsstring>
+        <name>get_ekfs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="35" column="13" declfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" declline="35" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="common__ekf_8h_1a79859de1de1780ce113d5f4e7a61cc3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_e_k_f" kindref="compound">EKF</ref> *</type>
+        <definition>const EKF* ekf_lookup</definition>
+        <argsstring>(const std::string &amp;ekf_name)</argsstring>
+        <name>ekf_lookup</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ekf_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="36" column="11" declfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" declline="36" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="common__ekf_8h_1a20a01428b7884daa24c41aca5fd47ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ekf_register</definition>
+        <argsstring>(const EKF *ekf)</argsstring>
+        <name>ekf_register</name>
+        <param>
+          <type>const <ref refid="struct_e_k_f" kindref="compound">EKF</ref> *</type>
+          <declname>ekf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" line="38" column="6" declfile="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*extra_routine_t)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="struct_e_k_f" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_e_k_f" kindref="compound">EKF</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>kinds;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>feature_kinds;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>void<sp/>(*f_fun)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/>double,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>void<sp/>(*F_fun)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/>double,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>void<sp/>(*err_fun)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>void<sp/>(*inv_err_fun)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>void<sp/>(*H_mod_fun)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>void<sp/>(*predict)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/>double);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>void<sp/>(*)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)&gt;<sp/>hs<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>void<sp/>(*)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)&gt;<sp/>Hs<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>void<sp/>(*)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)&gt;<sp/>updates<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>void<sp/>(*)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*)&gt;<sp/>Hes<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>void<sp/>(*)(double)&gt;<sp/>sets<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>extra_routine_t&gt;<sp/>extra_routines<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">std::vector&lt;const<sp/>EKF*&gt;&amp;<sp/>get_ekfs();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_e_k_f" kindref="compound">EKF</ref>*<sp/>ekf_lookup(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>ekf_name);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ekf_register(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_e_k_f" kindref="compound">EKF</ref>*<sp/>ekf);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ekf_init(ekf)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor">static<sp/>void<sp/>__attribute__((constructor))<sp/>do_ekf_init_<sp/>##<sp/>ekf(void)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/>ekf_register(&amp;ekf);<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor">}</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/openpilot/rednose_repo/rednose/helpers/common_ekf.h"/>
+  </compounddef>
+</doxygen>

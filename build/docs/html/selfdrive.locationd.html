@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selfdrive.locationd package &mdash; openpilot docs 0.9.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.comma.ai/selfdrive.locationd.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=61b282d3"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="selfdrive.locationd.models package" href="selfdrive.locationd.models.html" />
+    <link rel="prev" title="selfdrive.controls.lib.longitudinal_mpc_lib package" href="selfdrive.controls.lib.longitudinal_mpc_lib.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000000" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            openpilot docs
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.9.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html">Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#id1">265 Supported Cars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CARS.html#don-t-see-your-car-here">Don’t see your car here?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INTEGRATION.html">Integration with Stock Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LIMITATIONS.html">Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAFETY.html">Safety</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">openpilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#cereal">cereal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#laika">laika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#models">models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#opendbc">opendbc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#panda">panda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#rednose">rednose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#tools">tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">openpilot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cereal.html">cereal package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common.html">common package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conftest.html">conftest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opendbc.html">opendbc package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openpilot.html">openpilot package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="panda.html">panda package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="selfdrive.html">selfdrive package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="selfdrive.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.athena.html">selfdrive.athena package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.boardd.html">selfdrive.boardd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.car.html">selfdrive.car package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.controls.html">selfdrive.controls package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">selfdrive.locationd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.manager.html">selfdrive.manager package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.navd.html">selfdrive.navd package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.thermald.html">selfdrive.thermald package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-sentry-module">selfdrive.sentry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-statsd-module">selfdrive.statsd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-tombstoned-module">selfdrive.tombstoned module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#selfdrive-updated-module">selfdrive.updated module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.html#module-selfdrive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="system.html">system package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html">tools package</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C/C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="c_docs.html">openpilot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">openpilot docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">openpilot</a></li>
+          <li class="breadcrumb-item"><a href="selfdrive.html">selfdrive package</a></li>
+      <li class="breadcrumb-item active">selfdrive.locationd package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/selfdrive.locationd.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selfdrive-locationd-package">
+<h1>selfdrive.locationd package<a class="headerlink" href="#selfdrive-locationd-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="selfdrive.locationd.models.html">selfdrive.locationd.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive-locationd-models-car-kf-module">selfdrive.locationd.models.car_kf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.constants">selfdrive.locationd.models.constants module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind"><code class="docutils literal notranslate"><span class="pre">ObservationKind</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ANGLE_OFFSET_FAST"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ANGLE_OFFSET_FAST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.CAMERA_ODO_ROTATION"><code class="docutils literal notranslate"><span class="pre">ObservationKind.CAMERA_ODO_ROTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.CAMERA_ODO_TRANSLATION"><code class="docutils literal notranslate"><span class="pre">ObservationKind.CAMERA_ODO_TRANSLATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ECEF_ORIENTATION_FROM_GPS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ECEF_ORIENTATION_FROM_GPS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ECEF_POS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ECEF_POS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ECEF_VEL"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ECEF_VEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.FEATURE_TRACK_TEST"><code class="docutils literal notranslate"><span class="pre">ObservationKind.FEATURE_TRACK_TEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.GPS_NED"><code class="docutils literal notranslate"><span class="pre">ObservationKind.GPS_NED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.GPS_VEL"><code class="docutils literal notranslate"><span class="pre">ObservationKind.GPS_VEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.IMU_FRAME"><code class="docutils literal notranslate"><span class="pre">ObservationKind.IMU_FRAME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.LANE_PT"><code class="docutils literal notranslate"><span class="pre">ObservationKind.LANE_PT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.MSCKF_TEST"><code class="docutils literal notranslate"><span class="pre">ObservationKind.MSCKF_TEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.NO_ACCEL"><code class="docutils literal notranslate"><span class="pre">ObservationKind.NO_ACCEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.NO_OBSERVATION"><code class="docutils literal notranslate"><span class="pre">ObservationKind.NO_OBSERVATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.NO_ROT"><code class="docutils literal notranslate"><span class="pre">ObservationKind.NO_ROT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ODOMETRIC_SPEED"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ODOMETRIC_SPEED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ORB_FEATURES"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ORB_FEATURES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ORB_FEATURES_WIDE"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ORB_FEATURES_WIDE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ORB_POINT"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ORB_POINT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PHONE_ACCEL"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PHONE_ACCEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PHONE_GYRO"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PHONE_GYRO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE_GLONASS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE_GLONASS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE_GPS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE_GPS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE_RATE"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE_RATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE_RATE_GLONASS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE_RATE_GLONASS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.PSEUDORANGE_RATE_GPS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.PSEUDORANGE_RATE_GPS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ROAD_FRAME_XY_SPEED"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ROAD_FRAME_XY_SPEED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ROAD_FRAME_X_SPEED"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ROAD_FRAME_X_SPEED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ROAD_FRAME_YAW_RATE"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ROAD_FRAME_YAW_RATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.ROAD_ROLL"><code class="docutils literal notranslate"><span class="pre">ObservationKind.ROAD_ROLL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.SPEED"><code class="docutils literal notranslate"><span class="pre">ObservationKind.SPEED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.STEER_ANGLE"><code class="docutils literal notranslate"><span class="pre">ObservationKind.STEER_ANGLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.STEER_RATIO"><code class="docutils literal notranslate"><span class="pre">ObservationKind.STEER_RATIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.STIFFNESS"><code class="docutils literal notranslate"><span class="pre">ObservationKind.STIFFNESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">ObservationKind.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.names"><code class="docutils literal notranslate"><span class="pre">ObservationKind.names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.constants.ObservationKind.to_string"><code class="docutils literal notranslate"><span class="pre">ObservationKind.to_string()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.gnss_helpers">selfdrive.locationd.models.gnss_helpers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.gnss_helpers.parse_pr"><code class="docutils literal notranslate"><span class="pre">parse_pr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.gnss_helpers.parse_prr"><code class="docutils literal notranslate"><span class="pre">parse_prr()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive-locationd-models-gnss-kf-module">selfdrive.locationd.models.gnss_kf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.lane_kf">selfdrive.locationd.models.lane_kf module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman"><code class="docutils literal notranslate"><span class="pre">LaneKalman</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.P"><code class="docutils literal notranslate"><span class="pre">LaneKalman.P</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.generate_code"><code class="docutils literal notranslate"><span class="pre">LaneKalman.generate_code()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.get_R"><code class="docutils literal notranslate"><span class="pre">LaneKalman.get_R()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.init_state"><code class="docutils literal notranslate"><span class="pre">LaneKalman.init_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.name"><code class="docutils literal notranslate"><span class="pre">LaneKalman.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.predict"><code class="docutils literal notranslate"><span class="pre">LaneKalman.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.predict_and_observe"><code class="docutils literal notranslate"><span class="pre">LaneKalman.predict_and_observe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.rts_smooth"><code class="docutils literal notranslate"><span class="pre">LaneKalman.rts_smooth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.lane_kf.LaneKalman.x"><code class="docutils literal notranslate"><span class="pre">LaneKalman.x</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.live_kf">selfdrive.locationd.models.live_kf module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman"><code class="docutils literal notranslate"><span class="pre">LiveKalman</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.Q_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.Q_diag</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.fake_gps_pos_cov_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.fake_gps_pos_cov_diag</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.fake_gps_vel_cov_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.fake_gps_vel_cov_diag</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.generate_code"><code class="docutils literal notranslate"><span class="pre">LiveKalman.generate_code()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.initial_P_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.initial_P_diag</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.initial_x"><code class="docutils literal notranslate"><span class="pre">LiveKalman.initial_x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.name"><code class="docutils literal notranslate"><span class="pre">LiveKalman.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.obs_noise_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.obs_noise_diag</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.LiveKalman.reset_orientation_diag"><code class="docutils literal notranslate"><span class="pre">LiveKalman.reset_orientation_diag</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States"><code class="docutils literal notranslate"><span class="pre">States</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ACCELERATION"><code class="docutils literal notranslate"><span class="pre">States.ACCELERATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ACCELERATION_ERR"><code class="docutils literal notranslate"><span class="pre">States.ACCELERATION_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ACC_BIAS"><code class="docutils literal notranslate"><span class="pre">States.ACC_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ACC_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.ACC_BIAS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ANGULAR_VELOCITY"><code class="docutils literal notranslate"><span class="pre">States.ANGULAR_VELOCITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ANGULAR_VELOCITY_ERR"><code class="docutils literal notranslate"><span class="pre">States.ANGULAR_VELOCITY_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_ORIENTATION"><code class="docutils literal notranslate"><span class="pre">States.ECEF_ORIENTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_ORIENTATION_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_ORIENTATION_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_POS"><code class="docutils literal notranslate"><span class="pre">States.ECEF_POS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_POS_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_POS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_VELOCITY"><code class="docutils literal notranslate"><span class="pre">States.ECEF_VELOCITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.ECEF_VELOCITY_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_VELOCITY_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.GYRO_BIAS"><code class="docutils literal notranslate"><span class="pre">States.GYRO_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.States.GYRO_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.GYRO_BIAS_ERR</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.live_kf.numpy2eigenstring"><code class="docutils literal notranslate"><span class="pre">numpy2eigenstring()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models.loc_kf">selfdrive.locationd.models.loc_kf module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman"><code class="docutils literal notranslate"><span class="pre">LocKalman</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.P"><code class="docutils literal notranslate"><span class="pre">LocKalman.P</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.P_initial"><code class="docutils literal notranslate"><span class="pre">LocKalman.P_initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.dim_augment"><code class="docutils literal notranslate"><span class="pre">LocKalman.dim_augment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.dim_augment_err"><code class="docutils literal notranslate"><span class="pre">LocKalman.dim_augment_err</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.generate_code"><code class="docutils literal notranslate"><span class="pre">LocKalman.generate_code()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.get_R"><code class="docutils literal notranslate"><span class="pre">LocKalman.get_R()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.init_state"><code class="docutils literal notranslate"><span class="pre">LocKalman.init_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.maha_test_kinds"><code class="docutils literal notranslate"><span class="pre">LocKalman.maha_test_kinds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.maha_test_pseudorange"><code class="docutils literal notranslate"><span class="pre">LocKalman.maha_test_pseudorange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.maha_test_pseudorange_rate"><code class="docutils literal notranslate"><span class="pre">LocKalman.maha_test_pseudorange_rate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.name"><code class="docutils literal notranslate"><span class="pre">LocKalman.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.pad_augmented"><code class="docutils literal notranslate"><span class="pre">LocKalman.pad_augmented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_observe"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_observe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_msckf_test"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_msckf_test()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_odo_rot"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_odo_rot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_odo_trans"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_odo_trans()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_orb_features"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_orb_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_pseudorange"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_pseudorange()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.predict_and_update_pseudorange_rate"><code class="docutils literal notranslate"><span class="pre">LocKalman.predict_and_update_pseudorange_rate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.rts_smooth"><code class="docutils literal notranslate"><span class="pre">LocKalman.rts_smooth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.t"><code class="docutils literal notranslate"><span class="pre">LocKalman.t</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.x"><code class="docutils literal notranslate"><span class="pre">LocKalman.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.LocKalman.x_initial"><code class="docutils literal notranslate"><span class="pre">LocKalman.x_initial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States"><code class="docutils literal notranslate"><span class="pre">States</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELERATION"><code class="docutils literal notranslate"><span class="pre">States.ACCELERATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELERATION_ERR"><code class="docutils literal notranslate"><span class="pre">States.ACCELERATION_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELEROMETER_BIAS"><code class="docutils literal notranslate"><span class="pre">States.ACCELEROMETER_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELEROMETER_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.ACCELEROMETER_BIAS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELEROMETER_SCALE_ERR_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.ACCELEROMETER_SCALE_ERR_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ACCELEROMETER_SCALE_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.ACCELEROMETER_SCALE_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ANGULAR_VELOCITY"><code class="docutils literal notranslate"><span class="pre">States.ANGULAR_VELOCITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ANGULAR_VELOCITY_ERR"><code class="docutils literal notranslate"><span class="pre">States.ANGULAR_VELOCITY_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_ACCELERATION"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_ACCELERATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_ACCELERATION_ERR"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_ACCELERATION_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_BIAS"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_BIAS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_DRIFT"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_DRIFT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.CLOCK_DRIFT_ERR"><code class="docutils literal notranslate"><span class="pre">States.CLOCK_DRIFT_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_ORIENTATION"><code class="docutils literal notranslate"><span class="pre">States.ECEF_ORIENTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_ORIENTATION_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_ORIENTATION_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_POS"><code class="docutils literal notranslate"><span class="pre">States.ECEF_POS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_POS_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_POS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_VELOCITY"><code class="docutils literal notranslate"><span class="pre">States.ECEF_VELOCITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ECEF_VELOCITY_ERR"><code class="docutils literal notranslate"><span class="pre">States.ECEF_VELOCITY_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.FOCAL_SCALE_ERR_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.FOCAL_SCALE_ERR_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.FOCAL_SCALE_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.FOCAL_SCALE_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GLONASS_BIAS"><code class="docutils literal notranslate"><span class="pre">States.GLONASS_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GLONASS_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.GLONASS_BIAS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GLONASS_FREQ_SLOPE"><code class="docutils literal notranslate"><span class="pre">States.GLONASS_FREQ_SLOPE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GLONASS_FREQ_SLOPE_ERR"><code class="docutils literal notranslate"><span class="pre">States.GLONASS_FREQ_SLOPE_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GYRO_BIAS"><code class="docutils literal notranslate"><span class="pre">States.GYRO_BIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.GYRO_BIAS_ERR"><code class="docutils literal notranslate"><span class="pre">States.GYRO_BIAS_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.IMU_FROM_DEVICE_EULER"><code class="docutils literal notranslate"><span class="pre">States.IMU_FROM_DEVICE_EULER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.IMU_FROM_DEVICE_EULER_ERR"><code class="docutils literal notranslate"><span class="pre">States.IMU_FROM_DEVICE_EULER_ERR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ODO_SCALE_ERR_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.ODO_SCALE_ERR_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.ODO_SCALE_UNUSED"><code class="docutils literal notranslate"><span class="pre">States.ODO_SCALE_UNUSED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.WIDE_FROM_DEVICE_EULER"><code class="docutils literal notranslate"><span class="pre">States.WIDE_FROM_DEVICE_EULER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfdrive.locationd.models.html#selfdrive.locationd.models.loc_kf.States.WIDE_FROM_DEVICE_EULER_ERR"><code class="docutils literal notranslate"><span class="pre">States.WIDE_FROM_DEVICE_EULER_ERR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfdrive.locationd.models.html#module-selfdrive.locationd.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-locationd-calibrationd-module">
+<h2>selfdrive.locationd.calibrationd module<a class="headerlink" href="#selfdrive-locationd-calibrationd-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.locationd.helpers">
+<span id="selfdrive-locationd-helpers-module"></span><h2>selfdrive.locationd.helpers module<a class="headerlink" href="#module-selfdrive.locationd.helpers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.NPQueue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.locationd.helpers.</span></span><span class="sig-name descname"><span class="pre">NPQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxlen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rowsize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#NPQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.NPQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.NPQueue.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#NPQueue.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.NPQueue.append" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfdrive.locationd.helpers.</span></span><span class="sig-name descname"><span class="pre">PointBuckets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_points_total</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_per_bucket</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rowsize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets.add_point">
+<span class="sig-name descname"><span class="pre">add_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets.add_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets.add_point" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets.bucket_lengths">
+<span class="sig-name descname"><span class="pre">bucket_lengths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets.bucket_lengths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets.bucket_lengths" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets.get_points">
+<span class="sig-name descname"><span class="pre">get_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets.get_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets.get_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets.is_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets.is_valid" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfdrive.locationd.helpers.PointBuckets.load_points">
+<span class="sig-name descname"><span class="pre">load_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/selfdrive/locationd/helpers.html#PointBuckets.load_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfdrive.locationd.helpers.PointBuckets.load_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="selfdrive-locationd-laikad-module">
+<h2>selfdrive.locationd.laikad module<a class="headerlink" href="#selfdrive-locationd-laikad-module" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-locationd-paramsd-module">
+<h2>selfdrive.locationd.paramsd module<a class="headerlink" href="#selfdrive-locationd-paramsd-module" title="Link to this heading"></a></h2>
+</section>
+<section id="selfdrive-locationd-torqued-module">
+<h2>selfdrive.locationd.torqued module<a class="headerlink" href="#selfdrive-locationd-torqued-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-selfdrive.locationd">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-selfdrive.locationd" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selfdrive.controls.lib.longitudinal_mpc_lib.html" class="btn btn-neutral float-left" title="selfdrive.controls.lib.longitudinal_mpc_lib package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="selfdrive.locationd.models.html" class="btn btn-neutral float-right" title="selfdrive.locationd.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, comma.ai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

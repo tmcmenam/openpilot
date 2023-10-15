@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_message_list_model" kind="class" language="C++" prot="public">
+    <compoundname>MessageListModel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QAbstractTableModel</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Column</name>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa0493c6fdbc30f2c84c4ca71d7a95e8d6" prot="public">
+          <name>NAME</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fae9e14cd94f3da5c12f15a03c7fe9642e" prot="public">
+          <name>SOURCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fafb5c1af43ef12df003200ffb5db9862f" prot="public">
+          <name>ADDRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa1d882129fd9768e8754bda22b3df548f" prot="public">
+          <name>FREQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa76a4e1c016a614da0179e913c930e5bc" prot="public">
+          <name>COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa7b072bdc3ed8a5ce8d64be9cd3c24f91" prot="public">
+          <name>DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="25" column="14" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="25" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_message_list_model_1a1607aac67b40d3362db7b2e6b9a801cc" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; MessageId &gt;</type>
+        <definition>std::vector&lt;MessageId&gt; MessageListModel::msgs</definition>
+        <argsstring></argsstring>
+        <name>msgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="47" column="15" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_message_list_model_1a07e14a23038e6f4695852ea041314a50" prot="public" static="no" mutable="no">
+        <type>QSet&lt; std::pair&lt; MessageId, int &gt; &gt;</type>
+        <definition>QSet&lt;std::pair&lt;MessageId, int&gt; &gt; MessageListModel::suppressed_bytes</definition>
+        <argsstring></argsstring>
+        <name>suppressed_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="48" column="8" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_message_list_model_1ab0656ff642500524d0d1a43bd12d90f5" prot="private" static="no" mutable="no">
+        <type>QMap&lt; int, QString &gt;</type>
+        <definition>QMap&lt;int, QString&gt; MessageListModel::filter_str</definition>
+        <argsstring></argsstring>
+        <name>filter_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="54" column="8" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_message_list_model_1aa2bd5edd5fa307a9f12e3a28f2f91622" prot="private" static="no" mutable="no">
+        <type>QSet&lt; uint32_t &gt;</type>
+        <definition>QSet&lt;uint32_t&gt; MessageListModel::dbc_address</definition>
+        <argsstring></argsstring>
+        <name>dbc_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="55" column="8" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_message_list_model_1ae6d39b2d6b8e28851839fe179799be0d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageListModel::sort_column</definition>
+        <argsstring></argsstring>
+        <name>sort_column</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="56" column="7" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_message_list_model_1afab985eb6fc01b311045a25cb97c29c9" prot="private" static="no" mutable="no">
+        <type>Qt::SortOrder</type>
+        <definition>Qt::SortOrder MessageListModel::sort_order</definition>
+        <argsstring></argsstring>
+        <name>sort_order</name>
+        <initializer>= Qt::AscendingOrder</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="57" column="17" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_message_list_model_1ad41c19d375badc4783ac2f84b4e27ec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MessageListModel::MessageListModel</definition>
+        <argsstring>(QObject *parent)</argsstring>
+        <name>MessageListModel</name>
+        <param>
+          <type>QObject *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="34" column="3" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a5a562d0556e7b925920ea280ac0edf8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariant</type>
+        <definition>QVariant MessageListModel::headerData</definition>
+        <argsstring>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const override</argsstring>
+        <name>headerData</name>
+        <param>
+          <type>int</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>Qt::Orientation</type>
+          <declname>orientation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>role</declname>
+          <defval>Qt::DisplayRole</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="35" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a941247277f60164f71a7085007d9b527" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int MessageListModel::columnCount</definition>
+        <argsstring>(const QModelIndex &amp;parent=QModelIndex()) const override</argsstring>
+        <name>columnCount</name>
+        <param>
+          <type>const QModelIndex &amp;</type>
+          <declname>parent</declname>
+          <defval>QModelIndex()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="36" column="7" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a25e72454f553e85d19f95b616b8bb52d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVariant</type>
+        <definition>QVariant MessageListModel::data</definition>
+        <argsstring>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const</argsstring>
+        <name>data</name>
+        <param>
+          <type>const QModelIndex &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>role</declname>
+          <defval>Qt::DisplayRole</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="37" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a5dfd8ebeaa2453e60905eaeee9b27b2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int MessageListModel::rowCount</definition>
+        <argsstring>(const QModelIndex &amp;parent=QModelIndex()) const override</argsstring>
+        <name>rowCount</name>
+        <param>
+          <type>const QModelIndex &amp;</type>
+          <declname>parent</declname>
+          <defval>QModelIndex()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="38" column="7" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1ae8e4c695ca0ddc68919b43d366ccc79c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::sort</definition>
+        <argsstring>(int column, Qt::SortOrder order=Qt::AscendingOrder) override</argsstring>
+        <name>sort</name>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>Qt::SortOrder</type>
+          <declname>order</declname>
+          <defval>Qt::AscendingOrder</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="39" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a28192406f4cb4d4c8f82b7af412a1a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::setFilterStrings</definition>
+        <argsstring>(const QMap&lt; int, QString &gt; &amp;filters)</argsstring>
+        <name>setFilterStrings</name>
+        <param>
+          <type>const QMap&lt; int, QString &gt; &amp;</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="40" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a58450ae96bf412f53a744c665df78992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::msgsReceived</definition>
+        <argsstring>(const QHash&lt; MessageId, CanData &gt; *new_msgs, bool has_new_ids)</argsstring>
+        <name>msgsReceived</name>
+        <param>
+          <type>const QHash&lt; MessageId, CanData &gt; *</type>
+          <declname>new_msgs</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>has_new_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="41" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1af2664df36a1386758b094807e3bee6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::fetchData</definition>
+        <argsstring>()</argsstring>
+        <name>fetchData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="42" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a22b851ff1c1cb14f5623c2e809a68e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::suppress</definition>
+        <argsstring>()</argsstring>
+        <name>suppress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="43" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1a53f5879bc7e17c526ad4480ba822dc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::clearSuppress</definition>
+        <argsstring>()</argsstring>
+        <name>clearSuppress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="44" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1abd1b1580eedaf620bb931414aa81233f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::forceResetModel</definition>
+        <argsstring>()</argsstring>
+        <name>forceResetModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="45" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1ac6f93bda0dc3405a0d1f796d67746843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::dbcModified</definition>
+        <argsstring>()</argsstring>
+        <name>dbcModified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="46" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_message_list_model_1a05d0cb92e28a45dae2d123d63c6969eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageListModel::sortMessages</definition>
+        <argsstring>(std::vector&lt; MessageId &gt; &amp;new_msgs)</argsstring>
+        <name>sortMessages</name>
+        <param>
+          <type>std::vector&lt; MessageId &gt; &amp;</type>
+          <declname>new_msgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_list_model_1ae85991ffad85479dbc69d03e950ad87e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MessageListModel::matchMessage</definition>
+        <argsstring>(const MessageId &amp;id, const CanData &amp;data, const QMap&lt; int, QString &gt; &amp;filters)</argsstring>
+        <name>matchMessage</name>
+        <param>
+          <type>const MessageId &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const CanData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const QMap&lt; int, QString &gt; &amp;</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="52" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MessageListModel</label>
+        <link refid="class_message_list_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QAbstractTableModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MessageListModel</label>
+        <link refid="class_message_list_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QAbstractTableModel</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/openpilot/tools/cabana/messageswidget.h" line="20" column="50" bodyfile="/tmp/openpilot/tools/cabana/messageswidget.h" bodystart="20" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fafb5c1af43ef12df003200ffb5db9862f" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>ADDRESS</name></member>
+      <member refid="class_message_list_model_1a53f5879bc7e17c526ad4480ba822dc2d" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>clearSuppress</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124f" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>Column</name></member>
+      <member refid="class_message_list_model_1a941247277f60164f71a7085007d9b527" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>columnCount</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa76a4e1c016a614da0179e913c930e5bc" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>COUNT</name></member>
+      <member refid="class_message_list_model_1a25e72454f553e85d19f95b616b8bb52d" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>data</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa7b072bdc3ed8a5ce8d64be9cd3c24f91" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>DATA</name></member>
+      <member refid="class_message_list_model_1aa2bd5edd5fa307a9f12e3a28f2f91622" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>dbc_address</name></member>
+      <member refid="class_message_list_model_1ac6f93bda0dc3405a0d1f796d67746843" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>dbcModified</name></member>
+      <member refid="class_message_list_model_1af2664df36a1386758b094807e3bee6a9" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>fetchData</name></member>
+      <member refid="class_message_list_model_1ab0656ff642500524d0d1a43bd12d90f5" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>filter_str</name></member>
+      <member refid="class_message_list_model_1abd1b1580eedaf620bb931414aa81233f" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>forceResetModel</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa1d882129fd9768e8754bda22b3df548f" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>FREQ</name></member>
+      <member refid="class_message_list_model_1a5a562d0556e7b925920ea280ac0edf8c" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>headerData</name></member>
+      <member refid="class_message_list_model_1ae85991ffad85479dbc69d03e950ad87e" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>matchMessage</name></member>
+      <member refid="class_message_list_model_1ad41c19d375badc4783ac2f84b4e27ec6" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>MessageListModel</name></member>
+      <member refid="class_message_list_model_1a1607aac67b40d3362db7b2e6b9a801cc" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>msgs</name></member>
+      <member refid="class_message_list_model_1a58450ae96bf412f53a744c665df78992" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>msgsReceived</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fa0493c6fdbc30f2c84c4ca71d7a95e8d6" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>NAME</name></member>
+      <member refid="class_message_list_model_1a5dfd8ebeaa2453e60905eaeee9b27b2a" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>rowCount</name></member>
+      <member refid="class_message_list_model_1a28192406f4cb4d4c8f82b7af412a1a4f" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>setFilterStrings</name></member>
+      <member refid="class_message_list_model_1ae8e4c695ca0ddc68919b43d366ccc79c" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>sort</name></member>
+      <member refid="class_message_list_model_1ae6d39b2d6b8e28851839fe179799be0d" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>sort_column</name></member>
+      <member refid="class_message_list_model_1afab985eb6fc01b311045a25cb97c29c9" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>sort_order</name></member>
+      <member refid="class_message_list_model_1a05d0cb92e28a45dae2d123d63c6969eb" prot="private" virt="non-virtual"><scope>MessageListModel</scope><name>sortMessages</name></member>
+      <member refid="class_message_list_model_1a1574fe6c6f18cfc3a750a2f9eaf6124fae9e14cd94f3da5c12f15a03c7fe9642e" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>SOURCE</name></member>
+      <member refid="class_message_list_model_1a22b851ff1c1cb14f5623c2e809a68e01" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>suppress</name></member>
+      <member refid="class_message_list_model_1a07e14a23038e6f4695852ea041314a50" prot="public" virt="non-virtual"><scope>MessageListModel</scope><name>suppressed_bytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

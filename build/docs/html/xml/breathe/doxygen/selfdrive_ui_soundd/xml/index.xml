@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_sound" kind="class"><name>Sound</name>
+    <member refid="class_sound_1afc688fcfb351db48e99f44a804edfe3b" kind="variable"><name>sm</name></member>
+    <member refid="class_sound_1ab20982a72ff3fac44c2a7d4ea25d458d" kind="variable"><name>current_alert</name></member>
+    <member refid="class_sound_1a77d78536fabbe0e77a964b8a13bf73cc" kind="variable"><name>sounds</name></member>
+    <member refid="class_sound_1af06f43b587bc255937a644377576e244" kind="variable"><name>current_volume</name></member>
+    <member refid="class_sound_1ac53816f37fb41607d283e6792a89a6f6" kind="function"><name>Sound</name></member>
+    <member refid="class_sound_1a1363950fc24a88df0c358f453843b80c" kind="function"><name>update</name></member>
+    <member refid="class_sound_1aaa889d5c0093e8b874df44077de5dd7a" kind="function"><name>setAlert</name></member>
+  </compound>
+  <compound refid="sound_8h" kind="file"><name>sound.h</name>
+    <member refid="sound_8h_1a6441391c27402a292e549ee344a1fdda" kind="variable"><name>MAX_VOLUME</name></member>
+    <member refid="sound_8h_1a2c56e08a5099cca24755843f8e7f95ee" kind="variable"><name>sound_list</name></member>
+  </compound>
+  <compound refid="dir_9433856cffa03fcf414f88edc3657f68" kind="dir"><name>/tmp/openpilot/selfdrive</name>
+  </compound>
+  <compound refid="dir_338cb26c4202659f23954b3e1e0ed42d" kind="dir"><name>/tmp/openpilot/selfdrive/ui/soundd</name>
+  </compound>
+  <compound refid="dir_00bd7339aade360edada61456d967e1d" kind="dir"><name>/tmp/openpilot/selfdrive/ui</name>
+  </compound>
+</doxygenindex>
