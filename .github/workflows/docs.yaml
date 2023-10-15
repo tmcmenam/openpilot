@@ -48,4 +48,6 @@ jobs:
         export GIT_TRACE_SETUP=true
         export GIT_SSH_COMMAND="ssh -vvv"
 
+        export GIT_LFS_SKIP_PUSH=1
+
         git push -v origin gh-pages
