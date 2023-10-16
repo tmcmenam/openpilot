@@ -20,6 +20,7 @@ class OpenpilotPrefix:
     except FileExistsError:
       pass
     os.makedirs(Paths.log_root(), exist_ok=True)
+    os.makedirs(Paths.download_cache_root(), exist_ok=True)
 
     return self
 

@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 import argparse
-import concurrent.futures
 import os
+import pytest
 import sys
-from collections import defaultdict
-from tqdm import tqdm
-from typing import Any, DefaultDict, Dict
+import unittest
+
+from parameterized import parameterized, parameterized_class
 
 from openpilot.selfdrive.car.car_helpers import interface_names
 from openpilot.selfdrive.test.openpilotci import get_url, upload_file
-from openpilot.selfdrive.test.process_replay.compare_logs import compare_logs, format_diff
+from openpilot.selfdrive.test.process_replay.compare_logs import compare_logs
 from openpilot.selfdrive.test.process_replay.process_replay import CONFIGS, PROC_REPLAY_DIR, FAKEDATA, check_openpilot_enabled, replay_process
 from openpilot.system.version import get_commit
 from openpilot.tools.lib.filereader import FileReader
-from openpilot.tools.lib.logreader import LogReader
 from openpilot.tools.lib.helpers import save_log
+from openpilot.tools.lib.logreader import LogReader
+
 
 source_segments = [
   ("BODY", "937ccb7243511b65|2022-05-24--16-03-09--1"),        # COMMA.BODY
@@ -58,73 +59,37 @@ segments = [
   ("VOLKSWAGEN", "aregen765AF3D2CB5|2023-05-10--14-54-23--0"),
   ("MAZDA", "aregen3053762FF2E|2023-05-10--14-56-53--0"),
   ("FORD", "aregenDDE0F89FA1E|2023-05-10--14-59-26--0"),
-  ]
+]
+
 
 # dashcamOnly makes don't need to be tested until a full port is done
-excluded_interfaces = ["mock", "mazda", "tesla"]
+excluded_interfaces = ["mock", "tesla"]
 
 BASE_URL = "https://commadataci.blob.core.windows.net/openpilotci/"
 REF_COMMIT_FN = os.path.join(PROC_REPLAY_DIR, "ref_commit")
 EXCLUDED_PROCS = {"modeld", "dmonitoringmodeld"}
 
 
-def run_test_process(data):
-  segment, cfg, args, cur_log_fn, ref_log_path, lr_dat = data
-  res = None
-  if not args.upload_only:
-    lr = LogReader.from_bytes(lr_dat)
-    res, log_msgs = test_process(cfg, lr, segment, ref_log_path, cur_log_fn, args.ignore_fields, args.ignore_msgs)
-    # save logs so we can upload when updating refs
-    save_log(cur_log_fn, log_msgs)
-
-  if args.update_refs or args.upload_only:
-    print(f'Uploading: {os.path.basename(cur_log_fn)}')
-    assert os.path.exists(cur_log_fn), f"Cannot find log to upload: {cur_log_fn}"
-    upload_file(cur_log_fn, os.path.basename(cur_log_fn))
-    os.remove(cur_log_fn)
-  return (segment, cfg.proc_name, res)
-
-
 def get_log_data(segment):
   r, n = segment.rsplit("--", 1)
   with FileReader(get_url(r, n)) as f:
-    return (segment, f.read())
+    return f.read()
 
 
-def test_process(cfg, lr, segment, ref_log_path, new_log_path, ignore_fields=None, ignore_msgs=None):
-  if ignore_fields is None:
-    ignore_fields = []
-  if ignore_msgs is None:
-    ignore_msgs = []
+ALL_PROCS = {cfg.proc_name for cfg in CONFIGS if cfg.proc_name not in EXCLUDED_PROCS}
+ALL_CARS = {car for car, _ in segments}
 
-  ref_log_msgs = list(LogReader(ref_log_path))
+CAR_TO_SEGMENT = dict(segments)
+PROC_TO_CFG = {cfg.proc_name: cfg for cfg in CONFIGS}
 
-  try:
-    log_msgs = replay_process(cfg, lr, disable_progress=True)
-  except Exception as e:
-    raise Exception("failed on segment: " + segment) from e
-
-  # check to make sure openpilot is engaged in the route
-  if cfg.proc_name == "controlsd":
-    if not check_openpilot_enabled(log_msgs):
-      return f"Route did not enable at all or for long enough: {new_log_path}", log_msgs
-
-  try:
-    return compare_logs(ref_log_msgs, log_msgs, ignore_fields + cfg.ignore, ignore_msgs, cfg.tolerance), log_msgs
-  except Exception as e:
-    return str(e), log_msgs
+cpu_count = os.cpu_count() or 1
 
 
-if __name__ == "__main__":
-  all_cars = {car for car, _ in segments}
-  all_procs = {cfg.proc_name for cfg in CONFIGS if cfg.proc_name not in EXCLUDED_PROCS}
-
-  cpu_count = os.cpu_count() or 1
-
+def get_test_parameters():
   parser = argparse.ArgumentParser(description="Regression test to identify changes in a process's output")
-  parser.add_argument("--whitelist-procs", type=str, nargs="*", default=all_procs,
+  parser.add_argument("--whitelist-procs", type=str, nargs="*", default=ALL_PROCS,
                       help="Whitelist given processes from the test (e.g. controlsd)")
-  parser.add_argument("--whitelist-cars", type=str, nargs="*", default=all_cars,
+  parser.add_argument("--whitelist-cars", type=str, nargs="*", default=ALL_CARS,
                       help="Whitelist given cars from the test (e.g. HONDA)")
   parser.add_argument("--blacklist-procs", type=str, nargs="*", default=[],
                       help="Blacklist given processes from the test (e.g. controlsd)")
@@ -138,91 +103,88 @@ if __name__ == "__main__":
                       help="Updates reference logs using current commit")
   parser.add_argument("--upload-only", action="store_true",
                       help="Skips testing processes and uploads logs from previous test run")
-  parser.add_argument("-j", "--jobs", type=int, default=max(cpu_count - 2, 1),
-                      help="Max amount of parallel jobs")
-  args = parser.parse_args()
+
+  args, left = parser.parse_known_args()
+  sys.argv = sys.argv[:1]+left
 
   tested_procs = set(args.whitelist_procs) - set(args.blacklist_procs)
   tested_cars = set(args.whitelist_cars) - set(args.blacklist_cars)
   tested_cars = {c.upper() for c in tested_cars}
 
-  full_test = (tested_procs == all_procs) and (tested_cars == all_cars) and all(len(x) == 0 for x in (args.ignore_fields, args.ignore_msgs))
-  upload = args.update_refs or args.upload_only
-  os.makedirs(os.path.dirname(FAKEDATA), exist_ok=True)
+  return tested_cars, tested_procs, args.ignore_fields, args.ignore_msgs, args.update_refs, args.upload_only
 
-  if upload:
-    assert full_test, "Need to run full test when updating refs"
 
-  try:
-    ref_commit = open(REF_COMMIT_FN).read().strip()
-  except FileNotFoundError:
-    print("Couldn't find reference commit")
-    sys.exit(1)
+TESTED_CARS, TESTED_PROCS, ignore_fields, ignore_msgs, update_refs, upload_only = get_test_parameters()
 
-  cur_commit = get_commit()
-  if cur_commit is None:
-    raise Exception("Couldn't get current commit")
 
-  print(f"***** testing against commit {ref_commit} *****")
+@pytest.mark.slow
+@parameterized_class(('car'), [(c,) for c in sorted(TESTED_CARS)])
+class TestProcesses(unittest.TestCase):
+  @classmethod
+  def setUpClass(cls):
+    os.makedirs(os.path.dirname(FAKEDATA), exist_ok=True)
 
-  # check to make sure all car brands are tested
-  if full_test:
-    untested = (set(interface_names) - set(excluded_interfaces)) - {c.lower() for c in tested_cars}
-    assert len(untested) == 0, f"Cars missing routes: {str(untested)}"
+    cls.upload = update_refs or upload_only
 
-  log_paths: DefaultDict[str, Dict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
-  with concurrent.futures.ProcessPoolExecutor(max_workers=args.jobs) as pool:
-    if not args.upload_only:
-      download_segments = [seg for car, seg in segments if car in tested_cars]
-      log_data: Dict[str, LogReader] = {}
-      p1 = pool.map(get_log_data, download_segments)
-      for segment, lr in tqdm(p1, desc="Getting Logs", total=len(download_segments)):
-        log_data[segment] = lr
+    try:
+      with open(REF_COMMIT_FN) as f:
+        cls.ref_commit = f.read().strip()
+    except FileNotFoundError:
+      print("Couldn't find reference commit")
+      sys.exit(1)
 
-    pool_args: Any = []
-    for car_brand, segment in segments:
-      if car_brand not in tested_cars:
-        continue
+    cls.cur_commit = get_commit()
+    cls.assertNotEqual(cls.cur_commit, None, "Couldn't get current commit")
 
-      for cfg in CONFIGS:
-        if cfg.proc_name not in tested_procs:
-          continue
+    cls.segment = CAR_TO_SEGMENT[cls.car]
+    cls.log_bytes = get_log_data(CAR_TO_SEGMENT[cls.car])
 
-        cur_log_fn = os.path.join(FAKEDATA, f"{segment}_{cfg.proc_name}_{cur_commit}.bz2")
-        if args.update_refs:  # reference logs will not exist if routes were just regenerated
-          ref_log_path = get_url(*segment.rsplit("--", 1))
-        else:
-          ref_log_fn = os.path.join(FAKEDATA, f"{segment}_{cfg.proc_name}_{ref_commit}.bz2")
-          ref_log_path = ref_log_fn if os.path.exists(ref_log_fn) else BASE_URL + os.path.basename(ref_log_fn)
+  def test_all_makes_are_tested(self):
+    # check to make sure all car brands are tested
+    untested = (set(interface_names) - set(excluded_interfaces)) - {c.lower() for c in TESTED_CARS}
+    self.assertEqual(len(untested), 0, f"Cars missing routes: {str(untested)}")
 
-        dat = None if args.upload_only else log_data[segment]
-        pool_args.append((segment, cfg, args, cur_log_fn, ref_log_path, dat))
+  def _run_replay(self, cfg):
+    lr = LogReader.from_bytes(self.log_bytes)
 
-        log_paths[segment][cfg.proc_name]['ref'] = ref_log_path
-        log_paths[segment][cfg.proc_name]['new'] = cur_log_fn
+    try:
+      return replay_process(cfg, lr, disable_progress=True)
+    except Exception as e:
+      raise Exception(f"failed on segment: {self.segment} \n{e}") from e
 
-    results: Any = defaultdict(dict)
-    p2 = pool.map(run_test_process, pool_args)
-    for (segment, proc, result) in tqdm(p2, desc="Running Tests", total=len(pool_args)):
-      if not args.upload_only:
-        results[segment][proc] = result
+  @parameterized.expand(sorted(TESTED_PROCS))
+  def test_process(self, proc):
+    cfg = PROC_TO_CFG[proc]
 
-  diff1, diff2, failed = format_diff(results, log_paths, ref_commit)
-  if not upload:
-    with open(os.path.join(PROC_REPLAY_DIR, "diff.txt"), "w") as f:
-      f.write(diff2)
-    print(diff1)
-
-    if failed:
-      print("TEST FAILED")
-      print("\n\nTo push the new reference logs for this commit run:")
-      print("./test_processes.py --upload-only")
+    cur_log_fn = os.path.join(FAKEDATA, f"{self.segment}_{proc}_{self.cur_commit}.bz2")
+    if update_refs:  # reference logs will not exist if routes were just regenerated
+      ref_log_path = get_url(*self.segment.rsplit("--", 1))
     else:
-      print("TEST SUCCEEDED")
+      ref_log_fn = os.path.join(FAKEDATA, f"{self.segment}_{proc}_{self.ref_commit}.bz2")
+      ref_log_path = ref_log_fn if os.path.exists(ref_log_fn) else BASE_URL + os.path.basename(ref_log_fn)
 
-  else:
-    with open(REF_COMMIT_FN, "w") as f:
-      f.write(cur_commit)
-    print(f"\n\nUpdated reference logs for commit: {cur_commit}")
+    if update_refs or upload_only:
+      self.assertTrue(os.path.exists(cur_log_fn), f"Cannot find log to upload: {cur_log_fn}")
+      upload_file(cur_log_fn, os.path.basename(cur_log_fn))
+      os.remove(cur_log_fn)
 
-  sys.exit(int(failed))
+    if upload_only:
+      raise unittest.SkipTest("skipping test, uploading only")
+
+    log_msgs = self._run_replay(cfg)
+    save_log(cur_log_fn, log_msgs)
+
+    ref_log_msgs = list(LogReader(ref_log_path))
+
+    diff = compare_logs(ref_log_msgs, log_msgs, ignore_fields + cfg.ignore, ignore_msgs)
+
+    self.assertEqual(diff, [], "Diff not empty")
+
+    if proc == "controlsd":
+      with self.subTest("controlsd-enabled"):
+        # check to make sure openpilot is engaged in the route
+        self.assertTrue(check_openpilot_enabled(log_msgs), f"Route did not enable at all or for long enough: {self.segment}")
+
+
+if __name__ == "__main__":
+  unittest.main()
