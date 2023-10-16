@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+import abc
 import argparse
 import os
+from typing import Union
 import pytest
 import sys
 import unittest
@@ -9,12 +11,13 @@ from parameterized import parameterized, parameterized_class
 
 from openpilot.selfdrive.car.car_helpers import interface_names
 from openpilot.selfdrive.test.openpilotci import get_url, upload_file
-from openpilot.selfdrive.test.process_replay.compare_logs import compare_logs
+from openpilot.selfdrive.test.process_replay.compare_logs import compare_logs, proc_diff
 from openpilot.selfdrive.test.process_replay.process_replay import CONFIGS, PROC_REPLAY_DIR, FAKEDATA, check_openpilot_enabled, replay_process
 from openpilot.system.version import get_commit
 from openpilot.tools.lib.filereader import FileReader
 from openpilot.tools.lib.helpers import save_log
 from openpilot.tools.lib.logreader import LogReader
+from tools.lib.logreader import IterableLog
 
 
 source_segments = [
@@ -117,11 +120,14 @@ def get_test_parameters():
 TESTED_CARS, TESTED_PROCS, ignore_fields, ignore_msgs, update_refs, upload_only = get_test_parameters()
 
 
-@pytest.mark.slow
-@parameterized_class(('car'), [(c,) for c in sorted(TESTED_CARS)])
-class TestProcesses(unittest.TestCase):
+class TestReplayDiffBase(abc.ABC, unittest.TestCase):
+  segment: Union[str, IterableLog, None] = None
+
   @classmethod
   def setUpClass(cls):
+    if cls.segment is None:
+      raise unittest.SkipTest("no segment provided")
+
     os.makedirs(os.path.dirname(FAKEDATA), exist_ok=True)
 
     cls.upload = update_refs or upload_only
@@ -135,55 +141,73 @@ class TestProcesses(unittest.TestCase):
 
     cls.cur_commit = get_commit()
     cls.assertNotEqual(cls.cur_commit, None, "Couldn't get current commit")
+    
+    if isinstance(cls.segment, str):
+      cls.log_reader = LogReader.from_bytes(get_log_data(cls.segment))
+    else:
+      cls.log_reader = cls.segment
+    
+    cls._create_log_msgs()
+  
+  @classmethod
+  def _create_log_msgs(cls):
+    cls.log_msgs = {}
 
-    cls.segment = CAR_TO_SEGMENT[cls.car]
-    cls.log_bytes = get_log_data(CAR_TO_SEGMENT[cls.car])
+    for proc in TESTED_PROCS:
+      cfg = PROC_TO_CFG[proc]
 
+      cur_log_fn = os.path.join(FAKEDATA, f"{cls.segment}_{proc}_{cls.cur_commit}.bz2")
+      if update_refs:  # reference logs will not exist if routes were just regenerated
+        ref_log_path = get_url(*cls.segment.rsplit("--", 1))
+      else:
+        ref_log_fn = os.path.join(FAKEDATA, f"{cls.segment}_{proc}_{cls.ref_commit}.bz2")
+        ref_log_path = ref_log_fn if os.path.exists(ref_log_fn) else BASE_URL + os.path.basename(ref_log_fn)
+
+      if update_refs or upload_only:
+        cls.assertTrue(os.path.exists(cur_log_fn), f"Cannot find log to upload: {cur_log_fn}")
+        upload_file(cur_log_fn, os.path.basename(cur_log_fn))
+        os.remove(cur_log_fn)
+
+      log_msgs = cls._run_replay(cfg)
+      save_log(cur_log_fn, log_msgs)
+
+      ref_log_msgs = list(LogReader(ref_log_path))
+
+      cls.log_msgs[proc] = (cfg, log_msgs, ref_log_msgs)
+
+  @classmethod
+  def _run_replay(cls, cfg):
+    try:
+      return replay_process(cfg, cls.log_reader, disable_progress=True)
+    except Exception as e:
+      raise Exception(f"failed on segment: {cls.segment} \n{e}") from e
+
+  @parameterized.expand(sorted(TESTED_PROCS))
+  def test_process_diff(self, proc):
+    if upload_only:
+      raise unittest.SkipTest("skipping test, uploading only")
+
+    cfg, log_msgs, ref_log_msgs = self.log_msgs[proc]
+
+    diff = compare_logs(ref_log_msgs, log_msgs, ignore_fields + cfg.ignore, ignore_msgs)
+
+    diff_short, _ = proc_diff(diff)
+
+    self.assertEqual(len(diff), 0, "\n" + diff_short)
+
+
+@pytest.mark.slow
+@parameterized_class(('case_name', 'segment'), [(i, CAR_TO_SEGMENT[i]) for i in sorted(TESTED_CARS)])
+class TestCarReplayDiff(TestReplayDiffBase):
   def test_all_makes_are_tested(self):
     # check to make sure all car brands are tested
     untested = (set(interface_names) - set(excluded_interfaces)) - {c.lower() for c in TESTED_CARS}
     self.assertEqual(len(untested), 0, f"Cars missing routes: {str(untested)}")
-
-  def _run_replay(self, cfg):
-    lr = LogReader.from_bytes(self.log_bytes)
-
-    try:
-      return replay_process(cfg, lr, disable_progress=True)
-    except Exception as e:
-      raise Exception(f"failed on segment: {self.segment} \n{e}") from e
-
-  @parameterized.expand(sorted(TESTED_PROCS))
-  def test_process(self, proc):
-    cfg = PROC_TO_CFG[proc]
-
-    cur_log_fn = os.path.join(FAKEDATA, f"{self.segment}_{proc}_{self.cur_commit}.bz2")
-    if update_refs:  # reference logs will not exist if routes were just regenerated
-      ref_log_path = get_url(*self.segment.rsplit("--", 1))
-    else:
-      ref_log_fn = os.path.join(FAKEDATA, f"{self.segment}_{proc}_{self.ref_commit}.bz2")
-      ref_log_path = ref_log_fn if os.path.exists(ref_log_fn) else BASE_URL + os.path.basename(ref_log_fn)
-
-    if update_refs or upload_only:
-      self.assertTrue(os.path.exists(cur_log_fn), f"Cannot find log to upload: {cur_log_fn}")
-      upload_file(cur_log_fn, os.path.basename(cur_log_fn))
-      os.remove(cur_log_fn)
-
-    if upload_only:
-      raise unittest.SkipTest("skipping test, uploading only")
-
-    log_msgs = self._run_replay(cfg)
-    save_log(cur_log_fn, log_msgs)
-
-    ref_log_msgs = list(LogReader(ref_log_path))
-
-    diff = compare_logs(ref_log_msgs, log_msgs, ignore_fields + cfg.ignore, ignore_msgs)
-
-    self.assertEqual(diff, [], "Diff not empty")
-
-    if proc == "controlsd":
-      with self.subTest("controlsd-enabled"):
-        # check to make sure openpilot is engaged in the route
-        self.assertTrue(check_openpilot_enabled(log_msgs), f"Route did not enable at all or for long enough: {self.segment}")
+  
+  def test_controlsd_engaged(self):
+    # check to make sure openpilot is engaged in the route
+    _, log_msgs, _ = self.log_msgs["controlsd"]
+    self.assertTrue(check_openpilot_enabled(log_msgs), f"Route did not enable at all or for long enough: {self.segment}")
 
 
 if __name__ == "__main__":
