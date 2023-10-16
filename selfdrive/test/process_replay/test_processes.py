@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import abc
 import argparse
 import os
 from typing import Union
@@ -16,8 +15,7 @@ from openpilot.selfdrive.test.process_replay.process_replay import CONFIGS, PROC
 from openpilot.system.version import get_commit
 from openpilot.tools.lib.filereader import FileReader
 from openpilot.tools.lib.helpers import save_log
-from openpilot.tools.lib.logreader import LogReader
-from tools.lib.logreader import IterableLog
+from openpilot.tools.lib.logreader import LogReader, IterableLog
 
 
 source_segments = [
@@ -120,7 +118,7 @@ def get_test_parameters():
 TESTED_CARS, TESTED_PROCS, ignore_fields, ignore_msgs, update_refs, upload_only = get_test_parameters()
 
 
-class TestReplayDiffBase(abc.ABC, unittest.TestCase):
+class TestReplayDiffBase(unittest.TestCase):
   segment: Union[str, IterableLog, None] = None
 
   @classmethod
@@ -141,14 +139,14 @@ class TestReplayDiffBase(abc.ABC, unittest.TestCase):
 
     cls.cur_commit = get_commit()
     cls.assertNotEqual(cls.cur_commit, None, "Couldn't get current commit")
-    
+
     if isinstance(cls.segment, str):
       cls.log_reader = LogReader.from_bytes(get_log_data(cls.segment))
     else:
       cls.log_reader = cls.segment
-    
+
     cls._create_log_msgs()
-  
+
   @classmethod
   def _create_log_msgs(cls):
     cls.log_msgs = {}
@@ -203,7 +201,7 @@ class TestCarReplayDiff(TestReplayDiffBase):
     # check to make sure all car brands are tested
     untested = (set(interface_names) - set(excluded_interfaces)) - {c.lower() for c in TESTED_CARS}
     self.assertEqual(len(untested), 0, f"Cars missing routes: {str(untested)}")
-  
+
   def test_controlsd_engaged(self):
     # check to make sure openpilot is engaged in the route
     _, log_msgs, _ = self.log_msgs["controlsd"]

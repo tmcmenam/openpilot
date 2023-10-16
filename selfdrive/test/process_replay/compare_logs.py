@@ -105,9 +105,9 @@ def proc_diff(diff):
 
   for k, v in sorted(cnt.items()):
     diff_short += f"        {k}: {v}\n"
-  
+
   return diff_short, diff_long
-  
+
 
 def format_diff(results, log_paths, ref_commit):
   diff_short, diff_long = "", ""
